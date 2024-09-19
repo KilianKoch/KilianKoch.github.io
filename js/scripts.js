@@ -127,12 +127,12 @@ function generatePublicationList(dataArray, targetElement) {
 
 function isPageName(name) {
     const pathname = window.location.pathname;
-    return pathname.endsWith(`${name}.html`);
+    return pathname.endsWith(`${name}.html`) || pathname.endsWith(`${name}`);
 }
 
 // Ensure the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
-    if (isPageName("index")) {
+    if (isPageName("index") || isPageName("")) {
         const projectCards = document.querySelector(".project-cards")
 
         if (projectCards) {
