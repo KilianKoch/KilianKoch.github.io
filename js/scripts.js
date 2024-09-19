@@ -168,7 +168,7 @@ const publications = [
         "year": 2022,
         "abstract": "An in-depth study of partial differential equations.",
         "equation": "\\partial_t u = \\Delta u",
-        "link": "publication1.html",
+        "link": "publication1",
         "tags": ["PDE", "mathematics"]
     },
     {
@@ -176,7 +176,7 @@ const publications = [
         "journal": "Science Journal",
         "year": 2020,
         "abstract": "Exploring the applications of algebraic topology.",
-        "link": "publication2.html",
+        "link": "publication2",
         "tags": ["topology", "algebra"]
     }
 ]
@@ -186,21 +186,21 @@ const projects = [
         "title": "KoKi",
         "description": "A comprehensive project management tool.",
         "image": "images/KoKi.svg",
-        "link": "project1.html",
+        "link": "project1",
         "tags": ["management", "productivity"]
     },
     {
         "title": "Dispo",
         "description": "An advanced scheduling application.",
         "image": "images/Dispo.svg",
-        "link": "project2.html",
+        "link": "project2",
         "tags": ["scheduling", "automation"]
     },
     {
         "title": "Theorem Database",
         "description": "A database of mathematical theorems.",
         "image": "images/Theorems.webp",
-        "link": "project3.html",
+        "link": "project3",
         "tags": ["mathematics", "research"]
     }
 ]
