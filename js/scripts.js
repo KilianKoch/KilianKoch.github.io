@@ -127,8 +127,14 @@ function generatePublicationList(dataArray, targetElement) {
 
 function isPageName(name) {
     const pathname = window.location.pathname;
-    return pathname.endsWith(`${name}.html`) || pathname.endsWith(`${name}`);
+    const segments = pathname.split('/').filter(Boolean); // Split and filter out empty segments
+    const lastSegment = segments[segments.length - 1] || ''; // Get the last segment, or an empty string if none exists
+
+    // Check if the last segment matches the name or the name with .html
+    return lastSegment === name || lastSegment === `${name}.html`;
 }
+
+
 
 // Ensure the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -196,11 +202,11 @@ const projects = [
         "link": "project2",
         "tags": ["scheduling", "automation"]
     },
-    {
-        "title": "Theorem Database",
-        "description": "A database of mathematical theorems.",
-        "image": "images/Theorems.webp",
-        "link": "project3",
-        "tags": ["mathematics", "research"]
-    }
+    // {
+    //     "title": "Theorem Database",
+    //     "description": "A database of mathematical theorems.",
+    //     "image": "images/Theorems.webp",
+    //     "link": "project3",
+    //     "tags": ["mathematics", "research"]
+    // }
 ]
