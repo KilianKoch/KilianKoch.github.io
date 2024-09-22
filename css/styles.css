@@ -720,3 +720,125 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
+
+/* -------------------- */
+/* 404 Error Page Styles */
+/* -------------------- */
+
+/* Error Page Container */
+.error-page #error-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+  background-color: #f2f2f2;
+}
+
+/* Error Container */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 60px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.error-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Error Content */
+.error-content h1 {
+  font-size: 6rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.error-content h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.error-content p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+/* Home Button */
+.home-btn {
+  background-color: #3498db;
+  color: #ffffff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Error Animation/Icon */
+.error-animation {
+  margin: 20px;
+  color: #e74c3c;
+  animation: bounce 2s infinite;
+}
+
+.error-animation i {
+  font-size: 4rem;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* Responsive Design for 404 Page */
+@media screen and (max-width: 768px) {
+  .error-container {
+    padding: 40px 20px;
+  }
+
+  .error-content h1 {
+    font-size: 4rem;
+  }
+
+  .error-content h2 {
+    font-size: 2rem;
+  }
+
+  .error-animation i {
+    font-size: 3rem;
+  }
+}
+
+/* SVG Icon Styling */
+.svg-icon {
+  width: 100px;
+  height: 100px;
+  animation: bounce 2s infinite;
+}
