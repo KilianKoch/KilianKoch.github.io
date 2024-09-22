@@ -326,7 +326,7 @@ section h3 {
 
 #about-me .about-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
 }
 
@@ -609,5 +609,113 @@ img {
   /* Footer adjustments */
   footer p {
     font-size: 14px;
+  }
+}
+
+/* Resume Section */
+#resume {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+/* Resume Sections Container */
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Resume Section */
+.resume-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.resume-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Resume Section Headers */
+.resume-section h3 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  position: relative;
+  height: 3em;
+  display: grid;
+  place-items: center;
+}
+
+.resume-section h3::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+}
+
+/* Resume Items */
+.resume-section ul {
+  list-style: none;
+}
+
+.resume-section ul li {
+  margin-bottom: 25px;
+  padding-left: 25px;
+  position: relative;
+}
+
+/* Custom Bullet Points */
+.resume-section ul li::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: #3498db;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+
+/* Job Titles and Organizations */
+.resume-section ul li strong {
+  display: block;
+  font-size: 1.2rem;
+  color: #34495e;
+}
+
+/* Dates Styling */
+.resume-section .date {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+}
+
+/* Job Descriptions */
+.resume-section ul li p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+}
+
+/* Responsive Grid for Larger Screens */
+@media screen and (min-width: 768px) {
+  .resume-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Responsive Grid for Extra Large Screens */
+@media screen and (min-width: 1024px) {
+  .resume-container {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
