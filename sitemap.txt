@@ -4,3 +4,6 @@ https://kiliankoch.de/about
 https://kiliankoch.de/contact
 https://kiliankoch.de/projects
 https://kiliankoch.de/publications
+https://kiliankoch.de/impressum
+https://kiliankoch.de/datenschutz
+https://kiliankoch.de/404

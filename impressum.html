@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 | Kilian Koch | Mathematician & Software Developer</title>
+    <title>Impressum / Legal Notice | Kilian Koch</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
     <!-- Navigation Bar -->
     <nav>
@@ -24,34 +23,45 @@
       </div>
     </nav>
 
-    <div class="content error-page">
-      <!-- 404 Error Content -->
-      <section id="error-section">
-        <div class="error-container">
-          <div class="error-content">
-            <h1>404</h1>
-            <h2>Page Not Found</h2>
-            <div class="error-animation">
-              <!-- Example SVG Illustration -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="100"
-                viewBox="0 0 24 24"
-                fill="#e74c3c"
-                class="svg-icon"
-              >
-                <path
-                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1 17h-2v-2h2v2zm0-4h-2V7h2v6z"
-                />
-              </svg>
-            </div>
-            <p>
-              Oops! The page you're looking for doesn't exist or has been moved.
-            </p>
-            <a href="index" class="btn home-btn">Go Back Home</a>
-          </div>
-        </div>
+    <div class="language-toggle">
+      <button onclick="toggleLanguageImpressum('de')" class="active">Deutsch</button>
+      <button onclick="toggleLanguageImpressum('en')">English</button>
+    </div>
+
+    <div class="content">
+      <!-- German Impressum -->
+      <section id="impressum-de">
+        <h1>Impressum</h1>
+        <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+        <p>
+          Kilian Koch<br />
+          Königstraße 4<br />
+          52064 Aachen<br />
+          Deutschland
+        </p>
+        <p><strong>Kontakt:</strong></p>
+        <p>
+          Telefon: +49 (0) 15225244552<br />
+          E-Mail:
+          <a href="mailto:kilian_koch@gmx.de">kilian.koch@example.com</a>
+        </p>
+      </section>
+
+      <!-- English Impressum -->
+      <section id="impressum-en" style="display: none">
+        <h1>Legal Notice</h1>
+        <p><strong>Information in accordance with § 5 TMG:</strong></p>
+        <p>
+          Kilian Koch<br />
+          Königstraße 4<br />
+          52064 Aachen<br />
+          Germany
+        </p>
+        <p><strong>Contact:</strong></p>
+        <p>
+          Phone: +49 (0) 15225244552<br />
+          Email: <a href="mailto:kilian_koch@gmx.de">kilian.koch@example.com</a>
+        </p>
       </section>
     </div>
 

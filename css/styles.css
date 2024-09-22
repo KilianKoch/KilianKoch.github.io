@@ -555,6 +555,34 @@ footer .social-media a:hover {
   color: #bdc3c7;
 }
 
+/* Style for the social media icons */
+.social-icon {
+  width: 24px; /* Adjust the size as needed */
+  height: 24px;
+  fill: white; /* Ensures that the SVG is white */
+  transition: transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(104%) contrast(101%);
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Slight scaling effect on hover */
+}
+
+/* Ensure the images are displayed inline */
+.social-media a {
+  margin-right: 10px; /* Add spacing between icons */
+}
+
+/* Ensure links in the footer are styled properly */
+footer p a {
+  color: white; /* Set the text color to white */
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
 /* Ensure images are responsive */
 img {
   max-width: 100%;
@@ -842,3 +870,222 @@ img {
   height: 100px;
   animation: bounce 2s infinite;
 }
+
+/* Language Toggle Buttons */
+.language-toggle {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  .language-toggle button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .language-toggle button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Privacy Policy Section Styling */
+  #datenschutz-de, #privacy-policy-en {
+    padding: 30px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Section Titles */
+  #datenschutz-de h1, #privacy-policy-en h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  #datenschutz-de h2, #privacy-policy-en h2 {
+    font-size: 1.8rem;
+    margin: 25px 0 15px;
+    color: #34495e;
+    text-align: left;
+  }
+  
+  #datenschutz-de h3, #privacy-policy-en h3 {
+    font-size: 1.4rem;
+    margin: 20px 0 10px;
+    color: #2980b9;
+  }
+  
+  #datenschutz-de p, #privacy-policy-en p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  /* Links in Sections */
+  #datenschutz-de a, #privacy-policy-en a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #datenschutz-de a:hover, #privacy-policy-en a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Box Shadows and Borders for Section */
+  #datenschutz-de, #privacy-policy-en {
+    border-left: 5px solid #3498db;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #datenschutz-de:hover, #privacy-policy-en:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    #datenschutz-de, #privacy-policy-en {
+      padding: 20px;
+      margin: 15px;
+      font-size: 1rem;
+    }
+  
+    .language-toggle button {
+      margin: 5px;
+      padding: 8px 16px;
+    }
+  
+    #datenschutz-de h1, #privacy-policy-en h1 {
+      font-size: 1.8rem;
+    }
+  
+    #datenschutz-de h2, #privacy-policy-en h2 {
+      font-size: 1.6rem;
+    }
+  
+    #datenschutz-de h3, #privacy-policy-en h3 {
+      font-size: 1.3rem;
+    }
+  }
+    
+  /* Language Toggle Buttons */
+.language-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .language-toggle button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .language-toggle button:hover {
+    background-color: #2980b9;
+  }
+  
+  
+  /* Impressum Section Styling */
+  #impressum-de, #impressum-en {
+    padding: 30px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #impressum-de h1, #impressum-en h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    display: inline-block;
+  }
+  
+  #impressum-de p, #impressum-en p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  #impressum-de a, #impressum-en a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #impressum-de a:hover, #impressum-en a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Box Styling */
+  #impressum-de, #impressum-en {
+    border-left: 5px solid #3498db;
+    padding: 20px 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #impressum-de:hover, #impressum-en:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    #impressum-de, #impressum-en {
+      padding: 20px;
+      margin: 15px;
+      font-size: 1rem;
+    }
+  
+    .language-toggle button {
+      margin: 5px;
+      padding: 8px 16px;
+    }
+  
+    #impressum-de h1, #impressum-en h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
