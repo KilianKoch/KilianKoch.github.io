@@ -2,10 +2,11 @@
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 
-/*burger.addEventListener('click', () => {
+burger.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
     burger.classList.toggle('toggle');
-});*/
+});
+
 
 // Smooth Scroll (Optional)
 const navLinksItems = document.querySelectorAll('.nav-links li a');

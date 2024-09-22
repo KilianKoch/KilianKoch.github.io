@@ -1,3 +1,6 @@
 https://kiliankoch.de
-https://kiliankoch.de/AboutMe
-https://kiliankoch.de/Error
+https://kiliankoch.de/index
+https://kiliankoch.de/about
+https://kiliankoch.de/contact
+https://kiliankoch.de/projects
+https://kiliankoch.de/publications
