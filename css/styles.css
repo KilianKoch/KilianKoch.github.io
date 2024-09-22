@@ -163,6 +163,7 @@ nav .burger.toggle div:nth-child(3) {
   background-position: center;
   height: 80vh;
   position: relative;
+  min-height: 500px;
 }
 
 #hero::before {
