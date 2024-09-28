@@ -76,7 +76,8 @@ nav .burger div {
 
 /* Toggle Animation for Burger */
 nav .burger.toggle div:nth-child(1) {
-  transform: rotate(-45deg) translate(-7px, 7px);
+  transform-origin: 50% 50%;
+  transform: translate(0, 350%) rotate(-45deg);
 }
 
 nav .burger.toggle div:nth-child(2) {
@@ -84,7 +85,8 @@ nav .burger.toggle div:nth-child(2) {
 }
 
 nav .burger.toggle div:nth-child(3) {
-  transform: rotate(45deg) translate(-8px, -8px);
+  transform-origin: 50% 50%;
+  transform: translate(0, -350%) rotate(45deg);
 }
 
 /* Responsive Navigation */
@@ -100,7 +102,7 @@ nav .burger.toggle div:nth-child(3) {
     right: 0;
     height: 100vh;
     top: 60px;
-    background-color: #2c3e5099;
+    background-color: #2c3e50d1;
     flex-direction: column;
     width: 100%;
     align-items: center;
