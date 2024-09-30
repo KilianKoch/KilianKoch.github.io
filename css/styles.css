@@ -9,25 +9,29 @@
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+  min-height: 100vh;
+  /* Ensures the body takes at least the full viewport height */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
 }
 
 /* Content Wrapper */
 .content {
-  flex: 1; /* Allows the content to grow and push the footer down */
+  flex: 1;
+  /* Allows the content to grow and push the footer down */
 }
 
 /* Navigation Bar */
 nav {
   display: flex;
-  justify-content: flex-end; /* Changed from flex-end to space-between */
+  justify-content: flex-end;
+  /* Changed from flex-end to space-between */
   align-items: center;
   background-color: #2c3e50;
   padding: 0 20px;
   height: 60px;
-  position: relative; /* Ensure positioning for absolute elements if needed */
+  position: relative;
+  /* Ensure positioning for absolute elements if needed */
 }
 
 nav .logo {
@@ -210,18 +214,25 @@ nav .burger.toggle div:nth-child(3) {
 }
 
 .me-pic {
-  width: 150px; /* Adjust the size as needed */
-  height: 150px; /* Adjust the size as needed */
-  border-radius: 50%; /* Makes the div round */
-  overflow: hidden; /* Ensures the image stays within the round div */
-  border: 5px solid #ccc; /* Adds a border around the image */
-  margin: 0 auto; /* Centers the div horizontally */
+  width: 150px;
+  /* Adjust the size as needed */
+  height: 150px;
+  /* Adjust the size as needed */
+  border-radius: 50%;
+  /* Makes the div round */
+  overflow: hidden;
+  /* Ensures the image stays within the round div */
+  border: 5px solid #ccc;
+  /* Adds a border around the image */
+  margin: 0 auto;
+  /* Centers the div horizontally */
 }
 
 .me-pic img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire div without distortion */
+  object-fit: cover;
+  /* Ensures the image covers the entire div without distortion */
 }
 
 /* Section Titles */
@@ -460,9 +471,9 @@ section h3 {
   max-width: 600px;
   margin: 20px auto;
   padding: 2rem;
-  background-color: #f9f9f9;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 #contact-form h1 {
@@ -539,7 +550,8 @@ footer {
   color: #ecf0f1;
   padding: 20px 0;
   text-align: center;
-  position: relative; /* Remove fixed positioning */
+  position: relative;
+  /* Remove fixed positioning */
 }
 
 footer .social-media {
@@ -559,25 +571,30 @@ footer .social-media a:hover {
 
 /* Style for the social media icons */
 .social-icon {
-  width: 24px; /* Adjust the size as needed */
+  width: 24px;
+  /* Adjust the size as needed */
   height: 24px;
-  fill: white; /* Ensures that the SVG is white */
+  fill: white;
+  /* Ensures that the SVG is white */
   transition: transform 0.3s ease;
   filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(104%) contrast(101%);
 }
 
 .social-icon:hover {
-  transform: scale(1.1); /* Slight scaling effect on hover */
+  transform: scale(1.1);
+  /* Slight scaling effect on hover */
 }
 
 /* Ensure the images are displayed inline */
 .social-media a {
-  margin-right: 10px; /* Add spacing between icons */
+  margin-right: 10px;
+  /* Add spacing between icons */
 }
 
 /* Ensure links in the footer are styled properly */
 footer p a {
-  color: white; /* Set the text color to white */
+  color: white;
+  /* Set the text color to white */
   text-decoration: none;
 }
 
@@ -596,6 +613,7 @@ img {
   .content:first-of-type {
     margin-top: 60px;
   }
+
   #hero {
     height: 60vh;
   }
@@ -832,6 +850,7 @@ img {
 
 /* Bounce Animation */
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -839,9 +858,11 @@ img {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-5px);
   }
+
   60% {
     transform: translateY(-2px);
   }
@@ -875,219 +896,328 @@ img {
 
 /* Language Toggle Buttons */
 .language-toggle {
-    text-align: center;
-    margin: 20px;
-  }
-  
-  .language-toggle button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  text-align: center;
+  margin: 20px;
+}
+
+.language-toggle button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.language-toggle button:hover {
+  background-color: #2980b9;
+}
+
+/* Privacy Policy Section Styling */
+#datenschutz-de,
+#privacy-policy-en {
+  padding: 30px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Titles */
+#datenschutz-de h1,
+#privacy-policy-en h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+#datenschutz-de h2,
+#privacy-policy-en h2 {
+  font-size: 1.8rem;
+  margin: 25px 0 15px;
+  color: #34495e;
+  text-align: left;
+}
+
+#datenschutz-de h3,
+#privacy-policy-en h3 {
+  font-size: 1.4rem;
+  margin: 20px 0 10px;
+  color: #2980b9;
+}
+
+#datenschutz-de p,
+#privacy-policy-en p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Links in Sections */
+#datenschutz-de a,
+#privacy-policy-en a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#datenschutz-de a:hover,
+#privacy-policy-en a:hover {
+  text-decoration: underline;
+}
+
+/* Box Shadows and Borders for Section */
+#datenschutz-de,
+#privacy-policy-en {
+  border-left: 5px solid #3498db;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#datenschutz-de:hover,
+#privacy-policy-en:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+  #datenschutz-de,
+  #privacy-policy-en {
+    padding: 20px;
+    margin: 15px;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
   }
-  
-  .language-toggle button:hover {
-    background-color: #2980b9;
+
+  .language-toggle button {
+    margin: 5px;
+    padding: 8px 16px;
   }
-  
-  /* Privacy Policy Section Styling */
-  #datenschutz-de, #privacy-policy-en {
-    padding: 30px;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* Section Titles */
-  #datenschutz-de h1, #privacy-policy-en h1 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    display: inline-block;
-  }
-  
-  #datenschutz-de h2, #privacy-policy-en h2 {
+
+  #datenschutz-de h1,
+  #privacy-policy-en h1 {
     font-size: 1.8rem;
-    margin: 25px 0 15px;
-    color: #34495e;
-    text-align: left;
   }
-  
-  #datenschutz-de h3, #privacy-policy-en h3 {
-    font-size: 1.4rem;
-    margin: 20px 0 10px;
-    color: #2980b9;
+
+  #datenschutz-de h2,
+  #privacy-policy-en h2 {
+    font-size: 1.6rem;
   }
-  
-  #datenschutz-de p, #privacy-policy-en p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 20px;
+
+  #datenschutz-de h3,
+  #privacy-policy-en h3 {
+    font-size: 1.3rem;
   }
-  
-  /* Links in Sections */
-  #datenschutz-de a, #privacy-policy-en a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  #datenschutz-de a:hover, #privacy-policy-en a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Box Shadows and Borders for Section */
-  #datenschutz-de, #privacy-policy-en {
-    border-left: 5px solid #3498db;
-    padding: 20px 30px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #datenschutz-de:hover, #privacy-policy-en:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    #datenschutz-de, #privacy-policy-en {
-      padding: 20px;
-      margin: 15px;
-      font-size: 1rem;
-    }
-  
-    .language-toggle button {
-      margin: 5px;
-      padding: 8px 16px;
-    }
-  
-    #datenschutz-de h1, #privacy-policy-en h1 {
-      font-size: 1.8rem;
-    }
-  
-    #datenschutz-de h2, #privacy-policy-en h2 {
-      font-size: 1.6rem;
-    }
-  
-    #datenschutz-de h3, #privacy-policy-en h3 {
-      font-size: 1.3rem;
-    }
-  }
-    
-  /* Language Toggle Buttons */
+}
+
+/* Language Toggle Buttons */
 .language-toggle {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .language-toggle button {
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.language-toggle button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.language-toggle button:hover {
+  background-color: #2980b9;
+}
+
+
+/* Impressum Section Styling */
+#impressum-de,
+#impressum-en {
+  padding: 30px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#impressum-de h1,
+#impressum-en h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+#impressum-de p,
+#impressum-en p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#impressum-de a,
+#impressum-en a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#impressum-de a:hover,
+#impressum-en a:hover {
+  text-decoration: underline;
+}
+
+/* Box Styling */
+#impressum-de,
+#impressum-en {
+  border-left: 5px solid #3498db;
+  padding: 20px 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#impressum-de:hover,
+#impressum-en:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+
+  #impressum-de,
+  #impressum-en {
+    padding: 20px;
+    margin: 15px;
     font-size: 1rem;
-    transition: background-color 0.3s ease;
   }
-  
-  .language-toggle button:hover {
-    background-color: #2980b9;
+
+  .language-toggle button {
+    margin: 5px;
+    padding: 8px 16px;
   }
-  
-  
-  /* Impressum Section Styling */
-  #impressum-de, #impressum-en {
-    padding: 30px;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 20px 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+
+  #impressum-de h1,
+  #impressum-en h1 {
+    font-size: 1.8rem;
   }
-  
-  #impressum-de h1, #impressum-en h1 {
-    font-size: 2.2rem;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
-    display: inline-block;
+}
+
+/* Login Box */
+.login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  max-width: 400px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 25px;
+}
+
+/* Login Content */
+.login-content h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Submit Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  #impressum-de p, #impressum-en p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #555;
-    margin-bottom: 20px;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  #impressum-de a, #impressum-en a {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .login-box {
+    padding: 20px;
+    margin: 0 10px;
   }
-  
-  #impressum-de a:hover, #impressum-en a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Box Styling */
-  #impressum-de, #impressum-en {
-    border-left: 5px solid #3498db;
-    padding: 20px 30px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  #impressum-de:hover, #impressum-en:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive Styling */
-  @media (max-width: 768px) {
-    #impressum-de, #impressum-en {
-      padding: 20px;
-      margin: 15px;
-      font-size: 1rem;
-    }
-  
-    .language-toggle button {
-      margin: 5px;
-      padding: 8px 16px;
-    }
-  
-    #impressum-de h1, #impressum-en h1 {
-      font-size: 1.8rem;
-    }
-  }
-  
+}
