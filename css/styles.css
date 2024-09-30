@@ -1149,6 +1149,7 @@ img {
   margin: 0 auto;
   animation: fadeIn 1s ease-in-out;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 /* Login Content */
@@ -1211,13 +1212,5 @@ img {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-/* Mobile Responsive Design */
-@media (max-width: 768px) {
-  .login-box {
-    padding: 20px;
-    margin: 0 10px;
   }
 }
