@@ -6,19 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TheoremDatabase Login</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/login.css" />
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav>
+    <!-- Vereinfachte Navigation -->
+    <nav class="minimal-nav">
+        <a href="/theoremdatabase/login" class="logo">TheoremDatabase</a>
         <ul class="nav-links">
             <li><a href="/index">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/projects">Projects</a></li>
             <li><a href="/publications">Publications</a></li>
-            <li><a href="/theoremdatabase/login">TheoremDatabase</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
+        <!-- Burger-Menü für mobile Geräte -->
         <div class="burger">
             <div></div>
             <div></div>
@@ -27,19 +29,17 @@
     </nav>
 
     <div class="content login-page">
-        <!-- Login Form -->
+        <!-- Login Formular -->
         <section id="login-section">
             <div class="login-box">
                 <div class="login-content">
-                    <h1>TheoremDatabase Login</h1>
+                    <h1>Login</h1>
                     <form action="theoremdatabase" method="post">
                         <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" required />
+                            <input type="text" id="username" name="username" required placeholder="Username" />
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" required />
+                            <input type="password" id="password" name="password" required placeholder="Password" />
                         </div>
                         <button type="submit" class="btn login-btn">Login</button>
                     </form>
@@ -48,28 +48,16 @@
         </section>
     </div>
 
-
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="social-media">
-            <a href="https://github.com/KilianKoch">
-                <img src="/images/githubLogo.svg" alt="GitHub Logo" class="social-icon" />
-            </a>
-            <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
-                <img src="/images/linkedinLogo.svg" alt="LinkedIn Logo" class="social-icon" />
-            </a>
-            <!-- Add more social icons as needed -->
-        </div>
-        <p>&copy; 2024 Kilian Koch. All rights reserved.</p>
+    <!-- Vereinfachter Footer -->
+    <footer class="minimal-footer">
         <p>
+            &copy; 2024 Kilian Koch.
             <a href="/impressum.html">Impressum</a> |
             <a href="/datenschutz.html">Privacy Policy</a>
         </p>
     </footer>
 
-    <script src="/js/scripts.js"></script>
+    <script type="module" src="/scripts/main.js"></script>
 </body>
 
 </html>
