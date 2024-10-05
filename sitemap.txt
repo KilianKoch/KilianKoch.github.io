@@ -3,6 +3,7 @@ https://kiliankoch.de/index
 https://kiliankoch.de/about
 https://kiliankoch.de/contact
 https://kiliankoch.de/projects
+https://kiliankoch.de/projects/koki
 https://kiliankoch.de/publications
 https://kiliankoch.de/impressum
 https://kiliankoch.de/datenschutz

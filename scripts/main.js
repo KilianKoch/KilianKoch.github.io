@@ -4,43 +4,64 @@ import { loadAndGeneratePublications } from './publications.js';
 import { toggleLanguage, toggleLanguageImpressum } from './languageToggle.js';
 
 /**
- * Überprüft den aktuellen Seitennamen.
+ * Überprüft den aktuellen Seitennamen im gesamten Pfad.
  * @param {string} name - Der erwartete Name der Seite.
- * @returns {boolean} - Ob die aktuelle Seite dem Namen entspricht.
+ * @returns {boolean} - Ob der gesamte Pfad dem Namen exakt entspricht.
  */
 function isPageName(name) {
   const pathname = window.location.pathname;
-  const segments = pathname.split("/").filter(Boolean); // Split und leere Segmente filtern
-  const lastSegment = segments[segments.length - 1] || ""; // Letztes Segment oder leere Zeichenkette
+  const cleanPath = pathname.replace(/\/$/, ""); // Entfernt den letzten Slash, falls vorhanden
 
-  // Überprüfen, ob das letzte Segment dem Namen entspricht oder dem Namen mit .html
-  return lastSegment === name || lastSegment === `${name}.html`;
+  // Exakter Vergleich des gesamten Pfads mit dem übergebenen Namen
+  return cleanPath === `/${name}` || cleanPath === `/${name}.html`;
 }
+
+
+
 
 /**
  * Initialisiert die Seite basierend auf dem Seitennamen.
  */
 async function initializePage() {
-  if (isPageName("index") || isPageName("")) {
-    const projectCards = document.querySelector(".project-cards");
-    if (projectCards) {
-      await loadAndGenerateProjects(projectCards);
-    }
+  switch (true) {
+    case isPageName("index") || isPageName(""):
+      const projectCards = document.querySelector(".project-cards");
+      if (projectCards) {
+        await loadAndGenerateProjects(projectCards);
+      }
 
-    const publicationList = document.querySelector(".publication-list");
-    if (publicationList) {
-      await loadAndGeneratePublications(publicationList);
-    }
-  } else if (isPageName("projects")) {
-    const projectsGrid = document.querySelector(".projects-grid");
-    if (projectsGrid) {
-      await loadAndGenerateProjects(projectsGrid);
-    }
-  } else if (isPageName("publications")) {
-    const publicationList = document.querySelector(".publication-list");
-    if (publicationList) {
-      await loadAndGeneratePublications(publicationList);
-    }
+      const publicationListIndex = document.querySelector(".publication-list");
+      if (publicationListIndex) {
+        await loadAndGeneratePublications(publicationListIndex);
+      }
+      break;
+
+    case isPageName("projects"):
+      const projectsGrid = document.querySelector(".projects-grid");
+      if (projectsGrid) {
+        await loadAndGenerateProjects(projectsGrid);
+      }
+      break;
+
+    case isPageName("projects/koki"):
+      const galleryContainer = document.querySelector(".gallery-container");
+      if (galleryContainer) {
+        import('./gallery.js').then(({ initializeGallery }) => {
+          initializeGallery();
+        });
+      }
+      break;
+
+    case isPageName("publications"):
+      const publicationList = document.querySelector(".publication-list");
+      if (publicationList) {
+        await loadAndGeneratePublications(publicationList);
+      }
+      break;
+
+    default:
+      // Optionale Behandlung für andere Seiten
+      break;
   }
 }
 
