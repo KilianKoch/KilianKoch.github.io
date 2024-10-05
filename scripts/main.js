@@ -5,12 +5,17 @@ import { toggleLanguage, toggleLanguageImpressum } from './languageToggle.js';
 
 /**
  * Überprüft den aktuellen Seitennamen im gesamten Pfad.
- * @param {string} name - Der erwartete Name der Seite.
+ * @param {string} name - Der erwartete Name der Seite (z.B. "projects/koki" oder "").
  * @returns {boolean} - Ob der gesamte Pfad dem Namen exakt entspricht.
  */
 function isPageName(name) {
   const pathname = window.location.pathname;
   const cleanPath = pathname.replace(/\/$/, ""); // Entfernt den letzten Slash, falls vorhanden
+
+  if (cleanPath === '') {
+    // Root path
+    return name === '' || name.toLowerCase() === 'index';
+  }
 
   // Exakter Vergleich des gesamten Pfads mit dem übergebenen Namen
   return cleanPath === `/${name}` || cleanPath === `/${name}.html`;
