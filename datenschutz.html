@@ -11,6 +11,9 @@
 <body>
   <!-- Navigation Bar -->
   <nav>
+    <div class="logo">
+      <img src="images/me.jpeg" />
+    </div>
     <ul class="nav-links">
       <li><a href="index">Home</a></li>
       <li><a href="about">About</a></li>
@@ -39,7 +42,7 @@
       <h2>1. Allgemeine Hinweise</h2>
       <p>
         Diese Website verarbeitet selbst keine personenbezogenen Daten. Jegliche Erhebung von Daten, wie IP-Adressen
-        oder technische Informationen (z. B. Browsertyp, Betriebssystem, Zugriffszeit), erfolgt ausschließlich durch
+        oder technische Informationen (z. B. Browsertyp, Betriebssystem, Zugriffszeit), erfolgt ausschließlich durch
         GitHub Pages, das diese Website hostet. Diese Daten sind notwendig, um die Website bereitzustellen und die
         Sicherheit der Dienste zu gewährleisten.
       </p>
@@ -67,43 +70,50 @@
 
       <h3>Verarbeitung von Anmeldedaten</h3>
       <p>
-        Bei der Anmeldung werden ausschließlich die für die Authentifizierung notwendigen Daten verarbeitet, wie
-        E-Mail-Adresse und Passwort. Diese Daten werden sicher über ein Content Delivery Network (CDN) übertragen, um
-        die Integrität und Verfügbarkeit der Anmeldedienste zu gewährleisten. Es erfolgt keine Weitergabe oder
-        Verarbeitung dieser Daten für andere Zwecke.
+        Bei der Anmeldung und beim Zugriff auf geschützte Bereiche werden die für die Authentifizierung notwendigen
+        Daten verarbeitet, wie E-Mail-Adresse und Passwort. Wir verwenden hierfür die Dienste von Supabase, um zu
+        überprüfen, ob Sie angemeldet sind. Supabase kann dabei personenbezogene Daten wie Ihre IP-Adresse und
+        Anmeldedaten verarbeiten. Weitere Informationen finden Sie in der <a
+          href="https://supabase.com/privacy">Supabase-Datenschutzerklärung</a>.
       </p>
 
       <h3>Sicherheit der Datenübertragung</h3>
       <p>
         Die Übertragung der Anmeldedaten erfolgt verschlüsselt mittels HTTPS, um den Schutz Ihrer Daten während der
-        Übertragung zu gewährleisten. Das eingesetzte CDN unterstützt diese Sicherheitsmaßnahmen und speichert keine
-        personenbezogenen Daten über die Authentifizierung hinaus.
+        Übertragung zu gewährleisten. Supabase und die eingesetzten CDNs unterstützen diese Sicherheitsmaßnahmen und
+        speichern keine personenbezogenen Daten über die Authentifizierung hinaus.
+      </p>
+
+      <h3>Überprüfung der Anmeldung</h3>
+      <p>
+        Wenn Nutzer auf Bereiche zugreifen, die eine Anmeldung erfordern, wird über ein CDN und Supabase überprüft, ob
+        sie angemeldet sind. Diese Überprüfung ist notwendig, um den sicheren Zugang zu geschützten Inhalten zu
+        gewährleisten.
       </p>
 
       <h3>Rechte der Nutzer</h3>
       <p>
         Da wir keine personenbezogenen Daten direkt erheben oder speichern, können Sie sich bei Fragen zur
-        Datenverarbeitung durch GitHub an deren Datenschutzrichtlinie halten. Bei weiteren Fragen können Sie uns
-        jederzeit kontaktieren.
+        Datenverarbeitung durch GitHub oder Supabase an deren Datenschutzrichtlinien halten. Bei weiteren Fragen können
+        Sie uns jederzeit kontaktieren.
       </p>
+
       <h2>4. Nutzung von Content Delivery Networks (CDNs)</h2>
       <p>
         Diese Website verwendet Content Delivery Networks (CDNs) wie <a href="https://cdnjs.com/">cdnjs</a>, um
-        statische Ressourcen wie Schriftarten und Icons bereitzustellen. Ein Beispiel hierfür ist die Einbindung von
-        Font Awesome.
+        statische Ressourcen wie Schriftarten, Icons und zur Unterstützung der Login-Überprüfung bereitzustellen. Ein
+        Beispiel hierfür ist die Einbindung von Font Awesome und die Nutzung von CDNs für die sichere Überprüfung der
+        Benutzeranmeldung über Supabase.
       </p>
       <p>
-        Durch die Nutzung von CDNs werden keine personenbezogenen Daten an die CDN-Anbieter weitergegeben. Die
-        eingebundenen CDNs übertragen ausschließlich statische Dateien und speichern keine Informationen über die
-        Besucher dieser Website. Es findet keine Verarbeitung oder Speicherung von IP-Adressen oder anderen
-        personenbezogenen Daten durch die CDNs statt.
+        Durch die Nutzung von CDNs können personenbezogene Daten wie Ihre IP-Adresse an die CDN-Anbieter übertragen
+        werden. Diese Daten sind notwendig, um die Funktionalität der Website zu gewährleisten, insbesondere die sichere
+        Authentifizierung von Nutzern.
       </p>
       <p>
-        Wir setzen CDNs ein, um die Ladezeiten der Website zu optimieren und die Verfügbarkeit der Ressourcen
-        sicherzustellen. Die Nutzung von CDNs erfolgt im Einklang mit den geltenden Datenschutzbestimmungen,
-        insbesondere der DSGVO.
+        Wir setzen CDNs und Supabase ein, um die Ladezeiten der Website zu optimieren, die Verfügbarkeit der Ressourcen
+        sicherzustellen und eine sichere Anmeldung zu ermöglichen.
       </p>
-
 
       <h3>Kontakt</h3>
       <p>
@@ -113,6 +123,7 @@
         E-Mail: kilian_koch@gmx.de
       </p>
     </section>
+
 
     <!-- English Privacy Policy -->
     <section id="privacy-policy-en" style="display: none;">
@@ -147,39 +158,46 @@
 
       <h3>Processing of Login Data</h3>
       <p>
-        When logging in, only the data necessary for authentication, such as email address and password, are processed.
-        These data are securely transmitted via a Content Delivery Network (CDN) to ensure the integrity and
-        availability of the login services. There is no further sharing or processing of these data for other purposes.
+        When logging in and accessing protected areas, the data necessary for authentication, such as email address and
+        password, are processed. We use the services of Supabase to verify if you are logged in. Supabase may process
+        personal data such as your IP address and login credentials. For more information, please refer to the <a
+          href="https://supabase.com/privacy">Supabase Privacy Policy</a>.
       </p>
 
       <h3>Data Transmission Security</h3>
       <p>
         The transmission of login data is encrypted via HTTPS to ensure the protection of your data during transmission.
-        The CDN used supports these security measures and does not store personal data beyond the authentication
-        process.
+        Supabase and the CDNs used support these security measures and do not store personal data beyond the
+        authentication process.
+      </p>
+
+      <h3>Verification of Login Status</h3>
+      <p>
+        When users access areas that require login, a CDN and Supabase are used to check if they are logged in. This
+        verification is necessary to ensure secure access to protected content.
       </p>
 
       <h3>User Rights</h3>
       <p>
-        Since we do not directly collect or store personal data, please refer to GitHub's privacy policy for any
-        questions regarding data processing. If you have further questions, feel free to contact us at any time.
+        Since we do not directly collect or store personal data, please refer to GitHub's and Supabase's privacy
+        policies for any questions regarding data processing. If you have further questions, feel free to contact us at
+        any time.
       </p>
 
       <h2>4. Use of Content Delivery Networks (CDNs)</h2>
       <p>
         This website uses Content Delivery Networks (CDNs) such as <a href="https://cdnjs.com/">cdnjs</a> to deliver
-        static resources like fonts and icons. An example of this is the inclusion of Font Awesome.
+        static resources like fonts, icons, and to support login verification. Examples include the inclusion of Font
+        Awesome and the use of CDNs for the secure verification of user login status via Supabase.
       </p>
       <p>
-        By using CDNs, no personal data is transmitted to the CDN providers. The included CDNs only deliver static files
-        and do not store any information about the visitors of this website. There is no processing or storage of IP
-        addresses or other personal data by the CDNs.
+        By using CDNs, personal data such as your IP address may be transmitted to the CDN providers. These data are
+        necessary to ensure the functionality of the website, particularly the secure authentication of users.
       </p>
       <p>
-        We use CDNs to optimize the loading times of the website and to ensure the availability of resources. The use of
-        CDNs is in compliance with applicable data protection regulations, particularly the GDPR.
+        We use CDNs and Supabase to optimize the loading times of the website, ensure the availability of resources, and
+        enable secure login.
       </p>
-
 
       <h3>Contact</h3>
       <p>
@@ -189,6 +207,7 @@
         Email: kilian_koch@gmx.de
       </p>
     </section>
+
   </div>
 
   <!-- Footer -->
@@ -205,7 +224,7 @@
     <p>&copy; 2024 Kilian Koch. All rights reserved.</p>
     <p>
       <a href="impressum.html">Impressum</a> |
-      <a href="datenschutz.html">Datenschutzerklärung</a>
+      <a href="datenschutz.html">Privacy Policy</a>
     </p>
   </footer>
 
