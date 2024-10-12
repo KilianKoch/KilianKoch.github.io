@@ -1,115 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KoKi | Kilian Koch</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/projects.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KoKi | Kilian Koch</title>
-  <link rel="stylesheet" href="/css/styles.css" />
-  <link rel="stylesheet" href="/css/projects.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-
-<body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="logo">
-      <img src="/images/me.jpeg" />
-    </div>
-    <ul class="nav-links">
-      <li><a href="/index">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/projects">Projects</a></li>
-      <li><a href="/publications">Publications</a></li>
-      <li><a href="/theoremdatabase/login">TheoremDatabase</a></li>
-      <li><a href="/contact">Contact</a></li>
-    </ul>
-    <div class="burger">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </nav>
-
-  <div class="content">
-    <!-- Project Detail Section -->
-    <section id="project-detail">
-      <h2>KoKi</h2>
-      <div class="project-detail-container">
-        <img src="/images/KoKi.svg" alt="KoKi Project" class="project-detail-image" />
-        <div class="project-detail-content">
-          <p>A comprehensive project management tool designed to enhance productivity and automate workflows. KoKi
-            offers a range of features including task tracking, collaboration tools, and analytics.</p>
-          <h3>Features</h3>
-          <ul>
-            <li>Task Management</li>
-            <li>Real-time Collaboration</li>
-            <li>Automated Reporting</li>
-            <li>Integration with Popular Tools</li>
-          </ul>
-          <a href="https://github.com/KilianKoch/KoKi" class="btn">View on GitHub</a>
-        </div>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">
+        <img src="/images/me.jpeg" />
       </div>
-    </section>
-
-    <!-- Technologies Used -->
-    <section id="technologies">
-      <h2>Technologies Used</h2>
-      <div class="technologies-container">
-        <div class="tech-item">
-          <i class="fab fa-html5"></i>
-          <p>HTML5</p>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-css3-alt"></i>
-          <p>CSS3</p>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-js"></i>
-          <p>JavaScript</p>
-        </div>
-        <div class="tech-item">
-          <i class="fab fa-node"></i>
-          <p>Node.js</p>
-        </div>
-        <div class="tech-item">
-          <i class="fas fa-database"></i>
-          <p>PostgreSQL</p>
-        </div>
+      <ul class="nav-links">
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/publications">Publications</a></li>
+        <li><a href="/theoremdatabase/login">TheoremDatabase</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
-    </section>
+    </nav>
 
+    <div class="content">
+      <!-- Project Detail Section -->
+      <section id="project-detail">
+        <h2>KoKi</h2>
+        <div class="project-detail-container">
+          <img
+            src="/images/KoKi.svg"
+            alt="KoKi Project"
+            class="project-detail-image"
+          />
+          <div class="project-detail-content">
+            <p>
+              A comprehensive project management tool, continuously developed
+              since 2019, designed to enhance productivity and automate
+              workflows. KoKi provides an intuitive solution for managing
+              customer information alongside their vehicles, with advanced
+              features tailored for the needs of Auto-Koch GmbH & Co. KG, where
+              I am currently employed.
+            </p>
 
-    <!-- Project Gallery -->
-    <section id="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-container">
-        <!-- Galerie wird hier dynamisch eingefügt -->
-      </div>
-    </section>
+            <h3>Features</h3>
+            <ul>
+              <li>Customer and vehicle Management</li>
+              <li>
+                Detailed vehicle history and customer information management
+              </li>
+              <li>
+                Automated scheduling for inspections and TÜV (general and
+                emissions inspections) based on custom algorithms developed in
+                collaboration with Auto-Koch
+              </li>
+              <li>
+                Complex search functionalities for warranties, overdue calls,
+                etc.
+              </li>
+              <li>Automatic PDF generation for postal communication</li>
+              <li>
+                SMS and email integration via APIs for automatic appointment
+                confirmations
+              </li>
+              <li>
+                Chat for easy communication between employees, including sharing
+                vehicle details
+              </li>
+              <li>
+                Custom specifications for better data handling and user
+                experience
+              </li>
+            </ul>
 
-  </div>
+            <p>
+              This project is developed in close cooperation with the users at
+              <a href="https://www.auto-koch.com/" target="_blank"
+                >Auto-Koch GmbH & Co. KG</a
+              >, where I work, and is continuously evolving with new features
+              like automatic appointment reminders.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <!-- Footer -->
-  <footer>
-    <div class="social-media">
-      <a href="https://github.com/KilianKoch">
-        <img src="/images/githubLogo.svg" alt="GitHub Logo" class="social-icon" />
-      </a>
-      <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
-        <img src="/images/linkedinLogo.svg" alt="LinkedIn Logo" class="social-icon" />
-      </a>
-      <!-- Add more social icons as needed -->
+      <!-- Technologies Used -->
+      <section id="technologies">
+        <h2>Technologies Used</h2>
+        <div class="technologies-container">
+          <div class="frontend-section">
+            <h3>Frontend</h3>
+            <div class="tech-item">
+              <i class="fab fa-html5"></i>
+              <p>HTML5</p>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-css3-alt"></i>
+              <p>CSS3</p>
+            </div>
+            <div class="tech-item">
+              <i class="fab fa-js"></i>
+              <p>JavaScript</p>
+            </div>
+          </div>
+
+          <div class="backend-section">
+            <h3>Backend</h3>
+            <div class="tech-item">
+              <i class="fab fa-node"></i>
+              <p>Node.js</p>
+            </div>
+            <div class="tech-item">
+              <i class="fas fa-database"></i>
+              <p>PostgreSQL</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Gallery -->
+      <section id="gallery">
+        <h2>Gallery(currently only example pictures)</h2>
+        <div class="gallery-container">
+          <!-- Galerie wird hier dynamisch eingefügt -->
+        </div>
+      </section>
     </div>
-    <p>&copy; 2024 Kilian Koch. All rights reserved.</p>
-    <p>
-      <a href="/impressum">Impressum</a> |
-      <a href="/datenschutz">Privacy Policy</a>
-    </p>
-  </footer>
 
-  <!-- JavaScript-Modules -->
-  <script type="module" src="/scripts/main.js"></script>
-</body>
+    <!-- Footer -->
+    <footer>
+      <div class="social-media">
+        <a href="https://github.com/KilianKoch">
+          <img
+            src="/images/githubLogo.svg"
+            alt="GitHub Logo"
+            class="social-icon"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
+          <img
+            src="/images/linkedinLogo.svg"
+            alt="LinkedIn Logo"
+            class="social-icon"
+          />
+        </a>
+        <!-- Add more social icons as needed -->
+      </div>
+      <p>&copy; 2024 Kilian Koch. All rights reserved.</p>
+      <p>
+        <a href="/impressum">Impressum</a> |
+        <a href="/datenschutz">Privacy Policy</a>
+      </p>
+    </footer>
 
+    <!-- JavaScript-Modules -->
+    <script type="module" src="/scripts/main.js"></script>
+  </body>
 </html>

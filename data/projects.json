@@ -1,16 +1,9 @@
 [
-    {
-      "title": "KoKi",
-      "description": "A comprehensive project management tool.",
-      "image": "images/KoKi.svg",
-      "link": "koki",
-      "tags": ["management", "productivity", "automation"]
-    },
-    {
-      "title": "Dispo",
-      "description": "An advanced scheduling application.",
-      "image": "images/Dispo.svg",
-      "link": "dispo",
-      "tags": ["scheduling", "automation"]
-    }
+  {
+    "title": "KoKi",
+    "description": "A tool for managing customer information and vehicle tracking with automated workflows at Auto-Koch.",
+    "image": "images/KoKi.svg",
+    "link": "koki",
+    "tags": ["management", "automation"]
+  }
 ]

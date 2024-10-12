@@ -40,12 +40,25 @@ export function generateProjectCards(dataArray, targetElement) {
     p.textContent = project.description;
 
     const a = document.createElement("a");
-    a.href = `/projects/${project.link}`;
+    a.href = project.link ? `/projects/${project.link}` : '/projects/404';
     a.className = "btn";
-    a.textContent = "Mehr Erfahren";
+    a.textContent = "Learn More";
+
+    // Create a div for the tags
+    const tagsDiv = document.createElement("div");
+    tagsDiv.className = "tags";
+
+    // Add each tag to the tagsDiv
+    project.tags.forEach((tag) => {
+      const tagSpan = document.createElement("span");
+      tagSpan.className = "tag";
+      tagSpan.textContent = tag;
+      tagsDiv.appendChild(tagSpan);
+    });
 
     cardContent.appendChild(h3);
     cardContent.appendChild(p);
+    cardContent.appendChild(tagsDiv); // Append the tags div
     cardContent.appendChild(a);
 
     card.appendChild(img);
@@ -55,12 +68,20 @@ export function generateProjectCards(dataArray, targetElement) {
   });
 }
 
+
 /**
  * Lädt und generiert die Projektkarten.
  * @param {HTMLElement} targetElement - Das Container-Element, in das die Karten eingefügt werden.
  */
 export async function loadAndGenerateProjects(targetElement) {
+  // Create and show a loading spinner before fetching data
+  const spinner = document.createElement("div");
+  spinner.className = "loading-spinner";
+
+  // Append the spinner to the targetElement
+  targetElement.appendChild(spinner);
   const projects = await fetchData('/data/projects.json');
+  targetElement.removeChild(spinner); // Remove the spinner after fetching data
   console.log('Geladene Projekte:', projects); // Debugging
   generateProjectCards(projects, targetElement);
 }

@@ -1,6 +1,7 @@
 // scripts/publications.js
 
-import { fetchData } from './datafetcher.js';
+import { fetchData, ArxiveGrabber } from "./datafetcher.js";
+
 
 /**
  * Generiert Publikationslisten und fügt sie dem Ziel-Element hinzu.
@@ -22,8 +23,13 @@ export function generatePublicationList(dataArray, targetElement) {
     return;
   }
 
+  const ul = document.createElement("ul");
+  ul.style.listStyleType = "none"; // Entferne Standard-Aufzählungszeichen
+  ul.style.padding = "0"; // Entferne Standard-Polsterung
+
   dataArray.forEach((pub) => {
     const li = document.createElement("li");
+    li.style.marginBottom = "20px"; // Abstand zwischen den Einträgen
 
     // Titel und Journal-Info
     const strong = document.createElement("strong");
@@ -57,11 +63,14 @@ export function generatePublicationList(dataArray, targetElement) {
     const a = document.createElement("a");
     a.href = pub.link;
     a.className = "btn";
-    a.textContent = "Mehr Lesen";
+    a.textContent = "Learn More";
+    a.target = "_blank"; // Öffnet den Link in einem neuen Tab
 
     li.appendChild(a);
-    targetElement.appendChild(li);
+    ul.appendChild(li);
   });
+
+  targetElement.appendChild(ul);
 
   // MathJax erneut rendern, falls verwendet
   if (typeof MathJax !== "undefined") {
@@ -74,7 +83,26 @@ export function generatePublicationList(dataArray, targetElement) {
  * @param {HTMLElement} targetElement - Das Container-Element, in das die Publikationen eingefügt werden.
  */
 export async function loadAndGeneratePublications(targetElement) {
-  const publications = await fetchData('/data/publications.json');
-  console.log('Geladene Publikationen:', publications); // Debugging
+  // Create and show a loading spinner before fetching data
+  const spinner = document.createElement("div");
+  spinner.className = "loading-spinner";
+
+  // Append the spinner to the targetElement
+  targetElement.appendChild(spinner);
+
+  console.log("Lade Publikationen..."); // Debugging
+
+  // Fetch the publications from arXiv, later if i have publications, lel
+  // const arxivGrabber = new ArxiveGrabber("Kilian Koch");
+  // const publications = await arxivGrabber.getPublications();
+
+  const publications = await fetchData("publication.json");
+
+  // Remove the spinner once the publications are loaded
+  targetElement.removeChild(spinner);
+
+  console.log("Geladene Publikationen:", publications); // Debugging
+
+  // Generate the publication list
   generatePublicationList(publications, targetElement);
 }

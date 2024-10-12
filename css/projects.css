@@ -20,10 +20,11 @@ body {
 .project-detail-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   gap: 60px;
   max-width: 1200px;
   margin: 0 auto;
+  justify-content: center;
 }
 
 .project-detail-image {
@@ -84,12 +85,34 @@ body {
 
 .technologies-container {
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
 }
+
+.frontend-section, .backend-section {
+  width: 45%;
+  margin-bottom: 20px;
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.frontend-section h3, .backend-section h3{
+  width: 100%;
+  margin-bottom: 0;
+}
+
+/* Responsive: Stack sections on smaller screens */
+@media (max-width: 768px) {
+  .frontend-section, .backend-section {
+    width: 100%;
+  }
+}
+
 
 .tech-item {
   display: flex;
@@ -102,7 +125,6 @@ body {
 
 .tech-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 .tech-item img {
@@ -197,6 +219,7 @@ body {
   max-width: 90%;
   max-height: 60vh; /* Begrenze die Höhe auf 60% der Viewport-Höhe */
   animation: zoomIn 0.5s;
+  border-radius: 8px;
 }
 
 #lightbox .close {
@@ -214,7 +237,7 @@ body {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 70px;
 }
 
 #lightbox .prev,

@@ -170,22 +170,21 @@ nav .burger.toggle div:nth-child(3) {
     display: flex;
   }
 
-  body>div:nth-child(2) {
+  body > div:nth-child(2) {
     margin-top: 0px;
   }
-
 }
 
-body>div:nth-child(2) {
+body > div:nth-child(2) {
   margin-top: 60px;
 }
 
-
 /* Hero Section */
 #hero {
-  background-image: url("../images/hero-background.jpg");
+  background-image: url("../images/hero.webp");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   height: 80vh;
   position: relative;
   min-height: 500px;
@@ -213,6 +212,7 @@ body>div:nth-child(2) {
 #hero .hero-content h1 {
   font-size: 48px;
   margin-bottom: 20px;
+  color: white;
 }
 
 #hero .hero-content p {
@@ -280,6 +280,7 @@ section h3 {
   overflow: hidden;
   margin: 20px;
   width: 300px;
+  position: relative;
 }
 
 .card img {
@@ -292,6 +293,9 @@ section h3 {
 
 .card-content {
   padding: 20px;
+  padding-bottom: 40px;
+  position: relative;
+  height: calc(100% - 300px);
 }
 
 .card-content h3 {
@@ -308,6 +312,8 @@ section h3 {
   padding: 10px;
   text-decoration: none;
   border-radius: 4px;
+  position: absolute;
+  bottom: 15px;
 }
 
 .card-content .btn:hover {
@@ -596,7 +602,8 @@ footer .social-media a:hover {
   fill: white;
   /* Ensures that the SVG is white */
   transition: transform 0.3s ease;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(180deg) brightness(104%) contrast(101%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%)
+    hue-rotate(180deg) brightness(104%) contrast(101%);
 }
 
 .social-icon:hover {
@@ -869,7 +876,6 @@ img {
 
 /* Bounce Animation */
 @keyframes bounce {
-
   0%,
   20%,
   50%,
@@ -1018,7 +1024,6 @@ img {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-
   #datenschutz-de,
   #privacy-policy-en {
     padding: 20px;
@@ -1068,7 +1073,6 @@ img {
 .language-toggle button:hover {
   background-color: #2980b9;
 }
-
 
 /* Impressum Section Styling */
 #impressum-de,
@@ -1136,7 +1140,6 @@ img {
 
 /* Responsive Styling */
 @media (max-width: 768px) {
-
   #impressum-de,
   #impressum-en {
     padding: 20px;
@@ -1232,4 +1235,45 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Spinner-Styles */
+.loading-spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.tags {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #6f6f6f;; /* Example color, feel free to change */
+  color: white;
+  padding: 5px 10px;
+  margin-right: 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
