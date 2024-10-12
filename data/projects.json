@@ -1,7 +1,7 @@
 [
   {
     "title": "KoKi",
-    "description": "A tool for managing customer information and vehicle tracking with automated workflows at Auto-Koch.",
+    "description": "A tool for managing customer information and vehicle information with automated workflows at Auto-Koch.",
     "image": "images/KoKi.svg",
     "link": "koki",
     "tags": ["management", "automation"]
