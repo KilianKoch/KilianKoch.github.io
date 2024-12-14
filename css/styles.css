@@ -21,6 +21,11 @@ body {
   /* Allows the content to grow and push the footer down */
 }
 
+.contact-page{
+  display: grid;
+  place-items: center;
+}
+
 /* Navigation Bar */
 nav {
   display: flex;
@@ -493,8 +498,8 @@ section h3 {
 /* Contact Form */
 /* Styling for the contact form */
 #contact-form {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 800px;
+  margin: 20px;
   padding: 2rem;
   background-color: #fff;
   border-radius: 8px;
