@@ -381,3 +381,146 @@ body {
   background-color: #2980b9;
   transform: scale(1.05);
 }
+
+/* Main container for the gallery */
+#project-images {
+  width: 1000px; /* Slightly wider for more breathing room */
+  height: 700px; /* Increased height */
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main image wrapper styling */
+.main-image-wrapper {
+  position: relative;
+  flex: 1; /* Takes up remaining space above thumbnails */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 2px solid #ddd;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* Main image styling */
+.main-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Scale up the main image slightly on hover */
+.main-image-wrapper:hover .main-image {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Banner styling (title & description overlay) */
+.banner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 20px;
+  text-align: left;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Make the banner appear on hover */
+.main-image-wrapper:hover .banner {
+  opacity: 1;
+}
+
+.banner h3 {
+  margin: 0 0 5px;
+  text-align: left;
+  color: white;
+  font-size: 1.3rem;
+}
+
+.banner p {
+  margin: 0;
+  color: white;
+  font-size: 0.95rem;
+}
+
+/* Thumbnail container below the main image */
+.thumbnail-container {
+  height: 185px; /* Slightly taller to accommodate bigger thumbnails and text */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #007BFF #f4f4f9;
+  background: #f9f9f9;
+  border-top: 2px solid #ddd;
+}
+
+/* WebKit scrollbar customizations */
+.thumbnail-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.thumbnail-container::-webkit-scrollbar-track {
+  background: #f4f4f9;
+  border-radius: 4px;
+}
+
+.thumbnail-container::-webkit-scrollbar-thumb {
+  background: #007BFF;
+  border-radius: 4px;
+}
+
+/* Thumbnail styling */
+.thumbnail {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* Space between image and title */
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 90px; /* Slightly bigger than original */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Thumbnail image styling */
+.thumbnail img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 12px 12px 12px 12px;
+  transition: transform 0.2s ease, border-radius 0.2s ease;
+  user-select: none;
+}
+
+.thumbnail p {
+  font-size: 0.85rem;
+  color: #555;
+  text-align: center;
+  margin: 0;
+}
+
+/* Hover effect for thumbnails */
+.thumbnail:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.thumbnail:hover > img {
+  border-radius: 12px 12px 0 0;
+}

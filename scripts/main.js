@@ -49,12 +49,55 @@ async function initializePage() {
       break;
 
     case isPageName("projects/koki"):
+      const galleryData = [
+        {
+          src: "/images/KoKi/KoKi.svg",
+          title: "KoKi Logo",
+          description: "The official logo of the KoKi program.",
+          alt: "KoKi Logo"
+        },
+        {
+          src: "/images/KoKi/workFlowKoKi.webp",
+          title: "Workflow Example",
+          description: "Illustrates an example of the workflow where a customer is currently being called.",
+          alt: "Workflow Example"
+        },
+        {
+          src: "/images/KoKi/logInKoKi.webp",
+          title: "Login Page",
+          description: "Displays the login page of the application.",
+          alt: "Login Page"
+        },
+        {
+          src: "/images/KoKi/pdfKoKi.webp",
+          title: "PDF Generation",
+          description: "Demonstrates how a PDF can be generated using the provided customer data.",
+          alt: "PDF Generation"
+        },
+        {
+          src: "/images/KoKi/overviewKoKi.webp",
+          title: "Overview Page",
+          description: "Shows the status of the work already completed and the remaining tasks, with color-coded indicators.",
+          alt: "Overview Page"
+        },
+        {
+          src: "/images/KoKi/chatKoKi.webp",
+          title: "Chat Interface",
+          description: "Displays the internal chat interface for colleagues to communicate, such as sending customers or cars to each other or coordinating tasks.",
+          alt: "Chat Interface"
+        }
+      ];
+      
       const galleryContainer = document.querySelector(".gallery-container");
-      if (galleryContainer) {
-        import('./gallery.js').then(({ initializeGallery }) => {
-          initializeGallery();
-        });
-      }
+      const projectImages = document.querySelector("#project-images");
+      import('./gallery.js').then(({ initializeGallery, createGallery }) => {
+        if (galleryContainer) {
+        initializeGallery(galleryData)
+        }
+        if(projectImages) {
+          createGallery(galleryData,"#project-images");
+        }
+      });
       break;
 
     case isPageName("publications"):
