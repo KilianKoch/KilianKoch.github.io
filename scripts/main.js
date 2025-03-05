@@ -32,19 +32,19 @@ async function initializePage() {
     case isPageName("index") || isPageName(""):
       const projectCards = document.querySelector(".project-cards");
       if (projectCards) {
-        await loadAndGenerateProjects(projectCards);
+        loadAndGenerateProjects(projectCards);
       }
 
       const publicationListIndex = document.querySelector(".publication-list");
       if (publicationListIndex) {
-        await loadAndGeneratePublications(publicationListIndex);
+        loadAndGeneratePublications(publicationListIndex);
       }
       break;
 
     case isPageName("projects"):
       const projectsGrid = document.querySelector(".projects-grid");
       if (projectsGrid) {
-        await loadAndGenerateProjects(projectsGrid);
+        loadAndGenerateProjects(projectsGrid);
       }
       break;
 
@@ -103,7 +103,7 @@ async function initializePage() {
     case isPageName("publications"):
       const publicationList = document.querySelector(".publication-list");
       if (publicationList) {
-        await loadAndGeneratePublications(publicationList);
+        loadAndGeneratePublications(publicationList);
       }
       break;
 
