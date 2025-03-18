@@ -800,6 +800,97 @@ img {
   }
 }
 
+/* Details Section */
+/* Details Section */
+.NoBullets > li::before {
+  display: none;
+}
+
+.NoBullets > li {
+  padding-left: 0px !important;
+}
+
+details {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 5px;
+}
+
+details:hover,
+details[open] {
+  background-color: #f0f7ff; /* Sanftes Blau */
+}
+
+/* Spezielles Link-Design nur für den Resume-Bereich */
+/* Spezielles Link-Design nur für den Resume-Bereich */
+.resume-section a {
+  color: #3498db;         /* Dezentes Blau für Links */
+  text-decoration: underline;  /* Standard: Unterstrichen */
+  transition: color 0.2s ease;  /* Sanfte Farbänderung beim Hover */
+}
+
+.resume-section a:hover {
+  color: #2980b9;         /* Dunkleres Blau beim Hover */
+  text-decoration: underline;  /* Bleibt unterstrichen */
+}
+
+.resume-section a:active {
+  color: #1c6691;         /* Etwas dunkler beim Klick */
+}
+
+
+
+
+
+
+summary {
+  font-weight: normal;
+  color: #2c3e50;
+  list-style: none;
+  padding-left: 30px;
+  position: relative;
+}
+
+summary::before {
+  content: "+";
+  font-weight: bold;
+  font-size: 23px;
+  color: #3498db;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+details[open] summary::before {
+  content: "-";
+  transform: scaleX(1.8);
+}
+
+details p {
+  margin-left: 30px;
+  color: #555;
+}
+
+details p strong{
+  display: inline !important;
+  font-size: 1rem !important;
+}
+
+details hr {
+  margin: 8px 15px 5px;
+  background: #3498db;
+  height: 3px;
+  border: none;
+}
+
+
+
+
 /* -------------------- */
 /* 404 Error Page Styles */
 /* -------------------- */
@@ -927,7 +1018,7 @@ img {
 /* Language Toggle Buttons */
 .language-toggle {
   text-align: center;
-  margin: 20px;
+  margin: 80px 0 0 0 !important;
 }
 
 .language-toggle button {
@@ -1242,25 +1333,37 @@ img {
   }
 }
 
-/* Spinner-Styles */
 .loading-spinner {
-  border: 8px solid #f3f3f3;
-  border-top: 8px solid #3498db;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
+  position: relative;
+  animation: rotate 1s linear infinite;
+  border: 6px solid #f3f3f3;
   margin: 20px auto;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.loading-spinner::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 6px solid #3498db;
+  animation: prixClipFix 2s linear infinite alternate;
 }
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes prixClipFix {
+  0%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0); }
+  50%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%); }
+  100%  { clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%); }
+}
+
+
 
 .tags {
   margin-bottom: 30px;

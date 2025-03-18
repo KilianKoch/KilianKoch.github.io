@@ -1,6 +1,7 @@
 // scripts/publications.js
 
 import { fetchData, ArxiveGrabber } from "./datafetcher.js";
+import { withTimedCallback } from "./utils.js";
 
 
 /**
@@ -83,26 +84,32 @@ export function generatePublicationList(dataArray, targetElement) {
  * @param {HTMLElement} targetElement - Das Container-Element, in das die Publikationen eingefügt werden.
  */
 export async function loadAndGeneratePublications(targetElement) {
-  // Create and show a loading spinner before fetching data
-  const spinner = document.createElement("div");
-  spinner.className = "loading-spinner";
+    await withTimedCallback(
+        async () => {
+            // Fetch the publications from arXiv, later if i have publications, lel
+            // const arxivGrabber = new ArxiveGrabber("Kilian Koch");
+            // const publications = await arxivGrabber.getPublications();
 
-  // Append the spinner to the targetElement
-  targetElement.appendChild(spinner);
+            const publications = await fetchData("/data/publications.json");
 
-  console.log("Lade Publikationen..."); // Debugging
+            console.log("Geladene Publikationen:", publications); // Debugging
 
-  // Fetch the publications from arXiv, later if i have publications, lel
-  // const arxivGrabber = new ArxiveGrabber("Kilian Koch");
-  // const publications = await arxivGrabber.getPublications();
-
-  const publications = await fetchData("publication.json");
-
-  // Remove the spinner once the publications are loaded
-  targetElement.removeChild(spinner);
-
-  console.log("Geladene Publikationen:", publications); // Debugging
-
-  // Generate the publication list
-  generatePublicationList(publications, targetElement);
+            // Generate the publication list
+            generatePublicationList(publications, targetElement);
+        },
+        50, // Delay in milliseconds before the loader appears
+        () => {
+            // Create and show a loading spinner
+            const spinner = document.createElement("div");
+            spinner.className = "loading-spinner";
+            targetElement.appendChild(spinner);
+            return spinner;
+        },
+        (loader) => {
+          // Remove the spinner only if it still exists inside targetElement
+          if (loader && targetElement.contains(loader)) {
+              targetElement.removeChild(loader);
+          }
+      }
+    );
 }

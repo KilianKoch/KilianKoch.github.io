@@ -1,6 +1,7 @@
 // scripts/projects.js
 
 import { fetchData } from './datafetcher.js';
+import { withTimedCallback } from './utils.js';
 
 /**
  * Generiert Projektkarten und fügt sie dem Ziel-Element hinzu.
@@ -74,14 +75,25 @@ export function generateProjectCards(dataArray, targetElement) {
  * @param {HTMLElement} targetElement - Das Container-Element, in das die Karten eingefügt werden.
  */
 export async function loadAndGenerateProjects(targetElement) {
-  // Create and show a loading spinner before fetching data
-  const spinner = document.createElement("div");
-  spinner.className = "loading-spinner";
-
-  // Append the spinner to the targetElement
-  targetElement.appendChild(spinner);
-  const projects = await fetchData('/data/projects.json');
-  targetElement.removeChild(spinner); // Remove the spinner after fetching data
-  console.log('Geladene Projekte:', projects); // Debugging
-  generateProjectCards(projects, targetElement);
+  await withTimedCallback(
+      async () => {
+          const projects = await fetchData("/data/projects.json");
+          console.log("Geladene Projekte:", projects); // Debugging
+          generateProjectCards(projects, targetElement);
+      },
+      50, // Delay in milliseconds before showing the loader
+      () => {
+          // Create and show a loading spinner
+          const spinner = document.createElement("div");
+          spinner.className = "loading-spinner";
+          targetElement.appendChild(spinner);
+          return spinner;
+      },
+      (loader) => {
+          // Remove the spinner only if it still exists inside targetElement
+          if (loader && targetElement.contains(loader)) {
+              targetElement.removeChild(loader);
+          }
+      }
+  );
 }
