@@ -11,16 +11,35 @@ import { withTimedCallback } from './utils.js';
 export function generateProjectCards(dataArray, targetElement) {
   targetElement.innerHTML = ""; // Vorhandenen Inhalt löschen
 
-  if (dataArray.length === 0) {
-    const noProjectsBox = document.createElement("div");
-    noProjectsBox.textContent = "Currently, I don't have any projects.";
-    noProjectsBox.style.padding = "20px";
-    noProjectsBox.style.textAlign = "center";
-    noProjectsBox.style.backgroundColor = "#f5f5f5";
-    noProjectsBox.style.border = "1px solid #ddd";
-    noProjectsBox.style.borderRadius = "8px";
-    targetElement.appendChild(noProjectsBox);
-    return;
+  const softwareContainer = document.createElement("div");
+  softwareContainer.className = "project-container software";
+
+  const researchContainer = document.createElement("div");
+  researchContainer.className = "project-container research";
+
+  const softwareHeader = document.createElement("h2");
+  softwareHeader.textContent = "Software Projects";
+  softwareContainer.appendChild(softwareHeader);
+
+  const researchHeader = document.createElement("h2");
+  researchHeader.textContent = "Research Projects";
+  researchContainer.appendChild(researchHeader);
+
+  const hasSoftware = dataArray.some((project) => project.type === "software");
+  const hasResearch = dataArray.some((project) => project.type === "research");
+
+  if (!hasSoftware) {
+    const noSoftwareBox = document.createElement("div");
+    noSoftwareBox.textContent = "Currently, I don't have any software projects.";
+    noSoftwareBox.className = "no-projects-box";
+    softwareContainer.appendChild(noSoftwareBox);
+  }
+
+  if (!hasResearch) {
+    const noResearchBox = document.createElement("div");
+    noResearchBox.textContent = "Currently, I don't have any research projects.";
+    noResearchBox.className = "no-projects-box";
+    researchContainer.appendChild(noResearchBox);
   }
 
   dataArray.forEach((project) => {
@@ -41,15 +60,14 @@ export function generateProjectCards(dataArray, targetElement) {
     p.textContent = project.description;
 
     const a = document.createElement("a");
-    a.href = project.link ? `/projects/${project.link}` : '/projects/404';
+    a.href = project.link.url;
     a.className = "btn";
     a.textContent = "Learn More";
+    a.target = project.link.type === "external" ? "_blank" : "_self";
 
-    // Create a div for the tags
     const tagsDiv = document.createElement("div");
     tagsDiv.className = "tags";
 
-    // Add each tag to the tagsDiv
     project.tags.forEach((tag) => {
       const tagSpan = document.createElement("span");
       tagSpan.className = "tag";
@@ -59,15 +77,23 @@ export function generateProjectCards(dataArray, targetElement) {
 
     cardContent.appendChild(h3);
     cardContent.appendChild(p);
-    cardContent.appendChild(tagsDiv); // Append the tags div
+    cardContent.appendChild(tagsDiv);
     cardContent.appendChild(a);
 
     card.appendChild(img);
     card.appendChild(cardContent);
 
-    targetElement.appendChild(card);
+    if (project.type === "software") {
+      softwareContainer.appendChild(card);
+    } else if (project.type === "research") {
+      researchContainer.appendChild(card);
+    }
   });
+
+  targetElement.appendChild(softwareContainer);
+  targetElement.appendChild(researchContainer);
 }
+
 
 
 /**

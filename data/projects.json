@@ -3,7 +3,22 @@
     "title": "KoKi",
     "description": "A tool for managing customer information and vehicle information with automated workflows at Auto-Koch.",
     "image": "images/KoKi.svg",
-    "link": "koki",
-    "tags": ["management", "automation"]
+    "link": {
+      "type": "internal",
+      "url": "/projects/koki"
+    },
+    "tags": ["management", "automation"],
+    "type": "software"
+  },
+  {
+    "title": "C01 Singularity formation in dissipative harmonic flows",
+    "description": "We study harmonic map heat flow equations and their variants, focusing on singularities.",
+    "image": "images/CRC1481.svg",
+    "link": {
+      "type": "external",
+      "url": "https://sfb1481.rwth-aachen.de/research/area-c/project-c01/"
+    },
+    "tags": ["harmonic flows", "PDE", "numerical analysis", "singularities"],
+    "type": "research"
   }
 ]
