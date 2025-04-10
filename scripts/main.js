@@ -2,6 +2,11 @@ import { initializeNavigation } from './navigation.js';
 import { loadAndGenerateProjects } from './projects.js';
 import { loadAndGeneratePublications } from './publications.js';
 import { toggleLanguage, toggleLanguageImpressum } from './languageToggle.js';
+import { fetchOrcidWorks } from './orcid.js';
+
+fetchOrcidWorks('0009-0008-4358-9245')
+  .then(works => console.log(JSON.stringify(works)))
+  .catch(err => console.error(err));
 
 /**
  * Überprüft den aktuellen Seitennamen im gesamten Pfad.
