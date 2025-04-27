@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Kilian Koch</title>
-    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- SEO -->
+    <meta name="description" content="Contact Kilian Koch for inquiries about mathematics research, software development, or collaborations." />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Contact | Kilian Koch" />
+    <meta property="og:description" content="Reach out to Kilian Koch for academic and software development projects." />
+    <meta property="og:image" content="https://kiliankoch.de/images/me.jpeg" />
+    <meta property="og:url" content="https://kiliankoch.de/contact" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
   <body>
     <!-- Navigation Bar -->
     <nav>
-      <a href="index" class="logo">
-        <img src="/images/me.jpeg" />
+      <a href="/index" class="logo">
+        <img src="/images/me.jpeg" alt="Portrait of Kilian Koch" />
       </a>
       <ul class="nav-links">
-        <li><a href="index">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="projects">Projects</a></li>
-        <li><a href="publications">Publications</a></li>
-        <!-- <li><a href="theoremdatabase/login">TheoremDatabase</a></li> -->
-        <li><a href="contact" class="active">Contact</a></li>
+        <li><a href="/index">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/publications">Publications</a></li>
+        <!-- <li><a href="/theoremdatabase/login">TheoremDatabase</a></li> -->
+        <li><a href="/contact" class="active">Contact</a></li>
       </ul>
       <div class="burger">
         <div></div>
@@ -45,7 +56,6 @@
             Your message:
             <textarea name="message" required></textarea>
           </label>
-          <!-- your other form fields go here -->
           <button type="submit">Send</button>
         </form>
       </section>
@@ -55,25 +65,16 @@
     <footer>
       <div class="social-media">
         <a href="https://github.com/KilianKoch">
-          <img
-            src="images/githubLogo.svg"
-            alt="GitHub Logo"
-            class="social-icon"
-          />
+          <img src="images/githubLogo.svg" alt="GitHub Logo" class="social-icon" />
         </a>
         <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
-          <img
-            src="images/linkedinLogo.svg"
-            alt="LinkedIn Logo"
-            class="social-icon"
-          />
+          <img src="images/linkedinLogo.svg" alt="LinkedIn Logo" class="social-icon" />
         </a>
-        <!-- Add more social icons as needed -->
       </div>
       <p>&copy; 2025 Kilian Koch. All rights reserved.</p>
       <p>
-        <a href="impressum.html">Impressum</a> |
-        <a href="datenschutz.html">Privacy Policy</a>
+        <a href="/impressum.html">Impressum</a> |
+        <a href="/datenschutz.html">Privacy Policy</a>
       </p>
     </footer>
 

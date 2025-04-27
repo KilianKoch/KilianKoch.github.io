@@ -4,15 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Publications | Kilian Koch</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Scientific publications by Kilian Koch in mathematics, gradient flows, and applied analysis." />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Publications | Kilian Koch" />
+    <meta property="og:description" content="Explore the academic research and publications of Kilian Koch in mathematics and applied sciences." />
+    <meta property="og:image" content="https://kiliankoch.de/images/me.jpeg" />
+    <meta property="og:url" content="https://kiliankoch.de/publications" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="css/publications.css" />
+    <link rel="stylesheet" href="/css/publications.css" />
   </head>
 
   <body>
     <!-- Navigation Bar -->
     <nav>
       <a href="/index" class="logo">
-        <img src="/images/me.jpeg" />
+        <img src="/images/me.jpeg" alt="Portrait of Kilian Koch" />
       </a>
       <ul class="nav-links">
         <li><a href="/index">Home</a></li>
@@ -34,45 +45,36 @@
       <section id="latest-publications">
         <h2>Publications</h2>
         <div class="publication-list"></div>
+        <p style="display:none;">
+          Publications include topics like stochastic partial differential equations, gradient flows, functional analysis, and applied mathematics.
+        </p>
       </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <div class="social-media">
-          <a href="https://github.com/KilianKoch">
-            <img
-              src="images/githubLogo.svg"
-              alt="GitHub Logo"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
-            <img
-              src="images/linkedinLogo.svg"
-              alt="LinkedIn Logo"
-              class="social-icon"
-            />
-          </a>
-          <!-- Add more social icons as needed -->
-        </div>
-        <p>&copy; 2025 Kilian Koch. All rights reserved.</p>
-        <p>
-          <a href="/impressum.html">Impressum</a> |
-          <a href="/datenschutz.html">Privacy Policy</a>
-        </p>
-      </footer>
+      <div class="social-media">
+        <a href="https://github.com/KilianKoch">
+          <img src="images/githubLogo.svg" alt="GitHub Logo" class="social-icon" />
+        </a>
+        <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
+          <img src="images/linkedinLogo.svg" alt="LinkedIn Logo" class="social-icon" />
+        </a>
+      </div>
+      <p>&copy; 2025 Kilian Koch. All rights reserved.</p>
+      <p>
+        <a href="/impressum.html">Impressum</a> |
+        <a href="/datenschutz.html">Privacy Policy</a>
+      </p>
+    </footer>
 
     <script type="module" src="/scripts/main.js"></script>
-    <!-- <script>
-      MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-      };
-      </script>
-      <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-      </script> -->
+    <!-- Optional MathJax for equations -->
+    <!-- 
+    <script>
+      MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script> 
+    -->
   </body>
 </html>
