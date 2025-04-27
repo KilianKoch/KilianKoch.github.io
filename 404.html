@@ -3,62 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 | Kilian Koch | Mathematician & Software Developer</title>
+    <title>404 Not Found | Kilian Koch</title>
+
+    <!-- SEO -->
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="Page not found on Kilian Koch's website. Return to the homepage to explore mathematics and software development projects." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="404 Not Found | Kilian Koch" />
+    <meta property="og:description" content="Page not found. Visit Kilian Koch's homepage for research and projects." />
+    <meta property="og:image" content="https://kiliankoch.de/images/me.jpeg" />
+    <meta property="og:url" content="https://kiliankoch.de/404" />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="/css/styles.css" />
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Kilian Koch",
-  "url": "https://kiliankoch.de",
-  "image": "https://kiliankoch.de/images/me.jpeg",
-  "sameAs": [
-    "https://github.com/KilianKoch",
-    "https://www.linkedin.com/in/kilian-koch-23166026a/"
-  ],
-  "jobTitle": "Mathematician and Software Developer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "RWTH Aachen University"
-  },
-  "alumniOf": {
-    "@type": "CollegeOrUniversity",
-    "name": "RWTH Aachen University"
-  },
-  "description": "Kilian Koch specializes in applied analysis, gradient flows, partial differential equations, and practical software development for real-world problems. He develops software solutions for business workflow automation and customer data management.",
-  "knowsAbout": [
-    "Mathematical Analysis",
-    "Gradient Flows",
-    "Partial Differential Equations",
-    "Applied Mathematics",
-    "Software Development",
-    "Business Automation",
-    "Web Development",
-    "C++",
-    "Python",
-    "JavaScript"
-  ],
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Aachen",
-    "addressCountry": "Germany"
-  }
-}
-</script>
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Kilian Koch",
+      "url": "https://kiliankoch.de",
+      "image": "https://kiliankoch.de/images/me.jpeg",
+      "sameAs": [
+        "https://github.com/KilianKoch",
+        "https://www.linkedin.com/in/kilian-koch-23166026a/"
+      ],
+      "jobTitle": "Mathematician and Software Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "RWTH Aachen University"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "RWTH Aachen University"
+      },
+      "description": "Kilian Koch specializes in applied analysis, gradient flows, partial differential equations, and practical software development for real-world problems.",
+      "knowsAbout": [
+        "Mathematical Analysis",
+        "Gradient Flows",
+        "Partial Differential Equations",
+        "Applied Mathematics",
+        "Software Development",
+        "Business Automation",
+        "Web Development",
+        "C++",
+        "Python",
+        "JavaScript"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Aachen",
+        "addressCountry": "Germany"
+      }
+    }
+    </script>
+  </head>
 
   <body>
     <!-- Navigation Bar -->
     <nav>
-      <a href="index" class="logo">
-        <img src="/images/me.jpeg" />
+      <a href="/index" class="logo">
+        <img src="/images/me.jpeg" alt="Portrait of Kilian Koch" />
       </a>
       <ul class="nav-links">
         <li><a href="/index">Home</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/projects">Projects</a></li>
         <li><a href="/publications">Publications</a></li>
-        <!-- <li><a href="/theoremdatabase/login">TheoremDatabase</a></li> -->
         <li><a href="/contact">Contact</a></li>
       </ul>
       <div class="burger">
@@ -68,62 +81,37 @@
       </div>
     </nav>
 
-    <div class="content error-page">
-      <!-- 404 Error Content -->
+    <!-- 404 Content -->
+    <main class="content error-page">
       <section id="error-section">
         <div class="error-container">
           <div class="error-content">
             <h1>404</h1>
             <h2>Page Not Found</h2>
-            <div class="error-animation">
-              <!-- Example SVG Illustration -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100"
-                height="100"
-                viewBox="0 0 24 24"
-                fill="#e74c3c"
-                class="svg-icon"
-              >
-                <path
-                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm1 17h-2v-2h2v2zm0-4h-2V7h2v6z"
-                />
-              </svg>
-            </div>
-            <p>
-              Oops! The page you're looking for doesn't exist or has been moved.
-            </p>
-            <a href="/index" class="btn home-btn">Go Back Home</a>
+            <p>Sorry, the page you're looking for doesn't exist.</p>
+            <a href="/index" class="btn home-btn">Return Home</a>
           </div>
         </div>
       </section>
-    </div>
+    </main>
 
     <!-- Footer -->
     <footer>
-        <div class="social-media">
-          <a href="https://github.com/KilianKoch">
-            <img
-              src="images/githubLogo.svg"
-              alt="GitHub Logo"
-              class="social-icon"
-            />
-          </a>
-          <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
-            <img
-              src="images/linkedinLogo.svg"
-              alt="LinkedIn Logo"
-              class="social-icon"
-            />
-          </a>
-          <!-- Add more social icons as needed -->
-        </div>
-        <p>&copy; 2025 Kilian Koch. All rights reserved.</p>
-        <p>
-          <a href="/impressum.html">Impressum</a> |
-          <a href="/datenschutz.html">Privacy Policy</a>
-        </p>
-      </footer>
+      <div class="social-media">
+        <a href="https://github.com/KilianKoch">
+          <i class="fab fa-github social-icon"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
+          <i class="fab fa-linkedin social-icon"></i>
+        </a>
+        <a href="https://orcid.org/0009-0008-4358-9245">
+          <i class="fab fa-orcid social-icon"></i>
+        </a>
+      </div>
+      <p>&copy; 2025 Kilian Koch. All rights reserved.</p>
+      <p><a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Privacy Policy</a></p>
+    </footer>
+    
 
     <script type="module" src="/scripts/main.js"></script>
   </body>
