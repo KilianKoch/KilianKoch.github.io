@@ -1389,3 +1389,22 @@ details hr {
   font-weight: 500;
   text-transform: capitalize;
 }
+
+.centered-block-thanks {
+  max-width: 500px;
+  margin: 4rem auto;
+  text-align: center;
+}
+.btn-thanks {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #00509e; /* RWTH-Blau 100 */
+  color: white;
+}
+.btn:hover {
+  background-color: #004080;
+}
