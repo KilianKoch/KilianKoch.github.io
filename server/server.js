@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs').promises;
 const path = require('path');
+const { URL } = require('url');
 
 // Define the root directory for serving files
 const rootDirectory = path.join(__dirname, '../');
@@ -25,8 +26,9 @@ const server = http.createServer(async (req, res) => {
   try {
     console.log('Request:', req.url);
 
-    // Normalize and construct the file path
-    let safePath = path.normalize(decodeURIComponent(req.url));
+    // Normalize and construct the file path without query parameters
+    const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
+    let safePath = path.normalize(parsedUrl.pathname);
     if (safePath === '/' || safePath === '') safePath = '/index.html';
     if (!path.extname(safePath)) safePath += '.html';
     
