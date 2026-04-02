@@ -47,50 +47,13 @@
     color: #107c10;
 }
 
-.abstract-toggle {
-    margin-top: 10px;
-    padding: 5px 10px;
-    border: 1px solid #ccc;
-    background: transparent;
-    border-radius: 6px;
-    font-size: 0.85em;
-    cursor: pointer;
-}
-
-.publication-abstract {
-    margin-top: 8px;
-    display: none;
-    color: #333;
-    line-height: 1.4;
-    font-size: 0.95em;
-}
-
-.publication-link {
-    margin-top: 12px;
-    display: inline-block;
-    background-color: #28a745;
-    color: white;
-    padding: 6px 12px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 0.9em;
-    transition: background-color 0.2s ease;
-}
-
-.publication-link:hover {
-    background-color: #218838;
-}
-
 .publication-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    margin-top: 8px;
 }
 
 .publication-link {
+    display: inline-block;
+    margin-top: 12px;
     background-color: #28a745;
     color: white;
     padding: 8px 16px;

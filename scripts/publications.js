@@ -56,34 +56,35 @@ export function generatePublicationList(dataArray, targetElement) {
       li.appendChild(authors);
     }
 
-    // Read Online Button (oben)
+    // Read Online Button
     const link = document.createElement("a");
     link.href = pub.link;
     link.target = "_blank";
+    link.rel = "noopener noreferrer";
     link.className = "publication-link";
     link.textContent = "Read Online";
     li.appendChild(link);
 
-    // Abstract & Show/Hide Toggle (unten)
+    // Abstract & Show/Hide Toggle
     if (pub.abstract) {
       const actionRow = document.createElement("div");
       actionRow.className = "publication-actions";
-    
+
       const toggle = document.createElement("button");
       toggle.className = "abstract-toggle";
       toggle.textContent = "Show Abstract";
-    
+
       const abstract = document.createElement("div");
       abstract.className = "publication-abstract";
       abstract.textContent = pub.abstract;
       abstract.style.display = "none";
-    
+
       toggle.onclick = () => {
         const isVisible = abstract.style.display === "block";
         abstract.style.display = isVisible ? "none" : "block";
         toggle.textContent = isVisible ? "Show Abstract" : "Hide Abstract";
       };
-    
+
       actionRow.appendChild(toggle);
       li.appendChild(actionRow);
       li.appendChild(abstract);
@@ -111,8 +112,6 @@ export async function loadAndGeneratePublications(targetElement) {
       // const publications = await arxivGrabber.getPublications();
 
       const publications = await fetchAndNormalizeOrcidWorks("0009-0008-4358-9245");
-
-      console.log("Geladene Publikationen:", publications); // Debugging
 
       // Generate the publication list
       generatePublicationList(publications, targetElement);
