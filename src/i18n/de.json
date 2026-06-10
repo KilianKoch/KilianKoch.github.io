@@ -1,0 +1,42 @@
+{
+  "langName": "Deutsch",
+  "langLabel": "Sprache",
+  "nav": {
+    "research": "Forschung",
+    "cv": "Lebenslauf",
+    "software": "Software"
+  },
+  "sections": {
+    "publications": "Publikationen",
+    "talks": "Vorträge",
+    "events": "Organisierte Veranstaltungen",
+    "funding": "Forschungsprojekt & Förderung",
+    "contact": "Kontakt"
+  },
+  "publications": {
+    "by": "Von",
+    "showAbstract": "Abstract anzeigen",
+    "hideAbstract": "Abstract verbergen",
+    "readOnline": "Online lesen",
+    "none": "Publikationen erscheinen hier automatisch über ORCID.",
+    "types": {
+      "preprint": "Preprint",
+      "journal-article": "Zeitschriftenartikel",
+      "software": "Software",
+      "other": "Publikation"
+    }
+  },
+  "talks": {
+    "slides": "Folien (PDF)",
+    "eventPage": "Veranstaltungsseite",
+    "none": "Vorträge werden in Kürze gelistet."
+  },
+  "projects": {
+    "details": "Details"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten.",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz"
+  }
+}

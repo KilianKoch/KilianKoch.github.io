@@ -1,0 +1,42 @@
+{
+  "langName": "English",
+  "langLabel": "Language",
+  "nav": {
+    "research": "Research",
+    "cv": "CV",
+    "software": "Software"
+  },
+  "sections": {
+    "publications": "Publications",
+    "talks": "Talks",
+    "events": "Organized Events",
+    "funding": "Research Project & Funding",
+    "contact": "Contact"
+  },
+  "publications": {
+    "by": "By",
+    "showAbstract": "Show Abstract",
+    "hideAbstract": "Hide Abstract",
+    "readOnline": "Read Online",
+    "none": "Publications will appear here automatically via ORCID.",
+    "types": {
+      "preprint": "preprint",
+      "journal-article": "journal article",
+      "software": "software",
+      "other": "publication"
+    }
+  },
+  "talks": {
+    "slides": "Slides (PDF)",
+    "eventPage": "Event page",
+    "none": "Talks will be listed here soon."
+  },
+  "projects": {
+    "details": "Details"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "impressum": "Impressum",
+    "privacy": "Privacy Policy"
+  }
+}

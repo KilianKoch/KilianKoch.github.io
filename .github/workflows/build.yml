@@ -1,0 +1,46 @@
+name: Build site (ORCID refresh)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "data/talks.json"
+      - "data/projects.json"
+      - "scripts/build.js"
+      - ".github/workflows/build.yml"
+  schedule:
+    # täglich 05:00 UTC: Publikationen von ORCID aktualisieren
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build site
+        run: node scripts/build.js
+
+      - name: Generate CV PDF
+        run: bash scripts/make-cv-pdf.sh
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Rebuild site (ORCID refresh) [skip ci]"
+            git push
+          fi

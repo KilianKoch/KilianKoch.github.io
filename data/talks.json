@@ -1,0 +1,21 @@
+[
+  {
+    "type": "talk",
+    "title": "Thresholding Scheme for the Half-Harmonic Map Heat Flow",
+    "event": "Young Researchers Workshop on Geometric Analysis, Singular PDEs and Numerics",
+    "venue": "RWTH Aachen University",
+    "date": "2026-06-01",
+    "slides": null,
+    "eventUrl": "https://sfb1481.rwth-aachen.de/news-events/events/young-researchers-workshop"
+  },
+  {
+    "type": "organized",
+    "title": "Young Researchers Workshop on Geometric Analysis, Singular PDEs and Numerics",
+    "event": "Joint workshop of CRC 1481, EDDy and IntComSin (FAU Erlangen-Nürnberg / University of Regensburg)",
+    "venue": "RWTH Aachen University",
+    "date": "2026-06-01",
+    "dateEnd": "2026-06-03",
+    "role": "Co-organizer",
+    "eventUrl": "https://sfb1481.rwth-aachen.de/news-events/events/young-researchers-workshop"
+  }
+]

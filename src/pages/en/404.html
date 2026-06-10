@@ -1,0 +1,62 @@
+<!--meta
+{
+  "title": "404 Not Found | Kilian Koch",
+  "description": "Page not found on Kilian Koch's website. Return to the homepage for research, publications and software.",
+  "robots": "noindex"
+}
+-->
+
+<main class="error-page">
+  <section id="error-section">
+    <div class="error-container">
+      <div class="error-content" data-lang="en">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>Sorry, the page you're looking for doesn't exist.</p>
+        <a href="/" class="btn home-btn">Return Home</a>
+      </div>
+      <div class="error-content" data-lang="de" hidden>
+        <h1>404</h1>
+        <h2>Seite nicht gefunden</h2>
+        <p>Die gesuchte Seite existiert leider nicht.</p>
+        <a href="/de/" class="btn home-btn">Zur Startseite</a>
+      </div>
+      <div class="error-content" data-lang="ja" hidden>
+        <h1>404</h1>
+        <h2>ページが見つかりません</h2>
+        <p>お探しのページは存在しません。</p>
+        <a href="/ja/" class="btn home-btn">ホームへ戻る</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- GitHub Pages liefert für alle Sprachbereiche dieselbe /404.html aus.
+     Dieses Skript erkennt den Sprachbereich an der URL und stellt Inhalt
+     und Navigation entsprechend um. -->
+<script>
+  (function () {
+    var match = window.location.pathname.match(/^\/(de|ja)(\/|$)/);
+    var lang = match ? match[1] : "en";
+    if (lang === "en") return;
+
+    document.documentElement.lang = lang;
+    document.querySelectorAll(".error-content").forEach(function (el) {
+      el.hidden = el.dataset.lang !== lang;
+    });
+
+    var navLabels = {
+      de: { "/": "Forschung", "/cv": "Lebenslauf", "/software": "Software" },
+      ja: { "/": "研究", "/cv": "経歴", "/software": "ソフトウェア" }
+    };
+    document.querySelectorAll("nav .nav-links a").forEach(function (a) {
+      var href = a.getAttribute("href");
+      if (navLabels[lang][href] !== undefined) {
+        a.textContent = navLabels[lang][href];
+        a.setAttribute("href", "/" + lang + (href === "/" ? "/" : href));
+      }
+    });
+    var logo = document.querySelector("nav a.logo");
+    if (logo) logo.setAttribute("href", "/" + lang + "/");
+  })();
+</script>

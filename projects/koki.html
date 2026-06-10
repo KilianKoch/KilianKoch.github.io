@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- GENERIERTE DATEI – nicht von Hand editieren! Quelle: src/ – Build: node scripts/build.js -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,18 +8,26 @@
 
     <!-- SEO -->
     <meta name="description" content="Discover KoKi, the management system developed by Kilian Koch for Auto-Koch GmbH & Co. KG, enhancing workflow automation and customer management." />
-    
+    <link rel="canonical" href="https://kiliankoch.de/projects/koki" />
+    <link rel="alternate" hreflang="en" href="https://kiliankoch.de/projects/koki" />
+    <link rel="alternate" hreflang="de" href="https://kiliankoch.de/de/projects/koki" />
+    <link rel="alternate" hreflang="ja" href="https://kiliankoch.de/ja/projects/koki" />
+    <link rel="alternate" hreflang="x-default" href="https://kiliankoch.de/projects/koki" />
+
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="KoKi Project | Kilian Koch" />
-    <meta property="og:description" content="A powerful management tool for customer and vehicle information developed by Kilian Koch with Node.js, PostgreSQL, and modern web technologies." />
+    <meta property="og:description" content="Discover KoKi, the management system developed by Kilian Koch for Auto-Koch GmbH & Co. KG, enhancing workflow automation and customer management." />
     <meta property="og:image" content="https://kiliankoch.de/images/me.jpeg" />
     <meta property="og:url" content="https://kiliankoch.de/projects/koki" />
     <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="/css/styles.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/projects.css" />
-  <script type="application/ld+json">
+    <link rel="stylesheet" href="/css/styles.css?v=0a90ad2689" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/publications.css?v=0a90ad2689" />
+    <link rel="stylesheet" href="/css/projects.css?v=0a90ad2689" />
+
+    <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -26,10 +35,11 @@
   "url": "https://kiliankoch.de",
   "image": "https://kiliankoch.de/images/me.jpeg",
   "sameAs": [
+    "https://orcid.org/0009-0008-4358-9245",
     "https://github.com/KilianKoch",
     "https://www.linkedin.com/in/kilian-koch-23166026a/"
   ],
-  "jobTitle": "Mathematician and Software Developer",
+  "jobTitle": "Doctoral Researcher in Mathematics",
   "worksFor": {
     "@type": "Organization",
     "name": "RWTH Aachen University"
@@ -38,18 +48,15 @@
     "@type": "CollegeOrUniversity",
     "name": "RWTH Aachen University"
   },
-  "description": "Kilian Koch specializes in applied analysis, gradient flows, partial differential equations, and practical software development for real-world problems. He develops software solutions for business workflow automation and customer data management.",
+  "description": "Kilian Koch is a doctoral researcher in mathematics at RWTH Aachen University (CRC 1481 Sparsity and Singular Structures), working on gradient flows in geometric analysis, in particular well-posedness and singular behaviour of (half-)harmonic map heat flows.",
   "knowsAbout": [
     "Mathematical Analysis",
+    "Geometric Analysis",
     "Gradient Flows",
+    "Harmonic Map Heat Flow",
     "Partial Differential Equations",
     "Applied Mathematics",
-    "Software Development",
-    "Business Automation",
-    "Web Development",
-    "C++",
-    "Python",
-    "JavaScript"
+    "Numerical Analysis"
   ],
   "address": {
     "@type": "PostalAddress",
@@ -57,113 +64,128 @@
     "addressCountry": "Germany"
   }
 }
-</script>
-</head>
+    </script>
+
+  </head>
 
   <body>
     <!-- Navigation Bar -->
     <nav>
-      <a href="/index" class="logo">
+      <a href="/" class="logo">
         <img src="/images/me.jpeg" alt="Portrait of Kilian Koch" />
       </a>
       <ul class="nav-links">
-        <li><a href="/index">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/publications">Publications</a></li>
-        <!-- <li><a href="/theoremdatabase/login">TheoremDatabase</a></li> -->
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/">Research</a></li>
+        <li><a href="/cv">CV</a></li>
+        <li><a href="/software">Software</a></li>
       </ul>
+      <details class="lang-switcher">
+        <summary><i class="fas fa-globe"></i><span class="lang-label">Language</span></summary>
+        <ul>
+          <li><span class="lang-current" lang="en">English</span></li>
+          <li><a href="/de/projects/koki" lang="de" hreflang="de">Deutsch</a></li>
+          <li><a href="/ja/projects/koki" lang="ja" hreflang="ja">日本語</a></li>
+        </ul>
+      </details>
       <div class="burger">
-        <div></div><div></div><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </nav>
 
     <div class="content">
-      <!-- Project Detail Section -->
-      <section id="project-detail">
-        <h2>KoKi</h2>
-        <div class="project-detail-container">
-          <div id="project-images"></div>
-          <div class="project-detail-content">
-            <p>
-              A comprehensive management tool, continuously developed since 2019, designed to enhance productivity and automate workflows. KoKi provides an intuitive solution for managing customer information alongside their vehicles, with advanced features tailored for the needs of Auto-Koch GmbH & Co. KG, where I am currently employed.
-            </p>
+<!-- Project Detail Section -->
+<section id="project-detail">
+  <h2>KoKi</h2>
+  <div class="project-detail-container">
+    <div id="project-images"></div>
+    <div class="project-detail-content">
+      <p>
+        A comprehensive management tool, continuously developed since 2019, designed to enhance productivity and automate workflows. KoKi provides an intuitive solution for managing customer information alongside their vehicles, with advanced features tailored for the needs of Auto-Koch GmbH & Co. KG, where I am currently employed.
+      </p>
 
-            <h3>Features</h3>
-            <ul>
-              <li>Customer and vehicle management</li>
-              <li>Detailed vehicle history and customer information management</li>
-              <li>Automated scheduling for inspections (TÜV, emissions)</li>
-              <li>Complex search functionalities for warranties, overdue appointments, etc.</li>
-              <li>Automatic PDF generation for postal communication</li>
-              <li>SMS and email integration via APIs for automatic appointment confirmations</li>
-              <li>Internal chat system with vehicle data sharing</li>
-              <li>Custom specifications for efficient data handling and user experience</li>
-            </ul>
+      <h3>Features</h3>
+      <ul>
+        <li>Customer and vehicle management</li>
+        <li>Detailed vehicle history and customer information management</li>
+        <li>Automated scheduling for inspections (TÜV, emissions)</li>
+        <li>Complex search functionalities for warranties, overdue appointments, etc.</li>
+        <li>Automatic PDF generation for postal communication</li>
+        <li>SMS and email integration via APIs for automatic appointment confirmations</li>
+        <li>Internal chat system with vehicle data sharing</li>
+        <li>Custom specifications for efficient data handling and user experience</li>
+      </ul>
 
-            <p>
-              This project is developed in close cooperation with the users at 
-              <a href="https://www.auto-koch.com/" target="_blank" rel="noopener noreferrer">Auto-Koch GmbH & Co. KG</a>,
-              and is continuously evolving with new features like automatic appointment reminders.
-            </p>
-          </div>
-        </div>
-      </section>
+      <p>
+        This project is developed in close cooperation with the users at
+        <a href="https://www.auto-koch.com/" target="_blank" rel="noopener noreferrer">Auto-Koch GmbH & Co. KG</a>,
+        and is continuously evolving with new features like automatic appointment reminders.
+      </p>
+    </div>
+  </div>
+</section>
 
-      <!-- Technologies Used -->
-      <section id="technologies">
-        <h2>Technologies Used</h2>
-        <div class="technologies-container">
-          <div class="frontend-section">
-            <h3>Frontend</h3>
-            <div class="tech-item">
-              <i class="fab fa-html5"></i>
-              <p>HTML5</p>
-            </div>
-            <div class="tech-item">
-              <i class="fab fa-css3-alt"></i>
-              <p>CSS3</p>
-            </div>
-            <div class="tech-item">
-              <i class="fab fa-js"></i>
-              <p>JavaScript</p>
-            </div>
-          </div>
+<!-- Technologies Used -->
+<section id="technologies">
+  <h2>Technologies Used</h2>
+  <div class="technologies-container">
+    <div class="frontend-section">
+      <h3>Frontend</h3>
+      <div class="tech-item">
+        <i class="fab fa-html5"></i>
+        <p>HTML5</p>
+      </div>
+      <div class="tech-item">
+        <i class="fab fa-css3-alt"></i>
+        <p>CSS3</p>
+      </div>
+      <div class="tech-item">
+        <i class="fab fa-js"></i>
+        <p>JavaScript</p>
+      </div>
+    </div>
 
-          <div class="backend-section">
-            <h3>Backend</h3>
-            <div class="tech-item">
-              <i class="fab fa-node"></i>
-              <p>Node.js</p>
-            </div>
-            <div class="tech-item">
-              <i class="fas fa-database"></i>
-              <p>PostgreSQL</p>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div class="backend-section">
+      <h3>Backend</h3>
+      <div class="tech-item">
+        <i class="fab fa-node"></i>
+        <p>Node.js</p>
+      </div>
+      <div class="tech-item">
+        <i class="fas fa-database"></i>
+        <p>PostgreSQL</p>
+      </div>
+    </div>
+  </div>
+</section>
+
     </div>
 
     <!-- Footer -->
     <footer>
       <div class="social-media">
-        <a href="https://github.com/KilianKoch">
-          <i class="fab fa-github social-icon"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/kilian-koch-23166026a/">
-          <i class="fab fa-linkedin social-icon"></i>
-        </a>
-        <a href="https://orcid.org/0009-0008-4358-9245">
+        <a href="https://orcid.org/0009-0008-4358-9245" aria-label="ORCID">
           <i class="fab fa-orcid social-icon"></i>
         </a>
+        <a href="https://arxiv.org/search/?searchtype=author&amp;query=Koch%2C+Kilian" aria-label="arXiv">
+          <i class="ai ai-arxiv social-icon"></i>
+        </a>
+        <a href="https://github.com/KilianKoch" aria-label="GitHub">
+          <i class="fab fa-github social-icon"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/kilian-koch-23166026a/" aria-label="LinkedIn">
+          <i class="fab fa-linkedin social-icon"></i>
+        </a>
+        <a href="mailto:kilian.koch2000@outlook.de" aria-label="E-Mail">
+          <i class="fas fa-envelope social-icon"></i>
+        </a>
       </div>
+      <p><a href="mailto:kilian.koch2000@outlook.de">kilian.koch2000@outlook.de</a></p>
       <p>&copy; 2026 Kilian Koch. All rights reserved.</p>
-      <p><a href="/impressum.html">Impressum</a> | <a href="/datenschutz.html">Privacy Policy</a></p>
-    </footer>    
+      <p><a href="/impressum">Impressum</a> | <a href="/datenschutz">Privacy Policy</a></p>
+    </footer>
 
-    <!-- JavaScript Modules -->
-    <script type="module" src="/scripts/main.js"></script>
+    <script type="module" src="/scripts/main.js?v=0a90ad2689"></script>
   </body>
 </html>

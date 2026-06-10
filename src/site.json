@@ -1,0 +1,27 @@
+{
+  "name": "Kilian Koch",
+  "baseUrl": "https://kiliankoch.de",
+  "email": "kilian.koch2000@outlook.de",
+  "orcid": "0009-0008-4358-9245",
+  "github": "https://github.com/KilianKoch",
+  "linkedin": "https://www.linkedin.com/in/kilian-koch-23166026a/",
+  "image": "/images/me.jpeg",
+  "languages": ["en", "de", "ja"],
+  "defaultLanguage": "en",
+  "pages": [
+    { "slug": "index", "output": "index.html" },
+    { "slug": "cv", "output": "cv.html" },
+    { "slug": "cv-print", "output": "cv-print.html" },
+    { "slug": "software", "output": "software.html" },
+    { "slug": "impressum", "output": "impressum.html" },
+    { "slug": "datenschutz", "output": "datenschutz.html" },
+    { "slug": "404", "output": "404.html" },
+    { "slug": "projects/koki", "output": "projects/koki.html" }
+  ],
+  "redirects": [
+    { "from": "about.html", "to": "/cv" },
+    { "from": "projects.html", "to": "/software" },
+    { "from": "publications.html", "to": "/#publications" },
+    { "from": "contact.html", "to": "/" }
+  ]
+}

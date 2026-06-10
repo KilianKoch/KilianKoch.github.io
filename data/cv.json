@@ -1,0 +1,129 @@
+{
+  "name": "Kilian Koch",
+  "subtitle": "Doctoral Researcher in Mathematics · Chair of Applied Analysis · RWTH Aachen University",
+  "summary": "I am a mathematician and doctoral researcher at the Chair of Applied Analysis at RWTH Aachen University. My research concerns gradient flows in geometric analysis, in particular well-posedness and singular behaviour of (half-)harmonic map heat flows, for instance due to topological constraints. My position is funded by the DFG through CRC&nbsp;1481, project&nbsp;C01.",
+  "sections": [
+    {
+      "id": "positions",
+      "title": "Positions",
+      "style": "timeline",
+      "entries": [
+        {
+          "org": "RWTH Aachen University",
+          "role": "Doctoral Researcher",
+          "date": "April 2024 – Present",
+          "detailsHtml": "Chair of Applied Analysis. Funded by the German Research Foundation (DFG) via CRC&nbsp;1481 <em>Sparsity and Singular Structures</em>, project&nbsp;C01."
+        },
+        {
+          "org": "RWTH Aachen University",
+          "role": "Mathematics Tutor",
+          "date": "October 2020 – March 2024",
+          "detailsHtml": "Held various tutoring positions, including Preliminary Course Tutor, Analysis 1-3 Tutor, Function Theory I Tutor, and Functional Analysis Tutor."
+        },
+        {
+          "org": "Auto-Koch, Eschweiler",
+          "role": "Software Developer &amp; Customer Service",
+          "date": "February 2018 – Present",
+          "detailsHtml": "Developed the customer and vehicle management system KoKi and a scheduling program (desktop applications and locally used websites, JavaScript/Node.js). Regular customer service at the information desk and at exhibitions."
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "Education",
+      "style": "timeline",
+      "entries": [
+        {
+          "org": "RWTH Aachen University",
+          "role": "PhD in Mathematics",
+          "date": "April 2024 – Present (ongoing)"
+        },
+        {
+          "org": "RWTH Aachen University",
+          "role": "M.Sc. Mathematics, with distinction (1.2)",
+          "date": "October 2022 – April 2024"
+        },
+        {
+          "org": "RWTH Aachen University",
+          "role": "B.Sc. Mathematics, with distinction (1.3)",
+          "date": "October 2019 – October 2022"
+        },
+        {
+          "org": "Mies van der Rohe School, Aachen",
+          "role": "High School Diploma (Abitur)",
+          "date": "August 2016 – August 2019"
+        }
+      ]
+    },
+    {
+      "id": "teaching",
+      "title": "Teaching Experience",
+      "style": "collapsible",
+      "entries": [
+        {
+          "org": "RWTH Aachen, Aachen",
+          "role": "Höhere Mathematik 1 für Physiker und E-Techniker | Assistant",
+          "date": "October 2025 – March 2026",
+          "detailsHtml": "<strong>Professor:</strong> <a href=\"https://www.mathematik.rwth-aachen.de/cms/mathematik/fachgruppe/institute-lehrstuehle/personen/~bkbg/mitarbeiter-campus-/?gguid=PER-4DL9MKM&allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Dr. Ivan Yaroslavtsev</a><br /> <strong>Lecturer:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~blqow/olaf-wittich/?allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Priv.-Doz. Dr. Olaf Wittich</a><br /> <strong>Colleagues:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~bjomyl/valentin-linse/?allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Valentin Linse, M.Sc.</a>, <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~jwpak/glal-bacho/?allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Glal Bacho, M.Sc.</a><br /> <strong>Tasks:</strong> Created exercises, held exercise sessions, corrected exams, and prepared exam questions."
+        },
+        {
+          "org": "International Academy RWTH Aachen, Aachen",
+          "role": "Mathematics III | Co-lecturer",
+          "date": "August 2025 – September 2025",
+          "detailsHtml": "<strong>Lecturer:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>Colleagues:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~bjomyl/valentin-linse/\" target=\"_blank\">Valentin Linse, M.Sc.</a>, <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>Tasks:</strong> Conducted interactive online exercise sessions for international students, provided academic support and created learning materials.<br /> <strong>Partners:</strong> RWTH Aachen University, proRWTH-Freunde and Förderer der RWTH Aachen e.V."
+        },
+        {
+          "org": "RWTH Aachen, Aachen",
+          "role": "Partielle Differentialgleichungen 1 | Assistant",
+          "date": "April 2025 – September 2025",
+          "detailsHtml": "<strong>Professor:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>Colleague:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>Tasks:</strong> Created exercises, held exercise sessions, corrected exams, and prepared exam questions."
+        },
+        {
+          "org": "RWTH Aachen, Aachen",
+          "role": "Analysis 3 für Mathematiker | Assistant",
+          "date": "October 2024 – March 2025",
+          "detailsHtml": "<strong>Professor:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>Colleague:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>Tasks:</strong> Created exercises, held exercise sessions, corrected exams, and prepared exam questions."
+        },
+        {
+          "org": "International Academy RWTH Aachen, Aachen",
+          "role": "Mathematics III | Co-lecturer",
+          "date": "August 2024 – September 2024",
+          "detailsHtml": "<strong>Lecturer:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>Colleagues:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~elksp/Georg-Heinen/\" target=\"_blank\">Georg Heinen, M.Sc.</a>, <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>Tasks:</strong> Conducted interactive online exercise sessions for international students, provided academic support and created learning materials.<br /> <strong>Partners:</strong> RWTH Aachen University, proRWTH-Freunde and Förderer der RWTH Aachen e.V."
+        },
+        {
+          "org": "RWTH Aachen, Aachen",
+          "role": "Höhere Mathematik 2 für Physiker und E-Techniker | Assistant",
+          "date": "April 2024 – September 2024",
+          "detailsHtml": "<strong>Professor:</strong> <a href=\"https://www.igpm.rwth-aachen.de/team/former/noelle\" target=\"_blank\">Prof. Dr. Sebastian Noelle</a><br /> <strong>Lecturer:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~blqow/Olaf-Wittich/\" target=\"_blank\">Priv.-Doz. Dr. Olaf Wittich</a><br /> <strong>Colleague:</strong> <a href=\"https://www.maths.usyd.edu.au/ut/people?who=TF_Goertzen&sms=y\" target=\"_blank\">Tom Goertzen, Postdoctoral Research Associate</a><br /> <strong>Tasks:</strong> Developed digital exercises, conducted exercise sessions, and graded exams."
+        }
+      ]
+    },
+    {
+      "id": "funding",
+      "title": "Research Funding",
+      "style": "list",
+      "entries": [
+        { "html": "Doctoral researcher position funded by the German Research Foundation (DFG) through CRC&nbsp;1481 <em>Sparsity and Singular Structures</em> (project no.&nbsp;442047500), project&nbsp;C01 <em>Singularity formation in dissipative harmonic flows</em>, since April&nbsp;2024" }
+      ]
+    },
+    {
+      "id": "awards",
+      "title": "Awards",
+      "style": "list",
+      "entries": [
+        { "html": "RWTH Dean's List, Winter Semester 2021/22 - Summer Semester 2022" },
+        { "html": "RWTH Dean's List, Winter Semester 2020/21 - Summer Semester 2021" },
+        { "html": "RWTH Dean's List, Winter Semester 2019/20 - Summer Semester 2020" }
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "Skills",
+      "style": "list",
+      "entries": [
+        { "html": "<strong>Programming:</strong> JavaScript/Node.js, C/C++, Python, HTML/CSS; basics of Haskell, Prolog and Java" },
+        { "html": "<strong>Languages:</strong> German (native), English (C1), Japanese (JLPT N3, &asymp; B1)" }
+      ]
+    }
+  ]
+}

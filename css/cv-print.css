@@ -1,0 +1,147 @@
+/* Druck-/PDF-Layout für den Lebenslauf (cv-print.html).
+   Klassische, schlichte Typografie – keine Website-Optik. */
+
+@page {
+  size: A4;
+  margin: 17mm 19mm;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* LaTeX-Optik: Computer Modern (per CDN), Fallback Georgia */
+  font-family: "Computer Modern Serif", Georgia, "Times New Roman", serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #111;
+  max-width: 175mm;
+  margin: 0 auto;
+  padding: 10mm 0;
+}
+
+a {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+/* Kopf */
+.cvp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  border-bottom: 1.5pt solid #1a1a1a;
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.cvp-header h1 {
+  font-size: 21pt;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.cvp-subtitle {
+  font-size: 11pt;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.cvp-contact {
+  font-size: 9pt;
+  color: #333;
+}
+
+.cvp-photo {
+  width: 78px;
+  height: 78px;
+  object-fit: cover;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cvp-summary {
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+/* Abschnitte */
+.cvp-section {
+  margin-bottom: 14px;
+}
+
+.cvp-section h2 {
+  font-size: 11.5pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 0.75pt solid #888;
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+}
+
+/* Einträge: Datum links, Inhalt rechts */
+.cvp-entry {
+  display: grid;
+  grid-template-columns: 44mm 1fr;
+  gap: 0 14px;
+  margin-bottom: 7px;
+  break-inside: avoid;
+}
+
+.cvp-when {
+  font-size: 9pt;
+  color: #444;
+  padding-top: 1px;
+}
+
+.cvp-what strong {
+  font-weight: bold;
+}
+
+.cvp-org {
+  font-style: italic;
+}
+
+.cvp-details {
+  font-size: 9.5pt;
+  color: #333;
+  margin-top: 2px;
+}
+
+/* Einfache Listen (Awards, Skills) */
+.cvp-list {
+  list-style: none;
+}
+
+.cvp-list li {
+  padding-left: 14px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.cvp-list li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+
+.cvp-footer {
+  margin-top: 18px;
+  font-size: 8pt;
+  color: #999;
+  text-align: center;
+}
+
+/* Bildschirm-Vorschau der Druckseite */
+@media screen {
+  body {
+    background: #fff;
+    padding: 14mm 10mm;
+  }
+}

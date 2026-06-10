@@ -1,0 +1,129 @@
+{
+  "name": "Kilian Koch(キリアン・コッホ)",
+  "subtitle": "数学・博士課程研究員 · アーヘン工科大学 応用解析講座",
+  "summary": "アーヘン工科大学(RWTH Aachen)応用解析講座の数学者・博士課程研究員です。研究テーマは幾何解析における勾配流、特に(半)調和写像熱流の適切性と、位相的制約などに起因する特異性です。ポジションはドイツ研究振興協会(DFG)のCRC&nbsp;1481、プロジェクトC01より資金提供を受けています。",
+  "sections": [
+    {
+      "id": "positions",
+      "title": "職歴",
+      "style": "timeline",
+      "entries": [
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "博士課程研究員",
+          "date": "2024年4月 – 現在",
+          "detailsHtml": "応用解析講座所属。ドイツ研究振興協会(DFG)のCRC&nbsp;1481 <em>Sparsity and Singular Structures</em>、プロジェクトC01より資金提供。"
+        },
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "数学チューター",
+          "date": "2020年10月 – 2024年3月",
+          "detailsHtml": "入学前準備コース、解析学1〜3、関数論I、関数解析など、各種演習のチューターを担当。"
+        },
+        {
+          "org": "Auto-Koch(エシュヴァイラー)",
+          "role": "ソフトウェア開発・カスタマーサービス",
+          "date": "2018年2月 – 現在",
+          "detailsHtml": "顧客・車両管理システム「KoKi」およびスケジュール管理プログラムを開発(デスクトップアプリと社内Webサイト、JavaScript/Node.js)。受付窓口や展示会での接客業務も担当。"
+        }
+      ]
+    },
+    {
+      "id": "education",
+      "title": "学歴",
+      "style": "timeline",
+      "entries": [
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "数学 博士課程",
+          "date": "2024年4月 – 現在(在籍中)"
+        },
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "数学 修士(M.Sc.)、優等(成績1.2)",
+          "date": "2022年10月 – 2024年4月"
+        },
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "数学 学士(B.Sc.)、優等(成績1.3)",
+          "date": "2019年10月 – 2022年10月"
+        },
+        {
+          "org": "ミース・ファン・デル・ローエ校(アーヘン)",
+          "role": "高等学校卒業資格(アビトゥア)",
+          "date": "2016年8月 – 2019年8月"
+        }
+      ]
+    },
+    {
+      "id": "teaching",
+      "title": "教育経験",
+      "style": "collapsible",
+      "entries": [
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "Höhere Mathematik 1(物理・電気工学専攻向け高等数学1)| アシスタント",
+          "date": "2025年10月 – 2026年3月",
+          "detailsHtml": "<strong>教授:</strong> <a href=\"https://www.mathematik.rwth-aachen.de/cms/mathematik/fachgruppe/institute-lehrstuehle/personen/~bkbg/mitarbeiter-campus-/?gguid=PER-4DL9MKM&allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Prof. Dr. Ivan Yaroslavtsev</a><br /> <strong>講師:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~blqow/olaf-wittich/?allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Priv.-Doz. Dr. Olaf Wittich</a><br /> <strong>同僚:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~bjomyl/valentin-linse/?allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Valentin Linse, M.Sc.</a>、<a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~jwpak/glal-bacho/?allou=1\" target=\"_blank\" rel=\"noopener noreferrer\">Glal Bacho, M.Sc.</a><br /> <strong>担当業務:</strong> 演習問題の作成、演習授業の実施、試験の採点、試験問題の作成。"
+        },
+        {
+          "org": "RWTHアーヘン国際アカデミー",
+          "role": "Mathematics III | 共同講師",
+          "date": "2025年8月 – 2025年9月",
+          "detailsHtml": "<strong>講師:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>同僚:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/wissenschaftlich-beschaeftigte/~bjomyl/valentin-linse/\" target=\"_blank\">Valentin Linse, M.Sc.</a>、<a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>担当業務:</strong> 留学生向けの双方向オンライン演習の実施、学習サポート、教材作成。<br /> <strong>連携機関:</strong> RWTH Aachen University、proRWTH-Freunde und Förderer der RWTH Aachen e.V."
+        },
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "Partielle Differentialgleichungen 1(偏微分方程式1)| アシスタント",
+          "date": "2025年4月 – 2025年9月",
+          "detailsHtml": "<strong>教授:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>同僚:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>担当業務:</strong> 演習問題の作成、演習授業の実施、試験の採点、試験問題の作成。"
+        },
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "Analysis 3(数学専攻向け解析学3)| アシスタント",
+          "date": "2024年10月 – 2025年3月",
+          "detailsHtml": "<strong>教授:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>同僚:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>担当業務:</strong> 演習問題の作成、演習授業の実施、試験の採点、試験問題の作成。"
+        },
+        {
+          "org": "RWTHアーヘン国際アカデミー",
+          "role": "Mathematics III | 共同講師",
+          "date": "2024年8月 – 2024年9月",
+          "detailsHtml": "<strong>講師:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/math1/der-lehrstuhl/team/professorinnen-und-professoren/~bixel/christof-melcher\" target=\"_blank\">Prof. Dr. rer. nat. Christof Melcher</a><br /> <strong>同僚:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~elksp/Georg-Heinen/\" target=\"_blank\">Georg Heinen, M.Sc.</a>、<a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~jwpak/Glal-Bacho/\" target=\"_blank\">Glal Bacho, M.Sc.</a><br /> <strong>担当業務:</strong> 留学生向けの双方向オンライン演習の実施、学習サポート、教材作成。<br /> <strong>連携機関:</strong> RWTH Aachen University、proRWTH-Freunde und Förderer der RWTH Aachen e.V."
+        },
+        {
+          "org": "アーヘン工科大学(RWTH Aachen)",
+          "role": "Höhere Mathematik 2(物理・電気工学専攻向け高等数学2)| アシスタント",
+          "date": "2024年4月 – 2024年9月",
+          "detailsHtml": "<strong>教授:</strong> <a href=\"https://www.igpm.rwth-aachen.de/team/former/noelle\" target=\"_blank\">Prof. Dr. Sebastian Noelle</a><br /> <strong>講師:</strong> <a href=\"https://www.math1.rwth-aachen.de/cms/MATH1/Der-Lehrstuhl/Team/Wissenschaftlich-Beschaeftigte/~blqow/Olaf-Wittich/\" target=\"_blank\">Priv.-Doz. Dr. Olaf Wittich</a><br /> <strong>同僚:</strong> <a href=\"https://www.maths.usyd.edu.au/ut/people?who=TF_Goertzen&sms=y\" target=\"_blank\">Tom Goertzen(博士研究員)</a><br /> <strong>担当業務:</strong> デジタル演習問題の開発、演習授業の実施、試験の採点。"
+        }
+      ]
+    },
+    {
+      "id": "funding",
+      "title": "研究資金",
+      "style": "list",
+      "entries": [
+        { "html": "博士課程研究員ポジション:ドイツ研究振興協会(DFG)CRC&nbsp;1481 <em>Sparsity and Singular Structures</em>(プロジェクト番号&nbsp;442047500)、プロジェクトC01 <em>Singularity formation in dissipative harmonic flows</em> による資金提供(2024年4月より)" }
+      ]
+    },
+    {
+      "id": "awards",
+      "title": "受賞歴",
+      "style": "list",
+      "entries": [
+        { "html": "RWTH Dean's List(学部長表彰)、2021/22年冬学期 – 2022年夏学期" },
+        { "html": "RWTH Dean's List(学部長表彰)、2020/21年冬学期 – 2021年夏学期" },
+        { "html": "RWTH Dean's List(学部長表彰)、2019/20年冬学期 – 2020年夏学期" }
+      ]
+    },
+    {
+      "id": "skills",
+      "title": "スキル",
+      "style": "list",
+      "entries": [
+        { "html": "<strong>プログラミング:</strong> JavaScript/Node.js、C/C++、Python、HTML/CSS。Haskell、Prolog、Javaの基礎知識" },
+        { "html": "<strong>言語:</strong> ドイツ語(母語)、英語(C1)、日本語(JLPT N3、B1相当)" }
+      ]
+    }
+  ]
+}
