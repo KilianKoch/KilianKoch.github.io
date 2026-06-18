@@ -7,7 +7,7 @@
     <title>Software | Kilian Koch</title>
 
     <!-- SEO -->
-    <meta name="description" content="Software projects by Kilian Koch: business workflow automation, customer data management and numerical tools." />
+    <meta name="description" content="Alongside his research, Kilian Koch works part-time as a software developer, building and maintaining KoKi, a production customer and vehicle management system for the Auto-Koch dealership group." />
     <link rel="canonical" href="https://kiliankoch.de/software" />
     <link rel="alternate" hreflang="en" href="https://kiliankoch.de/software" />
     <link rel="alternate" hreflang="de" href="https://kiliankoch.de/de/software" />
@@ -16,16 +16,16 @@
 
     <!-- Open Graph / Social Media -->
     <meta property="og:title" content="Software | Kilian Koch" />
-    <meta property="og:description" content="Software projects by Kilian Koch: business workflow automation, customer data management and numerical tools." />
+    <meta property="og:description" content="Alongside his research, Kilian Koch works part-time as a software developer, building and maintaining KoKi, a production customer and vehicle management system for the Auto-Koch dealership group." />
     <meta property="og:image" content="https://kiliankoch.de/images/me.jpeg" />
     <meta property="og:url" content="https://kiliankoch.de/software" />
     <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="/css/styles.css?v=40dbddf6b8" />
+    <link rel="stylesheet" href="/css/styles.css?v=f9d9a60883" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/publications.css?v=40dbddf6b8" />
-    <link rel="stylesheet" href="/css/projects.css?v=40dbddf6b8" />
+    <link rel="stylesheet" href="/css/publications.css?v=f9d9a60883" />
+    <link rel="stylesheet" href="/css/projects.css?v=f9d9a60883" />
 
     <script type="application/ld+json">
 {
@@ -95,19 +95,83 @@
     </nav>
 
     <div class="content">
-<section id="projects-list">
+<section id="software-intro">
   <h1>Software</h1>
   <p class="software-intro">
-    Alongside my research I build software for real-world problems,
-    from business workflow automation to numerical tools. A selection:
+    Alongside my research I work part-time as a software developer at
+    <a href="https://www.auto-koch.com/" target="_blank" rel="noopener noreferrer">Auto-Koch&nbsp;GmbH&nbsp;&amp;&nbsp;Co.&nbsp;KG</a>.
+    Over the past years my main project there has been <strong>KoKi</strong>,
+    an in-house system for managing customer and vehicle data that I designed,
+    built and continuously expanded, and which is in daily production use across
+    the dealership&rsquo;s branches.
   </p>
-  <div class="projects-grid">
-    <div class="project-item">
-      <img src="/images/KoKi.svg" alt="KoKi" />
-      <h3>KoKi</h3>
-      <p>A tool for managing customer information and vehicle information with automated workflows at Auto-Koch.</p>
-      <p><span class="project-tag">management</span> <span class="project-tag">automation</span></p>
-      <a href="/projects/koki" class="btn">Details</a>
+</section>
+
+<!-- KoKi -->
+<section id="project-detail">
+  <h2>KoKi: Customer &amp; Vehicle Management</h2>
+  <div class="project-detail-container">
+    <div id="project-images"></div>
+    <div class="project-detail-content">
+      <p>
+        KoKi is a web-based business application I have been developing since
+        2019 for the day-to-day operations of a car dealership group. It keeps
+        customer and vehicle records together, supports the service workflow
+        around inspections (TÜV) and maintenance, and automates the recurring
+        communication and paperwork around them. The system is multi-tenant
+        across the group&rsquo;s five branches and is used in production every day.
+      </p>
+
+      <h3>Key Features</h3>
+      <ul>
+        <li>Combined customer and vehicle records, synchronised daily from the dealership management system</li>
+        <li>Vehicle inventory overview (days in stock, registration, status)</li>
+        <li>Appointment and service management with calendar view</li>
+        <li>Automated appointment reminders via SMS and email</li>
+        <li>Template-based PDF generation (e.g. customer letters)</li>
+        <li>Internal staff chat and direct SMS/email to customers</li>
+        <li>User management with role-based permissions and a full audit log</li>
+        <li>Statistics and dashboards computed from the database</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Technical highlights -->
+<section id="highlights">
+  <h2>Technical Highlights</h2>
+  <ul class="highlights-list">
+    <li>Custom single-page application in <strong>vanilla JavaScript</strong>, no front-end framework</li>
+    <li>Real-time client-server architecture over <strong>WebSockets</strong> rather than a REST API, with all application logic server-side</li>
+    <li>Live updates pushed via <strong>PostgreSQL LISTEN/NOTIFY</strong> triggers</li>
+    <li>Daily automated synchronisation with the dealership management system</li>
+    <li>Standalone background services for data sync and automated reminders</li>
+    <li>Server-side <strong>PDF generation</strong> from templates using headless Chromium</li>
+    <li>JWT-based authentication, bcrypt password hashing and role-based access control</li>
+    <li>Parameterised SQL throughout (no ORM), guarding against SQL injection</li>
+  </ul>
+</section>
+
+<!-- Technologies -->
+<section id="technologies">
+  <h2>Technologies</h2>
+  <div class="technologies-container">
+    <div class="frontend-section">
+      <h3>Frontend</h3>
+      <div class="tech-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div class="tech-item"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div class="tech-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
+    </div>
+    <div class="backend-section">
+      <h3>Backend</h3>
+      <div class="tech-item"><i class="fab fa-node"></i><p>Node.js</p></div>
+      <div class="tech-item"><i class="fas fa-plug"></i><p>WebSocket</p></div>
+      <div class="tech-item"><i class="fas fa-database"></i><p>PostgreSQL</p></div>
+    </div>
+    <div class="backend-section">
+      <h3>Tooling</h3>
+      <div class="tech-item"><i class="fas fa-file-pdf"></i><p>Puppeteer</p></div>
+      <div class="tech-item"><i class="fas fa-lock"></i><p>JWT &amp; bcrypt</p></div>
     </div>
   </div>
 </section>
@@ -138,6 +202,6 @@
       <p><a href="/impressum">Impressum</a> | <a href="/datenschutz">Privacy Policy</a></p>
     </footer>
 
-    <script type="module" src="/scripts/main.js?v=40dbddf6b8"></script>
+    <script type="module" src="/scripts/main.js?v=f9d9a60883"></script>
   </body>
 </html>

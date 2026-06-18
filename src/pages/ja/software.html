@@ -1,17 +1,86 @@
 <!--meta
 {
   "title": "ソフトウェア | Kilian Koch",
-  "description": "キリアン・コッホのソフトウェアプロジェクト:業務ワークフローの自動化、顧客データ管理、数値計算ツール。"
+  "description": "研究のかたわら、キリアン・コッホは自動車ディーラーグループ Auto-Koch の顧客・車両管理システム KoKi の開発に従事しています。"
 }
 -->
 
-<section id="projects-list">
+<section id="software-intro">
   <h1>ソフトウェア</h1>
   <p class="software-intro">
-    研究のかたわら、業務ワークフローの自動化から数値計算ツールまで、
-    実用的な問題のためのソフトウェアを開発しています。
+    研究のかたわら、私は
+    <a href="https://www.auto-koch.com/" target="_blank" rel="noopener noreferrer">Auto-Koch&nbsp;GmbH&nbsp;&amp;&nbsp;Co.&nbsp;KG</a>
+    でソフトウェア開発者としてパートタイムで働いています。長年にわたる主な
+    プロジェクトが <strong>KoKi</strong> です。顧客・車両データを管理する社内
+    システムで、私が設計・開発し、継続的に拡張してきました。グループ各拠点で
+    日々の業務に実運用されています。
   </p>
-  <div class="projects-grid">
-{{projects}}
+</section>
+
+<!-- KoKi -->
+<section id="project-detail">
+  <h2>KoKi: 顧客・車両管理</h2>
+  <div class="project-detail-container">
+    <div id="project-images"></div>
+    <div class="project-detail-content">
+      <p>
+        KoKi は、2019年から自動車ディーラーグループの日常業務のために開発して
+        いるウェブベースの業務アプリケーションです。顧客データと車両データを
+        統合し、車検(TÜV)や整備に関わるサービス業務を支援し、繰り返し発生する
+        コミュニケーションや書類作成を自動化します。グループ5拠点に対応した
+        マルチテナント構成で、日々実運用されています。
+      </p>
+
+      <h3>主な機能</h3>
+      <ul>
+        <li>顧客・車両データの統合(DMS から毎日同期)</li>
+        <li>車両在庫の概要(在庫日数、ナンバー、ステータス)</li>
+        <li>カレンダー表示付きの予約・サービス管理</li>
+        <li>SMS・メールによる予約リマインダーの自動送信</li>
+        <li>テンプレートからの PDF 生成(顧客向け文書など)</li>
+        <li>社内チャットおよび顧客への SMS・メール送信</li>
+        <li>ロールベースの権限管理と完全な変更履歴(監査ログ)</li>
+        <li>データベースに基づく統計・分析</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 技術的ハイライト -->
+<section id="highlights">
+  <h2>技術的ハイライト</h2>
+  <ul class="highlights-list">
+    <li>フレームワークを使わない<strong>バニラ JavaScript</strong> による独自のシングルページアプリケーション</li>
+    <li>REST API ではなく <strong>WebSocket</strong> によるリアルタイム通信。アプリケーションロジックはすべてサーバー側</li>
+    <li><strong>PostgreSQL の LISTEN/NOTIFY</strong> トリガーによるライブ更新</li>
+    <li>ディーラー管理システム(DMS)との毎日の自動同期</li>
+    <li>データ同期とリマインダー自動送信のための独立したバックグラウンドサービス</li>
+    <li>ヘッドレス Chromium を用いたテンプレートからのサーバーサイド <strong>PDF 生成</strong></li>
+    <li>JWT による認証、bcrypt によるパスワードハッシュ化、ロールベースのアクセス制御</li>
+    <li>全体を通じてパラメータ化された SQL(ORM 不使用)による SQL インジェクション対策</li>
+  </ul>
+</section>
+
+<!-- 技術スタック -->
+<section id="technologies">
+  <h2>技術スタック</h2>
+  <div class="technologies-container">
+    <div class="frontend-section">
+      <h3>フロントエンド</h3>
+      <div class="tech-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div class="tech-item"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div class="tech-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
+    </div>
+    <div class="backend-section">
+      <h3>バックエンド</h3>
+      <div class="tech-item"><i class="fab fa-node"></i><p>Node.js</p></div>
+      <div class="tech-item"><i class="fas fa-plug"></i><p>WebSocket</p></div>
+      <div class="tech-item"><i class="fas fa-database"></i><p>PostgreSQL</p></div>
+    </div>
+    <div class="backend-section">
+      <h3>ツール</h3>
+      <div class="tech-item"><i class="fas fa-file-pdf"></i><p>Puppeteer</p></div>
+      <div class="tech-item"><i class="fas fa-lock"></i><p>JWT &amp; bcrypt</p></div>
+    </div>
   </div>
 </section>

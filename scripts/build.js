@@ -59,7 +59,6 @@ async function computeAssetVersion() {
     "css/projects.css",
     "scripts/main.js",
     "scripts/navigation.js",
-    "scripts/languageToggle.js",
     "scripts/gallery.js",
   ];
   const hash = crypto.createHash("sha1");
@@ -325,9 +324,11 @@ function renderEvents(talks, t, lang) {
       : "";
 
     return `  <li class="publication-item talk-item">
-      <div class="publication-title">${escapeHtml(ev.title)}${role}</div>
-      <div class="publication-info">${escapeHtml(ev.event)}, ${escapeHtml(ev.venue)} &middot; ${formatDateRange(ev.date, ev.dateEnd, lang)}</div>
-      ${link}
+      <div class="talk-main">
+        <div class="publication-title">${escapeHtml(ev.title)}${role}</div>
+        <div class="publication-info">${escapeHtml(ev.event)}, ${escapeHtml(ev.venue)} &middot; ${formatDateRange(ev.date, ev.dateEnd, lang)}</div>
+        ${link}
+      </div>
     </li>`;
   });
 
@@ -412,7 +413,7 @@ function cvPrintAutoSections(publications, talks, lang) {
         return {
           date: pub.year ?? "",
           role: escapeHtml(pub.title),
-          org: `${escapeHtml(pub.authors.join(", "))} &mdash; ${escapeHtml(pub.journal)} (${escapeHtml(typeLabel)})`,
+          org: `${escapeHtml(pub.authors.join(", "))} &middot; ${escapeHtml(pub.journal)} (${escapeHtml(typeLabel)})`,
           detailsRaw: doi,
         };
       }),

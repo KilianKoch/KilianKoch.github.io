@@ -16,12 +16,12 @@
     { "slug": "software", "output": "software.html" },
     { "slug": "impressum", "output": "impressum.html" },
     { "slug": "datenschutz", "output": "datenschutz.html" },
-    { "slug": "404", "output": "404.html" },
-    { "slug": "projects/koki", "output": "projects/koki.html" }
+    { "slug": "404", "output": "404.html" }
   ],
   "redirects": [
     { "from": "about.html", "to": "/cv" },
     { "from": "projects.html", "to": "/software" },
+    { "from": "projects/koki.html", "to": "/software" },
     { "from": "publications.html", "to": "/#publications" },
     { "from": "contact.html", "to": "/" }
   ]

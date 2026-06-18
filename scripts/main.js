@@ -1,100 +1,56 @@
 import { initializeNavigation } from './navigation.js';
-import { toggleLanguage, toggleLanguageImpressum } from './languageToggle.js';
 
 /**
- * Überprüft den aktuellen Seitennamen im gesamten Pfad.
- * @param {string} name - Der erwartete Name der Seite (z.B. "projects/koki" oder "").
- * @returns {boolean} - Ob der gesamte Pfad dem Namen exakt entspricht.
- */
-function isPageName(name) {
-  const pathname = window.location.pathname;
-  const cleanPath = pathname.replace(/\/$/, "");
-
-  if (cleanPath === '') {
-    return name === '' || name.toLowerCase() === 'index';
-  }
-
-  return cleanPath === `/${name}` || cleanPath === `/${name}.html`;
-}
-
-/**
- * Initialisiert seitenspezifisches Verhalten (nur noch die KoKi-Galerie –
- * Publikationen, Talks und Projekte werden beim Build statisch gerendert).
+ * Initialisiert seitenspezifisches Verhalten. Die KoKi-Galerie wird überall
+ * dort aufgebaut, wo ein #project-images-Element vorhanden ist (Software-
+ * Seite in allen Sprachen) – sprachunabhängig, ohne Pfad-Prüfung.
  */
 async function initializePage() {
-  if (isPageName("projects/koki")) {
-    const galleryData = [
-      {
-        src: "/images/KoKi/KoKi.svg",
-        title: "KoKi Logo",
-        description: "The official logo of the KoKi program.",
-        alt: "KoKi Logo"
-      },
-      {
-        src: "/images/KoKi/workFlowKoKi.webp",
-        title: "Workflow Example",
-        description: "Illustrates an example of the workflow where a customer is currently being called.",
-        alt: "Workflow Example"
-      },
-      {
-        src: "/images/KoKi/logInKoKi.webp",
-        title: "Login Page",
-        description: "Displays the login page of the application.",
-        alt: "Login Page"
-      },
-      {
-        src: "/images/KoKi/pdfKoKi.webp",
-        title: "PDF Generation",
-        description: "Demonstrates how a PDF can be generated using the provided customer data.",
-        alt: "PDF Generation"
-      },
-      {
-        src: "/images/KoKi/overviewKoKi.webp",
-        title: "Overview Page",
-        description: "Shows the status of the work already completed and the remaining tasks, with color-coded indicators.",
-        alt: "Overview Page"
-      },
-      {
-        src: "/images/KoKi/chatKoKi.webp",
-        title: "Chat Interface",
-        description: "Displays the internal chat interface for colleagues to communicate, such as sending customers or cars to each other or coordinating tasks.",
-        alt: "Chat Interface"
-      }
-    ];
+  const projectImages = document.querySelector("#project-images");
+  if (!projectImages) return;
 
-    const galleryContainer = document.querySelector(".gallery-container");
-    const projectImages = document.querySelector("#project-images");
-    import('./gallery.js').then(({ initializeGallery, createGallery }) => {
-      if (galleryContainer) {
-        initializeGallery(galleryData);
-      }
-      if (projectImages) {
-        createGallery(galleryData, "#project-images");
-      }
-    });
-  }
-}
+  const galleryData = [
+    {
+      src: "/images/KoKi/overviewKoKi.webp",
+      title: "Overview",
+      description: "Status of completed and remaining tasks, with colour-coded indicators.",
+      alt: "KoKi overview page"
+    },
+    {
+      src: "/images/KoKi/workFlowKoKi.webp",
+      title: "Workflow",
+      description: "An example workflow while a customer is being called.",
+      alt: "KoKi workflow example"
+    },
+    {
+      src: "/images/KoKi/pdfKoKi.webp",
+      title: "PDF Generation",
+      description: "Automatic generation of a PDF from the stored customer data.",
+      alt: "KoKi PDF generation"
+    },
+    {
+      src: "/images/KoKi/chatKoKi.webp",
+      title: "Internal Chat",
+      description: "Built-in chat for staff, e.g. to hand over customers or cars and coordinate tasks.",
+      alt: "KoKi chat interface"
+    },
+    {
+      src: "/images/KoKi/logInKoKi.webp",
+      title: "Login",
+      description: "The login screen of the application.",
+      alt: "KoKi login page"
+    },
+    {
+      src: "/images/KoKi/KoKi.svg",
+      title: "Logo",
+      description: "The KoKi logo.",
+      alt: "KoKi logo"
+    }
+  ];
 
-/**
- * Fügt Event Listener für die Sprachumschaltung (Impressum/Datenschutz) hinzu.
- */
-function initializeLanguageToggle() {
-  const btnDe = document.getElementById('btn-de');
-  const btnEn = document.getElementById('btn-en');
-
-  if (btnDe) {
-    btnDe.addEventListener('click', () => {
-      toggleLanguage('de');
-      toggleLanguageImpressum('de');
-    });
-  }
-
-  if (btnEn) {
-    btnEn.addEventListener('click', () => {
-      toggleLanguage('en');
-      toggleLanguageImpressum('en');
-    });
-  }
+  import('./gallery.js').then(({ createGallery }) => {
+    createGallery(galleryData, "#project-images");
+  });
 }
 
 /**
@@ -137,7 +93,6 @@ function initializeLangSwitcher() {
 document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
   initializePage();
-  initializeLanguageToggle();
   initializeLangSwitcher();
   initializePrintDetails();
 });
