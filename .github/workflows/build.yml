@@ -30,9 +30,6 @@ jobs:
       - name: Build site
         run: node scripts/build.js
 
-      - name: Generate CV PDF
-        run: bash scripts/make-cv-pdf.sh
-
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"

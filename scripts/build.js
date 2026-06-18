@@ -268,7 +268,8 @@ function renderTalks(talks, t, lang) {
 
   const items = list.map((talk) => {
     const links = [
-      talk.slides
+      // Folien-Link nur, wenn ausdrücklich öffentlich freigegeben
+      talk.slides && talk.slidesPublic
         ? `<a class="talk-link" href="${escapeHtml(talk.slides)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> ${t.talks.slides}</a>`
         : "",
       talk.eventUrl
@@ -278,10 +279,18 @@ function renderTalks(talks, t, lang) {
       .filter(Boolean)
       .join("\n      ");
 
+    const abstract = talk.abstract
+      ? `<details class="publication-abstract-details">
+        <summary>${t.publications.showAbstract}</summary>
+        <div class="publication-abstract">${escapeHtml(talk.abstract)}</div>
+      </details>`
+      : "";
+
     return `  <li class="publication-item talk-item">
       <div class="publication-title">${escapeHtml(talk.title)}</div>
       <div class="publication-info">${escapeHtml(talk.event)}, ${escapeHtml(talk.venue)} &middot; ${formatDate(talk.date, lang)}</div>
       ${links}
+      ${abstract}
     </li>`;
   });
 

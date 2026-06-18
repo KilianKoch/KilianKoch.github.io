@@ -1,1 +1,10 @@
 .DS_Store
+
+# Folien-PDFs der Vorträge bleiben lokal und werden nicht veröffentlicht.
+# Um einen Vortrag öffentlich zu machen: PDF mit `git add -f talks/datei.pdf`
+# committen und in data/talks.json "slidesPublic": true setzen.
+talks/*.pdf
+
+# Auto-generierte CV-PDFs (Erzeugung aktuell deaktiviert)
+cv.pdf
+cv-*.pdf
