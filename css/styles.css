@@ -1554,7 +1554,52 @@ img {
   background: #fff;
 }
 
-/* Talks */
+/* Talks: optionales Thumbnail (erste Folie) neben dem Text */
+.talk-item {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.talk-item .talk-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.talk-thumb {
+  flex-shrink: 0;
+  display: block;
+}
+
+.talk-thumb img {
+  width: 150px;
+  display: block;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.talk-thumb:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.22);
+}
+
+@media screen and (max-width: 600px) {
+  .talk-item {
+    flex-direction: column;
+  }
+
+  .talk-thumb {
+    align-self: center;
+  }
+
+  .talk-thumb img {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
 .talk-link {
   display: inline-block;
   margin-top: 10px;

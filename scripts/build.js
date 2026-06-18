@@ -267,30 +267,42 @@ function renderTalks(talks, t, lang) {
   if (list.length === 0) return `<p class="empty-note">${escapeHtml(t.talks.none)}</p>`;
 
   const items = list.map((talk) => {
+    // Folien (Download) + Thumbnail nur, wenn ausdrücklich öffentlich freigegeben
+    const slidesPublic = talk.slides && talk.slidesPublic;
     const links = [
-      // Folien-Link nur, wenn ausdrücklich öffentlich freigegeben
-      talk.slides && talk.slidesPublic
-        ? `<a class="talk-link" href="${escapeHtml(talk.slides)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> ${t.talks.slides}</a>`
+      slidesPublic
+        ? `<a class="talk-link" href="${escapeHtml(talk.slides)}" download><i class="fas fa-file-pdf"></i> ${t.talks.slides}</a>`
         : "",
       talk.eventUrl
         ? `<a class="talk-link" href="${escapeHtml(talk.eventUrl)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> ${t.talks.eventPage}</a>`
         : "",
     ]
       .filter(Boolean)
-      .join("\n      ");
+      .join("\n        ");
 
     const abstract = talk.abstract
       ? `<details class="publication-abstract-details">
-        <summary>${t.publications.showAbstract}</summary>
-        <div class="publication-abstract">${escapeHtml(talk.abstract)}</div>
-      </details>`
+          <summary>${t.publications.showAbstract}</summary>
+          <div class="publication-abstract">${escapeHtml(talk.abstract)}</div>
+        </details>`
       : "";
 
+    // talk.thumb wird in main() gesetzt, wenn das Thumbnail existiert
+    const thumb =
+      slidesPublic && talk.thumb
+        ? `<a class="talk-thumb" href="${escapeHtml(talk.slides)}" target="_blank" rel="noopener noreferrer">
+        <img src="${escapeHtml(talk.thumb)}" alt="${escapeHtml(talk.title)} – first slide" loading="lazy" />
+      </a>`
+        : "";
+
     return `  <li class="publication-item talk-item">
-      <div class="publication-title">${escapeHtml(talk.title)}</div>
-      <div class="publication-info">${escapeHtml(talk.event)}, ${escapeHtml(talk.venue)} &middot; ${formatDate(talk.date, lang)}</div>
-      ${links}
-      ${abstract}
+      ${thumb}
+      <div class="talk-main">
+        <div class="publication-title">${escapeHtml(talk.title)}</div>
+        <div class="publication-info">${escapeHtml(talk.event)}, ${escapeHtml(talk.venue)} &middot; ${formatDate(talk.date, lang)}</div>
+        ${links}
+        ${abstract}
+      </div>
     </li>`;
   });
 
@@ -590,6 +602,16 @@ async function main() {
   const cv = (await exists(path.join(DATA, "cv.json")))
     ? await readJson(path.join(DATA, "cv.json"))
     : null;
+
+  // Thumbnail pro öffentlich freigegebenem Vortrag verlinken, falls vorhanden
+  for (const talk of talks) {
+    if (talk.slides && talk.slidesPublic) {
+      const base = path.basename(talk.slides).replace(/\.pdf$/i, "");
+      if (await exists(path.join(ROOT, "images", "talks", `${base}.webp`))) {
+        talk.thumb = `/images/talks/${base}.webp`;
+      }
+    }
+  }
 
   const year = new Date().getFullYear();
   const assetVersion = await computeAssetVersion();
