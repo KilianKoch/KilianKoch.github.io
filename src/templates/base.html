@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- {{generatedWarning}} -->
+<html lang="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+
+    <!-- SEO -->
+    <meta name="description" content="{{description}}" />
+    <link rel="canonical" href="{{canonical}}" />
+{{hreflang}}
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:image" content="{{baseUrl}}/images/me.jpeg" />
+    <meta property="og:url" content="{{canonical}}" />
+    <meta property="og:type" content="website" />
+
+    <link rel="stylesheet" href="/css/styles.css?v={{assetVersion}}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/publications.css?v={{assetVersion}}" />
+    <link rel="stylesheet" href="/css/projects.css?v={{assetVersion}}" />
+
+    <script type="application/ld+json">
+{{jsonldPerson}}
+    </script>
+{{headExtra}}
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="{{langPrefix}}/" class="logo">
+        <img src="/images/me.jpeg" alt="Portrait of Kilian Koch" />
+      </a>
+      <ul class="nav-links">
+{{navLinks}}
+      </ul>
+{{langSwitcher}}
+      <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </nav>
+
+    <div class="content">
+{{content}}
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="social-media">
+        <a href="https://orcid.org/{{orcid}}" aria-label="ORCID">
+          <i class="fab fa-orcid social-icon"></i>
+        </a>
+        <a href="https://arxiv.org/search/?searchtype=author&amp;query=Koch%2C+Kilian" aria-label="arXiv">
+          <i class="ai ai-arxiv social-icon"></i>
+        </a>
+        <a href="{{github}}" aria-label="GitHub">
+          <i class="fab fa-github social-icon"></i>
+        </a>
+        <a href="{{linkedin}}" aria-label="LinkedIn">
+          <i class="fab fa-linkedin social-icon"></i>
+        </a>
+        <a href="mailto:{{email}}" aria-label="E-Mail">
+          <i class="fas fa-envelope social-icon"></i>
+        </a>
+      </div>
+      <p><a href="mailto:{{email}}">{{email}}</a></p>
+      <p>&copy; {{year}} Kilian Koch. {{t.footer.rights}}</p>
+      <p><a href="{{langPrefix}}/impressum">{{t.footer.impressum}}</a> | <a href="{{langPrefix}}/datenschutz">{{t.footer.privacy}}</a></p>
+    </footer>
+
+    <script type="module" src="/scripts/main.js?v={{assetVersion}}"></script>
+  </body>
+</html>

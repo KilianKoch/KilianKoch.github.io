@@ -1,0 +1,87 @@
+<!--meta
+{
+  "title": "Software | Kilian Koch",
+  "description": "Neben seiner Forschung arbeitet Kilian Koch als Softwareentwickler an KoKi, einem produktiv genutzten Kunden- und Fahrzeugverwaltungssystem für die Autohausgruppe Auto-Koch."
+}
+-->
+
+<section id="software-intro">
+  <h1>Software</h1>
+  <p class="software-intro">
+    Neben meiner Forschung arbeite ich in Teilzeit als Softwareentwickler bei
+    <a href="https://www.auto-koch.com/" target="_blank" rel="noopener noreferrer">Auto-Koch&nbsp;GmbH&nbsp;&amp;&nbsp;Co.&nbsp;KG</a>.
+    Mein Hauptprojekt dort ist seit Jahren <strong>KoKi</strong>, ein
+    hauseigenes System zur Verwaltung von Kunden- und Fahrzeugdaten, das ich
+    entworfen, entwickelt und kontinuierlich erweitert habe und das täglich an
+    den Standorten der Autohausgruppe im Produktivbetrieb läuft.
+  </p>
+</section>
+
+<!-- KoKi -->
+<section id="project-detail">
+  <h2>KoKi: Kunden- &amp; Fahrzeugverwaltung</h2>
+  <div class="project-detail-container">
+    <div id="project-images"></div>
+    <div class="project-detail-content">
+      <p>
+        KoKi ist eine webbasierte Geschäftsanwendung, die ich seit 2019 für den
+        Alltag einer Autohausgruppe entwickle. Sie führt Kunden- und
+        Fahrzeugdaten zusammen, unterstützt den Serviceprozess rund um TÜV und
+        Inspektion und automatisiert die wiederkehrende Kommunikation und
+        Dokumentenerstellung. Das System ist mandantenfähig über die fünf
+        Niederlassungen der Gruppe und täglich im Produktiveinsatz.
+      </p>
+
+      <h3>Hauptfunktionen</h3>
+      <ul>
+        <li>Zusammengeführte Kunden- und Fahrzeugdaten, täglich aus dem DMS synchronisiert</li>
+        <li>Fahrzeugbestandsübersicht (Standtage, Kennzeichen, Status)</li>
+        <li>Termin- und Serviceverwaltung mit Kalenderansicht</li>
+        <li>Automatisierte Terminerinnerungen per SMS und E-Mail</li>
+        <li>Vorlagenbasierte PDF-Erstellung (z.&nbsp;B. Kundenanschreiben)</li>
+        <li>Internes Mitarbeiter-Chat sowie direkter SMS-/E-Mail-Versand an Kunden</li>
+        <li>Benutzerverwaltung mit Rollensystem und lückenlosem Änderungsprotokoll</li>
+        <li>Statistiken und Auswertungen aus der Datenbank</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Technische Highlights -->
+<section id="highlights">
+  <h2>Technische Highlights</h2>
+  <ul class="highlights-list">
+    <li>Eigene Single-Page-Application in <strong>reinem JavaScript</strong>, ohne Frontend-Framework</li>
+    <li>Echtzeit-Architektur über <strong>WebSockets</strong> statt REST-API, gesamte Anwendungslogik serverseitig</li>
+    <li>Live-Aktualisierungen über <strong>PostgreSQL-LISTEN/NOTIFY</strong>-Trigger</li>
+    <li>Tägliche automatische Synchronisation mit dem Dealer-Management-System</li>
+    <li>Eigenständige Hintergrunddienste für Datenabgleich und automatische Erinnerungen</li>
+    <li>Serverseitige <strong>PDF-Erstellung</strong> aus Vorlagen mit Headless-Chromium</li>
+    <li>JWT-basierte Authentifizierung, bcrypt-Passwort-Hashing und rollenbasierte Zugriffskontrolle</li>
+    <li>Durchgängig parametrisierte SQL-Abfragen (kein ORM) als Schutz vor SQL-Injection</li>
+  </ul>
+</section>
+
+<!-- Technologien -->
+<section id="technologies">
+  <h2>Technologien</h2>
+  <div class="technologies-container">
+    <div class="frontend-section">
+      <h3>Frontend</h3>
+      <div class="tech-item"><i class="fab fa-html5"></i><p>HTML5</p></div>
+      <div class="tech-item"><i class="fab fa-css3-alt"></i><p>CSS3</p></div>
+      <div class="tech-item"><i class="fab fa-js"></i><p>JavaScript</p></div>
+    </div>
+    <div class="backend-section">
+      <h3>Backend</h3>
+      <div class="tech-item"><i class="fab fa-node"></i><p>Node.js</p></div>
+      <div class="tech-item"><i class="fas fa-plug"></i><p>WebSocket</p></div>
+      <div class="tech-item"><i class="fas fa-database"></i><p>PostgreSQL</p></div>
+    </div>
+    <div class="backend-section">
+      <h3>Werkzeuge</h3>
+      <div class="tech-item"><i class="fas fa-file-pdf"></i><p>Puppeteer</p></div>
+      <div class="tech-item"><i class="fas fa-lock"></i><p>JWT &amp; bcrypt</p></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+{
+  "langName": "日本語",
+  "langLabel": "言語",
+  "nav": {
+    "research": "研究",
+    "cv": "経歴",
+    "software": "ソフトウェア"
+  },
+  "sections": {
+    "publications": "論文",
+    "talks": "講演",
+    "events": "主催イベント",
+    "funding": "研究プロジェクト・資金",
+    "contact": "連絡先"
+  },
+  "publications": {
+    "by": "著者:",
+    "showAbstract": "概要を表示",
+    "hideAbstract": "概要を隠す",
+    "readOnline": "オンラインで読む",
+    "none": "論文はORCID経由で自動的にここに表示されます。",
+    "types": {
+      "preprint": "プレプリント",
+      "journal-article": "学術論文",
+      "software": "ソフトウェア",
+      "other": "出版物"
+    }
+  },
+  "talks": {
+    "slides": "スライド (PDF)",
+    "eventPage": "イベントページ",
+    "none": "講演は近日中に掲載されます。"
+  },
+  "projects": {
+    "details": "詳細"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "impressum": "インプリント",
+    "privacy": "プライバシーポリシー"
+  }
+}

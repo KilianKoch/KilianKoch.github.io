@@ -29,8 +29,9 @@ const server = http.createServer(async (req, res) => {
     // Normalize and construct the file path without query parameters
     const parsedUrl = new URL(req.url, `http://${req.headers.host}`);
     let safePath = path.normalize(parsedUrl.pathname);
-    if (safePath === '/' || safePath === '') safePath = '/index.html';
-    if (!path.extname(safePath)) safePath += '.html';
+    if (safePath === '') safePath = '/';
+    if (safePath.endsWith('/')) safePath += 'index.html';
+    else if (!path.extname(safePath)) safePath += '.html';
     
     const filePath = path.join(rootDirectory, safePath);
 
@@ -74,7 +75,7 @@ const server = http.createServer(async (req, res) => {
 });
 
 // Start server after MIME types are loaded
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}/`);
 });

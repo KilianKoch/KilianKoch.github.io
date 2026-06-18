@@ -1,0 +1,99 @@
+<!--meta
+{
+  "title": "Kilian Koch, Mathematiker | RWTH Aachen",
+  "description": "Kilian Koch ist Doktorand der Mathematik an der RWTH Aachen (SFB 1481) und forscht zu Gradientenflüssen, geometrischer Analysis und singulären PDEs. Publikationen, Vorträge und Forschungsprofil.",
+  "includePublicationsMeta": true
+}
+-->
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="me-pic">
+      <img src="/images/me.jpeg" alt="Porträt von Kilian Koch" />
+    </div>
+    <h1>Kilian Koch</h1>
+    <div class="hero-text-box">
+      <p class="hero-role">
+        Doktorand der Mathematik<br />
+        Lehrstuhl für Angewandte Analysis &middot; RWTH Aachen
+      </p>
+      <p class="hero-intro">
+        Ich arbeite an Gradientenflüssen in der geometrischen Analysis,
+        insbesondere an Wohlgestelltheit und singulärem Verhalten von
+        (halb-)harmonischen Wärmeflüssen. Ich bin Doktorand im
+        SFB&nbsp;1481 <em>Sparsity and Singular Structures</em> an der
+        RWTH Aachen.
+      </p>
+      <details class="hero-more">
+        <summary>Mehr zu meiner Forschung</summary>
+        <p class="hero-intro-mobile">
+          Ich arbeite an Gradientenflüssen in der geometrischen Analysis,
+          insbesondere an Wohlgestelltheit und singulärem Verhalten von
+          (halb-)harmonischen Wärmeflüssen. Ich bin Doktorand im
+          SFB&nbsp;1481 <em>Sparsity and Singular Structures</em> an der
+          RWTH Aachen.
+        </p>
+      </details>
+    </div>
+    <p class="hero-links">
+      <a class="id-badge" href="https://orcid.org/{{orcid}}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-orcid"></i> <span class="badge-label">{{orcid}}</span>
+      </a>
+      <a class="id-badge" href="https://arxiv.org/search/?searchtype=author&amp;query=Koch%2C+Kilian" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-arxiv"></i> arXiv
+      </a>
+      <a class="id-badge" href="{{github}}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a class="id-badge" href="{{linkedin}}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a class="id-badge" href="mailto:{{email}}">
+        <i class="fas fa-envelope"></i> <span class="badge-label">{{email}}</span>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- Publikationen (beim Build aus ORCID generiert) -->
+<section id="publications">
+  <h2>{{t.sections.publications}}</h2>
+  {{publications}}
+</section>
+
+<!-- Vorträge (aus data/talks.json generiert) -->
+<section id="talks">
+  <h2>{{t.sections.talks}}</h2>
+  {{talks}}
+</section>
+
+<!-- Organisierte Veranstaltungen (aus data/talks.json generiert) -->
+<section id="events">
+  <h2>{{t.sections.events}}</h2>
+  {{events}}
+</section>
+
+<!-- Forschungsprojekt & Förderung -->
+<section id="funding">
+  <h2>{{t.sections.funding}}</h2>
+  <div class="funding-box">
+    <a href="https://sfb1481.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">
+      <img src="/images/CRC1481.svg" alt="Logo des SFB 1481 Sparsity and Singular Structures" class="funding-logo" />
+    </a>
+    <div class="funding-text">
+      <h3>Projekt C01: Singularity formation in dissipative harmonic flows</h3>
+      <p>
+        Meine Stelle wird seit April&nbsp;2024 von der Deutschen
+        Forschungsgemeinschaft (DFG) über den SFB&nbsp;1481
+        <em>Sparsity and Singular Structures</em>
+        (Projektnummer&nbsp;442047500), Teilprojekt&nbsp;C01, finanziert.
+      </p>
+      <p>
+        <a href="https://sfb1481.rwth-aachen.de/research/area-c/project-c01/" target="_blank" rel="noopener noreferrer">Projektseite &nearr;</a>
+        &nbsp;|&nbsp;
+        <a href="https://sfb1481.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">SFB&nbsp;1481 &nearr;</a>
+      </p>
+    </div>
+  </div>
+</section>

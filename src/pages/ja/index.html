@@ -1,0 +1,95 @@
+<!--meta
+{
+  "title": "キリアン・コッホ (Kilian Koch)、数学研究者 | アーヘン工科大学",
+  "description": "キリアン・コッホはアーヘン工科大学(RWTH Aachen、CRC 1481)の数学博士課程研究員。幾何解析における勾配流、特異的偏微分方程式を研究。論文・講演・研究プロフィール。",
+  "includePublicationsMeta": true
+}
+-->
+
+<!-- Hero Section -->
+<section id="hero">
+  <div class="hero-content">
+    <div class="me-pic">
+      <img src="/images/me.jpeg" alt="キリアン・コッホの写真" />
+    </div>
+    <h1>Kilian Koch</h1>
+    <div class="hero-text-box">
+      <p class="hero-role">
+        数学・博士課程研究員<br />
+        アーヘン工科大学 応用解析講座
+      </p>
+      <p class="hero-intro">
+        幾何解析における勾配流、特に(半)調和写像熱流の適切性と特異性に
+        ついて研究しています。アーヘン工科大学のCRC&nbsp;1481
+        <em>Sparsity and Singular Structures</em> の博士課程研究員です。
+      </p>
+      <details class="hero-more">
+        <summary>研究について詳しく</summary>
+        <p class="hero-intro-mobile">
+          幾何解析における勾配流、特に(半)調和写像熱流の適切性と特異性に
+          ついて研究しています。アーヘン工科大学のCRC&nbsp;1481
+          <em>Sparsity and Singular Structures</em> の博士課程研究員です。
+        </p>
+      </details>
+    </div>
+    <p class="hero-links">
+      <a class="id-badge" href="https://orcid.org/{{orcid}}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-orcid"></i> <span class="badge-label">{{orcid}}</span>
+      </a>
+      <a class="id-badge" href="https://arxiv.org/search/?searchtype=author&amp;query=Koch%2C+Kilian" target="_blank" rel="noopener noreferrer">
+        <i class="ai ai-arxiv"></i> arXiv
+      </a>
+      <a class="id-badge" href="{{github}}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a class="id-badge" href="{{linkedin}}" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a class="id-badge" href="mailto:{{email}}">
+        <i class="fas fa-envelope"></i> <span class="badge-label">{{email}}</span>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- 論文(ビルド時にORCIDから生成) -->
+<section id="publications">
+  <h2>{{t.sections.publications}}</h2>
+  {{publications}}
+</section>
+
+<!-- 講演(data/talks.jsonから生成) -->
+<section id="talks">
+  <h2>{{t.sections.talks}}</h2>
+  {{talks}}
+</section>
+
+<!-- 主催イベント(data/talks.jsonから生成) -->
+<section id="events">
+  <h2>{{t.sections.events}}</h2>
+  {{events}}
+</section>
+
+<!-- 研究プロジェクト・資金 -->
+<section id="funding">
+  <h2>{{t.sections.funding}}</h2>
+  <div class="funding-box">
+    <a href="https://sfb1481.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">
+      <img src="/images/CRC1481.svg" alt="CRC 1481 Sparsity and Singular Structures のロゴ" class="funding-logo" />
+    </a>
+    <div class="funding-text">
+      <h3>プロジェクトC01: Singularity formation in dissipative harmonic flows</h3>
+      <p>
+        私のポジションは、2024年4月よりドイツ研究振興協会(DFG)の
+        CRC&nbsp;1481 <em>Sparsity and Singular Structures</em>
+        (プロジェクト番号&nbsp;442047500)、プロジェクトC01の資金提供を
+        受けています。
+      </p>
+      <p>
+        <a href="https://sfb1481.rwth-aachen.de/research/area-c/project-c01/" target="_blank" rel="noopener noreferrer">プロジェクトページ &nearr;</a>
+        &nbsp;|&nbsp;
+        <a href="https://sfb1481.rwth-aachen.de/" target="_blank" rel="noopener noreferrer">CRC&nbsp;1481 &nearr;</a>
+      </p>
+    </div>
+  </div>
+</section>
