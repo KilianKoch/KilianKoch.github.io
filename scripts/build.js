@@ -531,7 +531,7 @@ function pageHref(page, lang, site) {
 
 function renderNav(currentSlug, lang, site, t) {
   const entries = [
-    { slug: "index", label: t.nav.research },
+    { slug: "index", label: t.nav.home },
     { slug: "cv", label: t.nav.cv },
     { slug: "software", label: t.nav.software },
   ];
