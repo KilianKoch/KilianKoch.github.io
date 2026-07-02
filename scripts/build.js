@@ -492,15 +492,32 @@ function renderPersonJsonld(site) {
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": `${site.baseUrl}/#person`,
       name: site.name,
       url: site.baseUrl,
+      email: `mailto:${site.email}`,
       image: `${site.baseUrl}/images/me.jpeg`,
       sameAs: [`https://orcid.org/${site.orcid}`, site.github, site.linkedin],
+      identifier: {
+        "@type": "PropertyValue",
+        propertyID: "ORCID",
+        value: site.orcid,
+      },
       jobTitle: "Doctoral Researcher in Mathematics",
-      worksFor: { "@type": "Organization", name: "RWTH Aachen University" },
+      worksFor: {
+        "@type": "Organization",
+        name: "RWTH Aachen University",
+        department: { "@type": "Organization", name: "Chair of Applied Analysis" },
+      },
+      memberOf: {
+        "@type": "Organization",
+        name: "CRC 1481 Sparsity and Singular Structures (DFG project no. 442047500)",
+        url: "https://sfb1481.rwth-aachen.de/",
+      },
+      knowsLanguage: ["de", "en", "ja"],
       alumniOf: { "@type": "CollegeOrUniversity", name: "RWTH Aachen University" },
       description:
-        "Kilian Koch is a doctoral researcher in mathematics at RWTH Aachen University (CRC 1481 Sparsity and Singular Structures), working on gradient flows in geometric analysis, in particular well-posedness and singular behaviour of (half-)harmonic map heat flows.",
+        "Kilian Koch is a doctoral researcher in mathematics at RWTH Aachen University (CRC 1481 Sparsity and Singular Structures), working on gradient flows in geometric analysis, in particular well-posedness and singular behaviour of half-harmonic map heat flows.",
       knowsAbout: [
         "Mathematical Analysis",
         "Geometric Analysis",
@@ -700,6 +717,55 @@ async function main() {
     await fs.writeFile(path.join(ROOT, redirect.from), html);
     written.push(redirect.from);
   }
+
+  // llms.txt: kompakte Selbstbeschreibung für KI-Crawler (llmstxt.org),
+  // automatisch aus den echten Daten generiert
+  const llmsPubs = publications
+    .map((p) => `- [${p.title}](${p.link ?? site.baseUrl}) (${p.authors.join(", ")}, ${p.journal} ${p.year ?? ""}${p.doi ? `, DOI: ${p.doi}` : ""})`)
+    .join("\n");
+  const llmsTalks = talks
+    .filter((t) => t.type === "talk")
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .map((t) => `- "${t.title}", ${t.event}, ${t.venue}, ${t.date}`)
+    .join("\n");
+  const llmsEvents = talks
+    .filter((t) => t.type === "organized")
+    .map((t) => `- ${t.title} (${t.role ?? "organizer"}), ${t.venue}, ${t.date}${t.dateEnd ? ` to ${t.dateEnd}` : ""}`)
+    .join("\n");
+  const llmsTxt = `# Kilian Koch
+
+> Kilian Koch is a doctoral researcher in mathematics at the Chair of Applied
+> Analysis, RWTH Aachen University, Germany. He works on gradient flows in
+> geometric analysis, in particular well-posedness and singular behaviour of
+> half-harmonic map heat flows. His position is funded by the German
+> Research Foundation (DFG) through CRC 1481 "Sparsity and Singular
+> Structures" (project no. 442047500), project C01, since October 2024.
+> Alongside his research he works part-time as a software developer
+> (KoKi, a customer and vehicle management system for Auto-Koch).
+
+Contact: ${site.email} · ORCID: https://orcid.org/${site.orcid} · GitHub: ${site.github}
+
+## Pages
+
+- [Research (home)](${site.baseUrl}/): publications, talks, organized events, funding
+- [CV](${site.baseUrl}/cv): positions, education, teaching experience, awards, skills
+- [Software](${site.baseUrl}/software): the KoKi system and technical highlights
+- German version: ${site.baseUrl}/de/ · Japanese version: ${site.baseUrl}/ja/
+
+## Publications
+
+${llmsPubs || "- (see ORCID)"}
+
+## Talks
+
+${llmsTalks}
+
+## Organized Events
+
+${llmsEvents}
+`;
+  await fs.writeFile(path.join(ROOT, "llms.txt"), llmsTxt);
+  written.push("llms.txt");
 
   // sitemap.xml (404 und Redirects bleiben draußen)
   const urls = [];

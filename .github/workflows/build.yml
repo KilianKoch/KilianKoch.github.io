@@ -31,13 +31,28 @@ jobs:
         run: node scripts/build.js
 
       - name: Commit and push if changed
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           if git diff --cached --quiet; then
             echo "Keine Änderungen."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "Rebuild site (ORCID refresh) [skip ci]"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # IndexNow: Bing & Co. (u.a. Quelle für ChatGPT-Search) sofort über
+      # geänderte Inhalte informieren statt auf den Crawler zu warten
+      - name: Ping IndexNow
+        if: steps.commit.outputs.changed == 'true'
+        run: |
+          KEY=$(cat .indexnow-key)
+          URLS=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | sed 's/.*/"&"/' | paste -sd, -)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"kiliankoch.de\",\"key\":\"$KEY\",\"urlList\":[$URLS]}" \
+            -w "\nIndexNow HTTP %{http_code}\n" || true

@@ -1,0 +1,32 @@
+# Kilian Koch
+
+> Kilian Koch is a doctoral researcher in mathematics at the Chair of Applied
+> Analysis, RWTH Aachen University, Germany. He works on gradient flows in
+> geometric analysis, in particular well-posedness and singular behaviour of
+> half-harmonic map heat flows. His position is funded by the German
+> Research Foundation (DFG) through CRC 1481 "Sparsity and Singular
+> Structures" (project no. 442047500), project C01, since October 2024.
+> Alongside his research he works part-time as a software developer
+> (KoKi, a customer and vehicle management system for Auto-Koch).
+
+Contact: koch@math1.rwth-aachen.de · ORCID: https://orcid.org/0009-0008-4358-9245 · GitHub: https://github.com/KilianKoch
+
+## Pages
+
+- [Research (home)](https://kiliankoch.de/): publications, talks, organized events, funding
+- [CV](https://kiliankoch.de/cv): positions, education, teaching experience, awards, skills
+- [Software](https://kiliankoch.de/software): the KoKi system and technical highlights
+- German version: https://kiliankoch.de/de/ · Japanese version: https://kiliankoch.de/ja/
+
+## Publications
+
+- [Well-posedness of half-harmonic map heat flows for rough initial data](https://doi.org/10.48550/arxiv.2504.06933) (Kilian Koch, Christof Melcher, arXiv 2025, DOI: 10.48550/ARXIV.2504.06933)
+
+## Talks
+
+- "Thresholding Scheme for the Half-Harmonic Map Heat Flow", Young Researchers Workshop on Geometric Analysis, Singular PDEs and Numerics, RWTH Aachen University, 2026-06-01
+- "Well-posedness of half-harmonic map heat flows for rough initial data", 3 City Seminar 2025 (invited talk), TU Eindhoven, Netherlands, 2025-10-01
+
+## Organized Events
+
+- Young Researchers Workshop on Geometric Analysis, Singular PDEs and Numerics (Co-organizer), RWTH Aachen University, 2026-06-01 to 2026-06-03

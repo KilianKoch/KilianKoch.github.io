@@ -1939,18 +1939,26 @@ nav .nav-links {
     font-size: 16px;
   }
 
-  /* Sprachwahl mobil: nur Globus-Symbol, kein Label */
-  .lang-switcher .lang-label {
+  /* Sprachwahl mobil: nur Globus-Symbol, kein Label
+     (muss die Desktop-Regel .lang-switcher summary .lang-label schlagen) */
+  .lang-switcher summary .lang-label {
     display: none;
   }
 
   .lang-switcher summary {
-    padding: 7px 10px;
+    padding: 0 10px;
   }
 
   .lang-switcher {
     margin-left: 0px;
     margin-right: 18px;
+  }
+
+  /* Ohne Nav-Logo sitzt der Globus mobil links – Dropdown daher nach
+     rechts aufklappen, sonst hängt es über den linken Bildschirmrand */
+  .lang-switcher ul {
+    left: 0;
+    right: auto;
   }
 }
 
