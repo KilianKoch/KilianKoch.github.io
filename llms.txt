@@ -20,6 +20,7 @@ Contact: koch@math1.rwth-aachen.de · ORCID: https://orcid.org/0009-0008-4358-92
 
 ## Publications
 
+- [Thresholding Scheme for the Half-Harmonic Map Heat Flow](https://doi.org/10.48550/arxiv.2609.25912) (Kilian Koch, Christof Melcher, Endre Süli, arXiv 2026, DOI: 10.48550/ARXIV.2609.25912)
 - [Well-posedness of half-harmonic map heat flows for rough initial data](https://doi.org/10.48550/arxiv.2504.06933) (Kilian Koch, Christof Melcher, arXiv 2025, DOI: 10.48550/ARXIV.2504.06933)
 
 ## Talks
