@@ -2,6 +2,17 @@
   {
     "type": "talk",
     "title": "Thresholding Scheme for the Half-Harmonic Map Heat Flow",
+    "event": "Annual Retreat of the CRC 1481 “Sparsity and Singular Structures”",
+    "venue": "Burg Frankenberg, Aachen",
+    "date": "2026-09-30",
+    "slides": "/talks/Vortrag_SFB_Retreat_2026.pdf",
+    "slidesPublic": true,
+    "eventUrl": "https://sfb1481.rwth-aachen.de/news-events/events/retreat-2026",
+    "abstract": "We propose a thresholding scheme for the half-harmonic map heat flow from the flat torus 𝕋^d into the unit sphere 𝕊^m in ℝ^(m+1), whose iterates are given by convolution with the Poisson kernel, replacing the Gaussian kernel of the classical Merriman-Bence-Osher algorithm, and pointwise normalization. We prove that the piecewise constant interpolants subconverge to a weak solution of the half-harmonic maps heat flow that attains the initial map strongly in the energy space and satisfies the energy-dissipation inequality. For a spectrally truncated variant, convergence holds under a condition on the step size. A key ingredient is the derivation of the precise energy-dissipation identity directly from a refined within-step estimate, without resorting to De Giorgi interpolation typically used in the minimizing movement framework. This provides a direct way to recover the appropriate energy-dissipation property in the limit and, in turn, enables weak-strong uniqueness: every energy-dissipating weak solution coincides with the strong solution whenever the latter exists."
+  },
+  {
+    "type": "talk",
+    "title": "Thresholding Scheme for the Half-Harmonic Map Heat Flow",
     "event": "Young Researchers Workshop on Geometric Analysis, Singular PDEs and Numerics",
     "venue": "RWTH Aachen University",
     "date": "2026-06-01",
