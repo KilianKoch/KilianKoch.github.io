@@ -8,3 +8,6 @@ talks/*.pdf
 # Auto-generierte CV-PDFs (Erzeugung aktuell deaktiviert)
 cv.pdf
 cv-*.pdf
+
+# Zwischendateien des LaTeX-Lebenslaufs (scripts/build-cv.js); die PDFs in cv/ werden committet
+cv/build/

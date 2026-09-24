@@ -308,6 +308,12 @@ function renderTalks(talks, t, lang) {
   return `<ul class="publication-list">\n${items.join("\n")}\n</ul>`;
 }
 
+// Download-Button für den LaTeX-Lebenslauf (cv/*.pdf, gebaut von scripts/build-cv.js)
+function renderCvPdfLink(entry, t) {
+  if (!entry) return "";
+  return `<a class="cv-pdf-link" href="${escapeHtml(entry.file)}" download><i class="fas fa-file-pdf"></i> ${escapeHtml(t.cv.downloadPdf)}</a>`;
+}
+
 function renderEvents(talks, t, lang) {
   const list = talks
     .filter((talk) => talk.type === "organized")
@@ -620,6 +626,9 @@ async function main() {
   const cv = (await exists(path.join(DATA, "cv.json")))
     ? await readJson(path.join(DATA, "cv.json"))
     : null;
+  const cvManifest = (await exists(path.join(ROOT, "cv", "manifest.json")))
+    ? await readJson(path.join(ROOT, "cv", "manifest.json"))
+    : {};
 
   // Thumbnail pro öffentlich freigegebenem Vortrag verlinken, falls vorhanden
   for (const talk of talks) {
@@ -673,6 +682,7 @@ async function main() {
         cv: cvData ? renderCvWeb(cvData) : "",
         cvPrint: cvData ? renderCvPrint(cvData, publications, talks, lang) : "",
         cvSummary: cvData?.summary ?? "",
+        cvPdfLink: renderCvPdfLink(cvManifest[lang], t),
         name: site.name,
         headExtra: [
           meta.robots ? `    <meta name="robots" content="${meta.robots}" />` : "",

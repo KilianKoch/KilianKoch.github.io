@@ -7,7 +7,9 @@ on:
       - "src/**"
       - "data/talks.json"
       - "data/projects.json"
+      - "data/cv*.json"
       - "scripts/build.js"
+      - "scripts/build-cv.js"
       - ".github/workflows/build.yml"
   schedule:
     # täglich 05:00 UTC: Publikationen von ORCID aktualisieren
@@ -29,6 +31,24 @@ jobs:
 
       - name: Build site
         run: node scripts/build.js
+
+      # Lebenslauf-PDFs (cv/*.pdf): nur neu bauen, wenn sich der Inhalt geändert hat
+      # (Hash-Vergleich mit cv/manifest.json) – sonst bleiben PDF und Datum unverändert.
+      - name: Generate CV sources
+        id: cv
+        run: node scripts/build-cv.js
+
+      - name: Compile CV (LuaLaTeX)
+        if: steps.cv.outputs.changed == 'true'
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: cv/build/*.tex
+          work_in_root_file_dir: true
+          latexmk_use_lualatex: true
+
+      - name: Finalize CV
+        if: steps.cv.outputs.changed == 'true'
+        run: node scripts/build-cv.js --finalize
 
       - name: Commit and push if changed
         id: commit
