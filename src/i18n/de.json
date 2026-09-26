@@ -3,6 +3,8 @@
   "langLabel": "Sprache",
   "nav": {
     "home": "Start",
+    "publications": "Publikationen",
+    "talks": "Vorträge",
     "cv": "Lebenslauf",
     "software": "Software"
   },
@@ -24,7 +26,8 @@
       "journal-article": "Zeitschriftenartikel",
       "software": "Software",
       "other": "Publikation"
-    }
+    },
+    "all": "Alle Publikationen"
   },
   "talks": {
     "slides": "Folien (PDF)",
@@ -32,7 +35,9 @@
     "none": "Vorträge werden in Kürze gelistet.",
     "roles": {
       "Organizer": "Organisator"
-    }
+    },
+    "upcoming": "Bevorstehend",
+    "all": "Alle Vorträge"
   },
   "projects": {
     "details": "Details"

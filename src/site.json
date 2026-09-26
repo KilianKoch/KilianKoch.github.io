@@ -11,6 +11,8 @@
   "defaultLanguage": "en",
   "pages": [
     { "slug": "index", "output": "index.html" },
+    { "slug": "publications", "output": "publications.html" },
+    { "slug": "talks", "output": "talks.html" },
     { "slug": "cv", "output": "cv.html" },
     { "slug": "cv-print", "output": "cv-print.html" },
     { "slug": "software", "output": "software.html" },
@@ -22,7 +24,6 @@
     { "from": "about.html", "to": "/cv" },
     { "from": "projects.html", "to": "/software" },
     { "from": "projects/koki.html", "to": "/software" },
-    { "from": "publications.html", "to": "/#publications" },
     { "from": "contact.html", "to": "/" }
   ]
 }

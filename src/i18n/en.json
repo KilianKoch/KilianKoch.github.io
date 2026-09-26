@@ -3,6 +3,8 @@
   "langLabel": "Language",
   "nav": {
     "home": "Home",
+    "publications": "Publications",
+    "talks": "Talks",
     "cv": "CV",
     "software": "Software"
   },
@@ -24,12 +26,15 @@
       "journal-article": "journal article",
       "software": "software",
       "other": "publication"
-    }
+    },
+    "all": "All publications"
   },
   "talks": {
     "slides": "Slides (PDF)",
     "eventPage": "Event page",
-    "none": "Talks will be listed here soon."
+    "none": "Talks will be listed here soon.",
+    "upcoming": "Upcoming",
+    "all": "All talks"
   },
   "projects": {
     "details": "Details"

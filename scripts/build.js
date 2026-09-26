@@ -166,7 +166,29 @@ async function loadPublications(site, offline) {
 
 // ---------------------------------------------------------------- renderers
 
-function renderPublications(pubs, t, site) {
+// Startseite: nur die neuesten Einträge zeigen; sind es mehr, führt ein Button
+// "Alle … (n)" auf die eigene Seite (/publications bzw. /talks)
+const FRONTPAGE_LIMIT = { publications: 5, talks: 4 };
+
+// Koautor:innen automatisch verlinken: data/people.json (name, url, optional urls pro Sprache, aliases).
+// Abgleich ohne Groß-/Kleinschreibung und Akzente ("Endre Suli" = "Endre Süli").
+let PEOPLE = [];
+const normName = (s) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+
+function personUrl(name, lang) {
+  const n = normName(name);
+  const person = PEOPLE.find((p) => [p.name, ...(p.aliases ?? [])].some((a) => normName(a) === n));
+  return person ? (person.urls?.[lang] ?? person.url) : null;
+}
+
+function renderLimitedList(items, opts = {}) {
+  const list = (xs) => `<ul class="publication-list">\n${xs.join("\n")}\n</ul>`;
+  if (!opts.limit || items.length <= opts.limit) return list(items);
+  return `${list(items.slice(0, opts.limit))}
+<div class="list-more"><a class="list-more-link" href="${opts.href}">${escapeHtml(opts.label)} (${items.length}) <i class="fas fa-arrow-right"></i></a></div>`;
+}
+
+function renderPublications(pubs, t, site, opts = {}) {
   if (pubs.length === 0) {
     return `<p class="empty-note">${escapeHtml(t.publications.none)}</p>`;
   }
@@ -178,11 +200,13 @@ function renderPublications(pubs, t, site) {
     const authors =
       pub.authors.length > 0
         ? `<div class="publication-authors">${t.publications.by} ${pub.authors
-            .map((name) =>
-              name === site.name || name.includes("Kilian")
-                ? `<strong>${escapeHtml(name)}</strong>`
-                : escapeHtml(name)
-            )
+            .map((name) => {
+              if (name === site.name || name.includes("Kilian")) return `<strong>${escapeHtml(name)}</strong>`;
+              const url = personUrl(name, opts.lang);
+              return url
+                ? `<a class="coauthor-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(name)}</a>`
+                : escapeHtml(name);
+            })
             .join(", ")}</div>`
         : "";
 
@@ -216,7 +240,7 @@ function renderPublications(pubs, t, site) {
     </li>`;
   });
 
-  return `<ul class="publication-list">\n${items.join("\n")}\n</ul>`;
+  return renderLimitedList(items, opts);
 }
 
 // citation_* Meta-Tags + ScholarlyArticle-JSON-LD für Google Scholar & Co.
@@ -258,7 +282,7 @@ function renderPublicationsHead(pubs, site) {
   return `    ${meta}\n    ${jsonldBlock}`;
 }
 
-function renderTalks(talks, t, lang) {
+function renderTalks(talks, t, lang, opts = {}) {
   const list = talks
     .filter((talk) => talk.type === "talk")
     .sort((a, b) => b.date.localeCompare(a.date));
@@ -297,7 +321,12 @@ function renderTalks(talks, t, lang) {
     return `  <li class="publication-item talk-item">
       ${thumb}
       <div class="talk-main">
-        <div class="publication-title">${escapeHtml(talk.title)}</div>
+        <div class="publication-title">${escapeHtml(talk.title)}${
+          // Bevorstehend = Datum heute oder später; der tägliche Build nimmt die Markierung danach automatisch weg
+          talk.date >= new Date().toISOString().slice(0, 10)
+            ? ` <span class="talk-upcoming"><i class="fas fa-calendar-days"></i> ${escapeHtml(t.talks.upcoming)}</span>`
+            : ""
+        }</div>
         <div class="publication-info">${escapeHtml(talk.event)}, ${escapeHtml(talk.venue)} &middot; ${formatDate(talk.date, lang)}</div>
         ${links}
         ${abstract}
@@ -305,7 +334,7 @@ function renderTalks(talks, t, lang) {
     </li>`;
   });
 
-  return `<ul class="publication-list">\n${items.join("\n")}\n</ul>`;
+  return renderLimitedList(items, opts);
 }
 
 // Download-Button für den LaTeX-Lebenslauf (cv/*.pdf, gebaut von scripts/build-cv.js)
@@ -560,6 +589,8 @@ function pageHref(page, lang, site) {
 function renderNav(currentSlug, lang, site, t) {
   const entries = [
     { slug: "index", label: t.nav.home },
+    { slug: "publications", label: t.nav.publications },
+    { slug: "talks", label: t.nav.talks },
     { slug: "cv", label: t.nav.cv },
     { slug: "software", label: t.nav.software },
   ];
@@ -631,6 +662,9 @@ async function main() {
   const cv = (await exists(path.join(DATA, "cv.json")))
     ? await readJson(path.join(DATA, "cv.json"))
     : null;
+  PEOPLE = (await exists(path.join(DATA, "people.json")))
+    ? await readJson(path.join(DATA, "people.json"))
+    : [];
   const cvManifest = (await exists(path.join(ROOT, "cv", "manifest.json")))
     ? await readJson(path.join(ROOT, "cv", "manifest.json"))
     : {};
@@ -680,8 +714,19 @@ async function main() {
         navLinks: renderNav(page.slug, lang, site, t),
         langSwitcher: renderLangSwitcher(page, lang, site, i18n),
         jsonldPerson: renderPersonJsonld(site),
-        publications: renderPublications(publications, t, site),
-        talks: renderTalks(talks, t, lang),
+        publications: renderPublications(publications, t, site, {
+          lang,
+          limit: FRONTPAGE_LIMIT.publications,
+          label: t.publications.all,
+          href: pageHref(site.pages.find((p) => p.slug === "publications"), lang, site),
+        }),
+        talks: renderTalks(talks, t, lang, {
+          limit: FRONTPAGE_LIMIT.talks,
+          label: t.talks.all,
+          href: pageHref(site.pages.find((p) => p.slug === "talks"), lang, site),
+        }),
+        publicationsAll: renderPublications(publications, t, site, { lang }),
+        talksAll: renderTalks(talks, t, lang),
         events: renderEvents(talks, t, lang),
         projects: renderProjects(projects, t),
         cv: cvData ? renderCvWeb(cvData) : "",

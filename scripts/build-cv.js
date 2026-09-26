@@ -165,7 +165,7 @@ function renderCv(lang, { site, pubs, talksAll }) {
 
   const talkList = talks.length
     ? list(esc(t.talks), talks.map((x) => {
-        const up = x.date > now ? ` \\badge{${t.upcoming}}` : "";
+        const up = x.date >= now ? ` \\badge{${t.upcoming}}` : "";
         const slides = x.slides && x.slidesPublic
           ? `\\par\\entrydetails{\\href{${site.baseUrl}${x.slides}}{\\faFilePdf[regular]~${t.slides}}}`
           : "";

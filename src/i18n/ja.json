@@ -3,6 +3,8 @@
   "langLabel": "言語",
   "nav": {
     "home": "ホーム",
+    "publications": "論文",
+    "talks": "講演",
     "cv": "経歴",
     "software": "ソフトウェア"
   },
@@ -24,7 +26,8 @@
       "journal-article": "学術論文",
       "software": "ソフトウェア",
       "other": "出版物"
-    }
+    },
+    "all": "すべての論文"
   },
   "talks": {
     "slides": "スライド (PDF)",
@@ -32,7 +35,9 @@
     "none": "講演は近日中に掲載されます。",
     "roles": {
       "Organizer": "オーガナイザー"
-    }
+    },
+    "upcoming": "予定",
+    "all": "すべての講演"
   },
   "projects": {
     "details": "詳細"
