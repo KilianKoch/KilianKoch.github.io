@@ -1,6 +1,14 @@
 [
   {
     "type": "talk",
+    "title": "TBA",
+    "event": "NLPDE Seminar (invited talk)",
+    "venue": "Kyoto University, Japan",
+    "date": "2026-12-04",
+    "eventUrl": "https://www.kurims.kyoto-u.ac.jp/~nobu/nlpde/"
+  },
+  {
+    "type": "talk",
     "title": "Thresholding Scheme for the Half-Harmonic Map Heat Flow",
     "event": "Annual Retreat of the CRC 1481 “Sparsity and Singular Structures”",
     "venue": "Burg Frankenberg, Aachen",

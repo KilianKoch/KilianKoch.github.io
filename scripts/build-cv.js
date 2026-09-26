@@ -173,9 +173,11 @@ function renderCv(lang, { site, pubs, talksAll }) {
       }))
     : "";
 
+  // Rollenbezeichnung ("Organizer") wie auf der Website über src/i18n/<lang>.json übersetzen
+  const roles = readJson(`src/i18n/${lang}.json`).talks?.roles ?? {};
   const eventList = events.length
     ? list(esc(t.events), events.map((e) =>
-        `  \\item[${fmtRange(e.date, e.dateEnd, lang)}] \\entrytitle{${esc(e.title)}}\\par\\entryorg{${e.role ? `\\textbf{${esc(e.role)}} · ` : ""}${esc(e.event)}, ${esc(e.venue)}}`))
+        `  \\item[${fmtRange(e.date, e.dateEnd, lang)}] \\entrytitle{${esc(e.title)}}\\par\\entryorg{${e.role ? `\\textbf{${esc(roles[e.role] ?? e.role)}} · ` : ""}${esc(e.event)}, ${esc(e.venue)}}`))
     : "";
 
   const stats = t.stats(pubs.length, talks.length, events.length, sec.teaching ? sec.teaching.entries.length : 0);

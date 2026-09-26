@@ -29,7 +29,10 @@
   "talks": {
     "slides": "Folien (PDF)",
     "eventPage": "Veranstaltungsseite",
-    "none": "Vorträge werden in Kürze gelistet."
+    "none": "Vorträge werden in Kürze gelistet.",
+    "roles": {
+      "Organizer": "Organisator"
+    }
   },
   "projects": {
     "details": "Details"

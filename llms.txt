@@ -25,6 +25,7 @@ Contact: koch@math1.rwth-aachen.de · ORCID: https://orcid.org/0009-0008-4358-92
 
 ## Talks
 
+- "TBA", NLPDE Seminar (invited talk), Kyoto University, Japan, 2026-12-04
 - "Thresholding Scheme for the Half-Harmonic Map Heat Flow", Annual Retreat of the CRC 1481 “Sparsity and Singular Structures”, Burg Frankenberg, Aachen, 2026-09-30
 - "Thresholding Scheme for the Half-Harmonic Map Heat Flow", Young Researchers Workshop on Geometric Analysis, Singular PDEs and Numerics, RWTH Aachen University, 2026-06-01
 - "Well-posedness of half-harmonic map heat flows for rough initial data", 3 City Seminar 2025 (invited talk), TU Eindhoven, Netherlands, 2025-10-01

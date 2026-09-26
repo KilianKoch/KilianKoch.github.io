@@ -29,7 +29,10 @@
   "talks": {
     "slides": "スライド (PDF)",
     "eventPage": "イベントページ",
-    "none": "講演は近日中に掲載されます。"
+    "none": "講演は近日中に掲載されます。",
+    "roles": {
+      "Organizer": "オーガナイザー"
+    }
   },
   "projects": {
     "details": "詳細"

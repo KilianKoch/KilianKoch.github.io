@@ -314,6 +314,11 @@ function renderCvPdfLink(entry, t) {
   return `<a class="cv-pdf-link" href="${escapeHtml(entry.file)}" download><i class="fas fa-file-pdf"></i> ${escapeHtml(t.cv.downloadPdf)}</a>`;
 }
 
+// Rolle bei organisierten Events (z. B. "Organizer") in die Seitensprache übersetzen
+function roleLabel(role, t) {
+  return t.talks?.roles?.[role] ?? role;
+}
+
 function renderEvents(talks, t, lang) {
   const list = talks
     .filter((talk) => talk.type === "organized")
@@ -326,7 +331,7 @@ function renderEvents(talks, t, lang) {
       ? `<a class="talk-link" href="${escapeHtml(ev.eventUrl)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i> ${t.talks.eventPage}</a>`
       : "";
     const role = ev.role
-      ? ` <span class="publication-badge">${escapeHtml(ev.role)}</span>`
+      ? ` <span class="publication-badge">${escapeHtml(roleLabel(ev.role, t))}</span>`
       : "";
 
     return `  <li class="publication-item talk-item">
@@ -404,7 +409,7 @@ ${items}
 
 // Publikationen, Vorträge und organisierte Events als CV-Print-Sektionen
 // (aus ORCID-Cache bzw. data/talks.json – bleiben automatisch synchron)
-function cvPrintAutoSections(publications, talks, lang) {
+function cvPrintAutoSections(publications, talks, lang, t) {
   const sections = [];
 
   if (publications.length > 0) {
@@ -450,7 +455,7 @@ function cvPrintAutoSections(publications, talks, lang) {
       style: "timeline",
       entries: eventEntries.map((ev) => ({
         date: formatDateRange(ev.date, ev.dateEnd, lang),
-        role: `${escapeHtml(ev.title)}${ev.role ? ` (${escapeHtml(ev.role)})` : ""}`,
+        role: `${escapeHtml(ev.title)}${ev.role ? ` (${escapeHtml(roleLabel(ev.role, t))})` : ""}`,
         org: `${escapeHtml(ev.event)}, ${escapeHtml(ev.venue)}`,
       })),
     });
@@ -461,10 +466,10 @@ function cvPrintAutoSections(publications, talks, lang) {
 
 // Lebenslauf (Druck-/PDF-Ansicht): schlichte Typografie, alles ausgeklappt.
 // Publikationen/Talks/Events werden nach "Education" automatisch eingefügt.
-function renderCvPrint(cv, publications, talks, lang) {
+function renderCvPrint(cv, publications, talks, lang, t) {
   const sections = [...cv.sections];
   const eduIndex = sections.findIndex((s) => s.id === "education");
-  sections.splice(eduIndex + 1, 0, ...cvPrintAutoSections(publications, talks, lang));
+  sections.splice(eduIndex + 1, 0, ...cvPrintAutoSections(publications, talks, lang, t));
 
   return sections
     .map((section) => {
@@ -680,7 +685,7 @@ async function main() {
         events: renderEvents(talks, t, lang),
         projects: renderProjects(projects, t),
         cv: cvData ? renderCvWeb(cvData) : "",
-        cvPrint: cvData ? renderCvPrint(cvData, publications, talks, lang) : "",
+        cvPrint: cvData ? renderCvPrint(cvData, publications, talks, lang, t) : "",
         cvSummary: cvData?.summary ?? "",
         cvPdfLink: renderCvPdfLink(cvManifest[lang], t),
         name: site.name,
