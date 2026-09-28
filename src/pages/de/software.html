@@ -14,6 +14,9 @@
     hauseigenes System zur Verwaltung von Kunden- und Fahrzeugdaten, das ich
     entworfen, entwickelt und kontinuierlich erweitert habe und das täglich an
     den Standorten der Autohausgruppe im Produktivbetrieb läuft.
+    Ich entwickle KoKi überwiegend allein, etwa anderthalb Jahre davon im
+    Zweierteam. Der
+    Quellcode ist firmenintern und nicht öffentlich.
   </p>
 </section>
 
@@ -21,7 +24,10 @@
 <section id="project-detail">
   <h2>KoKi: Kunden- &amp; Fahrzeugverwaltung</h2>
   <div class="project-detail-container">
-    <div id="project-images"></div>
+    <div class="project-gallery">
+      <div id="project-images"></div>
+      <p class="gallery-note">Alle Screenshots zeigen synthetische Testdaten.</p>
+    </div>
     <div class="project-detail-content">
       <p>
         KoKi ist eine webbasierte Geschäftsanwendung, die ich seit 2019 für den
@@ -29,7 +35,8 @@
         Fahrzeugdaten zusammen, unterstützt den Serviceprozess rund um TÜV und
         Inspektion und automatisiert die wiederkehrende Kommunikation und
         Dokumentenerstellung. Das System ist mandantenfähig über die fünf
-        Niederlassungen der Gruppe und täglich im Produktiveinsatz.
+        Niederlassungen der Gruppe, verwaltet jeweils eine fünfstellige Zahl an
+        Kunden und Fahrzeugen und ist täglich im Produktiveinsatz.
       </p>
 
       <h3>Hauptfunktionen</h3>
@@ -40,7 +47,7 @@
         <li>Einwilligungen zum Datenschutz auf zwei Ebenen (allgemein und je Marke)</li>
         <li>Terminerinnerungen, Notizkalender mit Erinnerungen</li>
         <li>SMS, E-Mail und PDF aus Vorlagen, deren Platzhalter aus den Kundendaten gefüllt werden</li>
-        <li>Interner Chat für die Kolleginnen</li>
+        <li>Interner Chat für die Mitarbeiter</li>
         <li>Rollensystem und lückenlose Fahrzeughistorie</li>
         <li>Arbeitsübersicht und Statistik (Monatsverlauf, Erfolgsquote, Standortvergleich)</li>
       </ul>
@@ -63,6 +70,7 @@
     <li><strong>Nachvollziehbarer Termin-Algorithmus:</strong> Jede Berechnung wird als Snapshot gespeichert. Ein Cross-Check-Test prüft die Erklärung im Browser gegen die Berechnung auf dem Server.</li>
     <li><strong>Automatisierte Qualitätssicherung mit einem Befehl:</strong> Eine Testdatenbank wird über die gesamte Migrationskette neu gebaut. Dazu laufen Simulatoren für DMS, Werkstattplanung und SMS/Mail-Versand sowie Unit-, Datenbank- und Browsertests in echtem Chromium.</li>
     <li>Jeder Wochenabgleich wird mit Kennzahlen und Fehlern protokolliert.</li>
+    <li>Seit einigen Jahren <strong>KI-gestützte Entwicklung</strong>, aktuell mit <strong>Claude Code</strong>; jede Änderung wird durch die automatisierten Tests abgesichert.</li>
   </ul>
 </section>
 

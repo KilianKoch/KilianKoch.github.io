@@ -530,3 +530,18 @@ body {
 .thumbnail:hover > img {
   border-radius: 12px 12px 0 0;
 }
+
+/* Hinweis unter der KoKi-Galerie (synthetische Testdaten) */
+/* Galerie + Hinweis als ein Block im Flex-Layout, damit der Hinweis unter den Bildern bleibt */
+.project-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #777;
+  margin: 12px 0 0;
+}

@@ -28,11 +28,11 @@
     <meta property="og:url" content="https://kiliankoch.de/ja/software" />
     <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="/css/styles.css?v=935b074995" />
+    <link rel="stylesheet" href="/css/styles.css?v=55bccb95ee" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/publications.css?v=935b074995" />
-    <link rel="stylesheet" href="/css/projects.css?v=935b074995" />
+    <link rel="stylesheet" href="/css/publications.css?v=55bccb95ee" />
+    <link rel="stylesheet" href="/css/projects.css?v=55bccb95ee" />
 
     <script type="application/ld+json">
 {
@@ -131,6 +131,8 @@
     プロジェクトが <strong>KoKi</strong> です。顧客・車両データを管理する社内
     システムで、私が設計・開発し、継続的に拡張してきました。グループ各拠点で
     日々の業務に実運用されています。
+    KoKi はほぼ単独で開発しており、そのうち約1年半は 2 人体制でした。
+    ソースコードは社内専用のため公開していません。
   </p>
 </section>
 
@@ -138,14 +140,17 @@
 <section id="project-detail">
   <h2>KoKi: 顧客・車両管理</h2>
   <div class="project-detail-container">
-    <div id="project-images"></div>
+    <div class="project-gallery">
+      <div id="project-images"></div>
+      <p class="gallery-note">スクリーンショットはすべて合成テストデータです。</p>
+    </div>
     <div class="project-detail-content">
       <p>
         KoKi は、2019年から自動車ディーラーグループの日常業務のために開発して
         いるウェブベースの業務アプリケーションです。顧客データと車両データを
         統合し、車検(TÜV)や整備に関わるサービス業務を支援し、繰り返し発生する
         コミュニケーションや書類作成を自動化します。グループ5拠点に対応した
-        マルチテナント構成で、日々実運用されています。
+        マルチテナント構成で、数万件規模の顧客・車両データを管理し、日々実運用されています。
       </p>
 
       <h3>主な機能</h3>
@@ -156,7 +161,7 @@
         <li>2 段階のデータ保護同意(全般およびブランド別)</li>
         <li>予約リマインダー、リマインダー付きメモカレンダー</li>
         <li>顧客データでプレースホルダーを埋めるテンプレートからの SMS・メール・PDF 作成</li>
-        <li>同僚向けの社内チャット</li>
+        <li>スタッフ向けの社内チャット</li>
         <li>ロール管理と漏れのない車両履歴</li>
         <li>作業概要と統計(月次推移、成功率、拠点比較)</li>
       </ul>
@@ -179,6 +184,7 @@
     <li><strong>追跡可能な日程算出アルゴリズム</strong>:すべての計算をスナップショットとして保存し、ブラウザ上の説明とサーバー側の計算をクロスチェックテストで照合</li>
     <li><strong>コマンド一つで自動品質保証</strong>:マイグレーション全体を通してテスト用データベースを再構築し、DMS・工場計画・SMS/メール送信のシミュレーターに加え、ユニットテスト、データベーステスト、実際の Chromium でのブラウザテストを実行</li>
     <li>毎週の同期処理を指標とエラーとともに記録</li>
+    <li>数年来 <strong>AI 支援による開発</strong>を行っており、現在は <strong>Claude Code</strong> を使用。すべての変更を自動テストで検証</li>
   </ul>
 </section>
 
@@ -235,6 +241,6 @@
       <p><a href="/ja/impressum">インプリント</a> | <a href="/ja/datenschutz">プライバシーポリシー</a></p>
     </footer>
 
-    <script type="module" src="/scripts/main.js?v=935b074995"></script>
+    <script type="module" src="/scripts/main.js?v=55bccb95ee"></script>
   </body>
 </html>

@@ -14,6 +14,9 @@
     an in-house system for managing customer and vehicle data that I designed,
     built and continuously expanded, and which is in daily production use across
     the dealership&rsquo;s branches.
+    I develop KoKi mostly on my own, including about one and a half years as
+    part of a two-person team.
+    The source code is proprietary and not publicly available.
   </p>
 </section>
 
@@ -21,7 +24,10 @@
 <section id="project-detail">
   <h2>KoKi: Customer &amp; Vehicle Management</h2>
   <div class="project-detail-container">
-    <div id="project-images"></div>
+    <div class="project-gallery">
+      <div id="project-images"></div>
+      <p class="gallery-note">All screenshots show synthetic test data.</p>
+    </div>
     <div class="project-detail-content">
       <p>
         KoKi is a web-based business application I have been developing since
@@ -29,7 +35,8 @@
         customer and vehicle records together, supports the service workflow
         around inspections (TÜV) and maintenance, and automates the recurring
         communication and paperwork around them. The system is multi-tenant
-        across the group&rsquo;s five branches and is used in production every day.
+        across the group&rsquo;s five branches, manages tens of thousands of customers and
+        vehicles and is used in production every day.
       </p>
 
       <h3>Key Features</h3>
@@ -40,7 +47,7 @@
         <li>Data-protection consent on two levels (general and per brand)</li>
         <li>Appointment reminders and a notes calendar with reminders</li>
         <li>SMS, email and PDF from templates whose placeholders are filled from the customer data</li>
-        <li>Internal chat for colleagues</li>
+        <li>Internal chat for staff</li>
         <li>Role system and complete vehicle history</li>
         <li>Work overview and statistics (monthly trends, success rate, branch comparison)</li>
       </ul>
@@ -63,6 +70,7 @@
     <li><strong>Traceable scheduling algorithm:</strong> every calculation is stored as a snapshot, and a cross-check test verifies the explanation shown in the browser against the calculation on the server.</li>
     <li><strong>Automated quality assurance with a single command:</strong> a test database is rebuilt through the entire migration chain, with simulators for the DMS, workshop planning and SMS/email delivery, plus unit, database and browser tests in real Chromium.</li>
     <li>Every weekly sync run is logged with key figures and errors.</li>
+    <li><strong>AI-assisted development</strong> for several years, currently with <strong>Claude Code</strong>; every change is safeguarded by the automated tests.</li>
   </ul>
 </section>
 
