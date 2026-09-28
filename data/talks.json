@@ -32,17 +32,18 @@
   {
     "type": "talk",
     "title": "Well-posedness of Half-Harmonic Map Heat Flows for Rough Initial Data",
-    "event": "Oberseminar (invited talk)",
+    "event": "Applied Analysis Seminar (invited talk)",
     "venue": "Heidelberg University, Germany",
     "date": "2025-12-04",
     "slides": "/talks/Vortrag_Heidelberg_2025.pdf",
     "slidesPublic": true,
-    "abstract": "We adopt the Koch–Tataru theory for the Navier–Stokes equations, based on Carleson measure estimates, to develop a scaling-critical low-regularity framework for half-harmonic map heat flows. This nonlocal variant of the harmonic map heat flow has been studied recently in connection with free boundary minimal surfaces. We introduce a new class of initial data for the flow, broader than the conventional energy or Sobolev spaces considered in previous work, for which we establish existence, uniqueness, and continuous dependence. The class particularly includes homogeneous initial data that give rise to self-similar expanders."
+    "abstract": "We adopt the Koch–Tataru theory for the Navier–Stokes equations, based on Carleson measure estimates, to develop a scaling-critical low-regularity framework for half-harmonic map heat flows. This nonlocal variant of the harmonic map heat flow has been studied recently in connection with free boundary minimal surfaces. We introduce a new class of initial data for the flow, broader than the conventional energy or Sobolev spaces considered in previous work, for which we establish existence, uniqueness, and continuous dependence. The class particularly includes homogeneous initial data that give rise to self-similar expanders.",
+    "eventUrl": "https://www.math.uni-heidelberg.de/en/event-calendar/well-posedness-of-half-harmonic-map-heat-flows-for-rough-initial-data-2025-12-04"
   },
   {
     "type": "talk",
     "title": "Well-posedness of half-harmonic map heat flows for rough initial data",
-    "event": "3 City Seminar 2025 (invited talk)",
+    "event": "3 City Seminar Aachen–Dortmund–Eindhoven",
     "venue": "TU Eindhoven, Netherlands",
     "date": "2025-10-01",
     "slides": "/talks/Vortrag_Eindhoven.pdf",
