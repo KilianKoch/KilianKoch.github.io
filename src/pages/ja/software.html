@@ -33,14 +33,15 @@
 
       <h3>主な機能</h3>
       <ul>
-        <li>顧客・車両データの統合(DMS から毎日同期)</li>
-        <li>車両在庫の概要(在庫日数、ナンバー、ステータス)</li>
-        <li>カレンダー表示付きの予約・サービス管理</li>
-        <li>SMS・メールによる予約リマインダーの自動送信</li>
-        <li>テンプレートからの PDF 生成(顧客向け文書など)</li>
-        <li>社内チャットおよび顧客への SMS・メール送信</li>
-        <li>ロールベースの権限管理と完全な変更履歴(監査ログ)</li>
-        <li>データベースに基づく統計・分析</li>
+        <li>顧客・車両データの統合(DMS と毎週自動で照合、必要に応じてワンクリックでも実行可能)</li>
+        <li>点検・車検(HU)日程の自動算出。日程がどのように決まったかを判断グラフで確認可能</li>
+        <li>ホバーカード付きの車両行:予約、データ保護、顧客の全車両を一目で表示</li>
+        <li>2 段階のデータ保護同意(全般およびブランド別)</li>
+        <li>予約リマインダー、リマインダー付きメモカレンダー</li>
+        <li>顧客データでプレースホルダーを埋めるテンプレートからの SMS・メール・PDF 作成</li>
+        <li>同僚向けの社内チャット</li>
+        <li>ロール管理と漏れのない車両履歴</li>
+        <li>作業概要と統計(月次推移、成功率、拠点比較)</li>
       </ul>
     </div>
   </div>
@@ -53,11 +54,14 @@
     <li>フレームワークを使わない<strong>バニラ JavaScript</strong> による独自のシングルページアプリケーション</li>
     <li>REST API ではなく <strong>WebSocket</strong> によるリアルタイム通信。アプリケーションロジックはすべてサーバー側</li>
     <li><strong>PostgreSQL の LISTEN/NOTIFY</strong> トリガーによるライブ更新</li>
-    <li>ディーラー管理システム(DMS)との毎日の自動同期</li>
+    <li>ディーラー管理システム(DMS)との定期的な自動同期</li>
     <li>データ同期とリマインダー自動送信のための独立したバックグラウンドサービス</li>
     <li>ヘッドレス Chromium を用いたテンプレートからのサーバーサイド <strong>PDF 生成</strong></li>
     <li>JWT による認証、bcrypt によるパスワードハッシュ化、ロールベースのアクセス制御</li>
     <li>全体を通じてパラメータ化された SQL(ORM 不使用)による SQL インジェクション対策</li>
+    <li><strong>追跡可能な日程算出アルゴリズム</strong>:すべての計算をスナップショットとして保存し、ブラウザ上の説明とサーバー側の計算をクロスチェックテストで照合</li>
+    <li><strong>コマンド一つで自動品質保証</strong>:マイグレーション全体を通してテスト用データベースを再構築し、DMS・工場計画・SMS/メール送信のシミュレーターに加え、ユニットテスト、データベーステスト、実際の Chromium でのブラウザテストを実行</li>
+    <li>毎週の同期処理を指標とエラーとともに記録</li>
   </ul>
 </section>
 
@@ -81,6 +85,9 @@
       <h3>ツール</h3>
       <div class="tech-item"><i class="fas fa-file-pdf"></i><p>Puppeteer</p></div>
       <div class="tech-item"><i class="fas fa-lock"></i><p>JWT &amp; bcrypt</p></div>
+      <div class="tech-item"><i class="fas fa-bolt"></i><p>Vite</p></div>
+      <div class="tech-item"><i class="fas fa-code"></i><p>Handlebars</p></div>
+      <div class="tech-item"><i class="fas fa-vial"></i><p>Vitest</p></div>
     </div>
   </div>
 </section>

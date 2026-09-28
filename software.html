@@ -28,11 +28,11 @@
     <meta property="og:url" content="https://kiliankoch.de/software" />
     <meta property="og:type" content="website" />
 
-    <link rel="stylesheet" href="/css/styles.css?v=c9c9173136" />
+    <link rel="stylesheet" href="/css/styles.css?v=935b074995" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/publications.css?v=c9c9173136" />
-    <link rel="stylesheet" href="/css/projects.css?v=c9c9173136" />
+    <link rel="stylesheet" href="/css/publications.css?v=935b074995" />
+    <link rel="stylesheet" href="/css/projects.css?v=935b074995" />
 
     <script type="application/ld+json">
 {
@@ -151,14 +151,15 @@
 
       <h3>Key Features</h3>
       <ul>
-        <li>Combined customer and vehicle records, synchronised daily from the dealership management system</li>
-        <li>Vehicle inventory overview (days in stock, registration, status)</li>
-        <li>Appointment and service management with calendar view</li>
-        <li>Automated appointment reminders via SMS and email</li>
-        <li>Template-based PDF generation (e.g. customer letters)</li>
-        <li>Internal staff chat and direct SMS/email to customers</li>
-        <li>User management with role-based permissions and a full audit log</li>
-        <li>Statistics and dashboards computed from the database</li>
+        <li>Combined customer and vehicle records, automatically reconciled with the DMS every week and on demand at the click of a button</li>
+        <li>Automatic calculation of inspection and statutory roadworthiness (HU) dates; a decision graph shows how each date came about</li>
+        <li>Vehicle row with hover cards: appointments, data protection and all of a customer's vehicles at a glance</li>
+        <li>Data-protection consent on two levels (general and per brand)</li>
+        <li>Appointment reminders and a notes calendar with reminders</li>
+        <li>SMS, email and PDF from templates whose placeholders are filled from the customer data</li>
+        <li>Internal chat for colleagues</li>
+        <li>Role system and complete vehicle history</li>
+        <li>Work overview and statistics (monthly trends, success rate, branch comparison)</li>
       </ul>
     </div>
   </div>
@@ -171,11 +172,14 @@
     <li>Custom single-page application in <strong>vanilla JavaScript</strong>, no front-end framework</li>
     <li>Real-time client-server architecture over <strong>WebSockets</strong> rather than a REST API, with all application logic server-side</li>
     <li>Live updates pushed via <strong>PostgreSQL LISTEN/NOTIFY</strong> triggers</li>
-    <li>Daily automated synchronisation with the dealership management system</li>
+    <li>Regular automated synchronisation with the dealership management system</li>
     <li>Standalone background services for data sync and automated reminders</li>
     <li>Server-side <strong>PDF generation</strong> from templates using headless Chromium</li>
     <li>JWT-based authentication, bcrypt password hashing and role-based access control</li>
     <li>Parameterised SQL throughout (no ORM), guarding against SQL injection</li>
+    <li><strong>Traceable scheduling algorithm:</strong> every calculation is stored as a snapshot, and a cross-check test verifies the explanation shown in the browser against the calculation on the server.</li>
+    <li><strong>Automated quality assurance with a single command:</strong> a test database is rebuilt through the entire migration chain, with simulators for the DMS, workshop planning and SMS/email delivery, plus unit, database and browser tests in real Chromium.</li>
+    <li>Every weekly sync run is logged with key figures and errors.</li>
   </ul>
 </section>
 
@@ -199,6 +203,9 @@
       <h3>Tooling</h3>
       <div class="tech-item"><i class="fas fa-file-pdf"></i><p>Puppeteer</p></div>
       <div class="tech-item"><i class="fas fa-lock"></i><p>JWT &amp; bcrypt</p></div>
+      <div class="tech-item"><i class="fas fa-bolt"></i><p>Vite</p></div>
+      <div class="tech-item"><i class="fas fa-code"></i><p>Handlebars</p></div>
+      <div class="tech-item"><i class="fas fa-vial"></i><p>Vitest</p></div>
     </div>
   </div>
 </section>
@@ -229,6 +236,6 @@
       <p><a href="/impressum">Impressum</a> | <a href="/datenschutz">Privacy Policy</a></p>
     </footer>
 
-    <script type="module" src="/scripts/main.js?v=c9c9173136"></script>
+    <script type="module" src="/scripts/main.js?v=935b074995"></script>
   </body>
 </html>

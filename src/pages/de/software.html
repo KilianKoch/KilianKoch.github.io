@@ -34,14 +34,15 @@
 
       <h3>Hauptfunktionen</h3>
       <ul>
-        <li>Zusammengeführte Kunden- und Fahrzeugdaten, täglich aus dem DMS synchronisiert</li>
-        <li>Fahrzeugbestandsübersicht (Standtage, Kennzeichen, Status)</li>
-        <li>Termin- und Serviceverwaltung mit Kalenderansicht</li>
-        <li>Automatisierte Terminerinnerungen per SMS und E-Mail</li>
-        <li>Vorlagenbasierte PDF-Erstellung (z.&nbsp;B. Kundenanschreiben)</li>
-        <li>Internes Mitarbeiter-Chat sowie direkter SMS-/E-Mail-Versand an Kunden</li>
-        <li>Benutzerverwaltung mit Rollensystem und lückenlosem Änderungsprotokoll</li>
-        <li>Statistiken und Auswertungen aus der Datenbank</li>
+        <li>Zusammengeführte Kunden- und Fahrzeugdaten, wöchentlich automatisch mit dem DMS abgeglichen, bei Bedarf auch per Klick</li>
+        <li>Automatische Berechnung von Inspektions- und HU-Terminen; per Entscheidungsgraph nachvollziehbar, wie ein Termin zustande kam</li>
+        <li>Fahrzeugzeile mit Hoverkarten: Termine, Datenschutz und alle Fahrzeuge eines Kunden auf einen Blick</li>
+        <li>Einwilligungen zum Datenschutz auf zwei Ebenen (allgemein und je Marke)</li>
+        <li>Terminerinnerungen, Notizkalender mit Erinnerungen</li>
+        <li>SMS, E-Mail und PDF aus Vorlagen, deren Platzhalter aus den Kundendaten gefüllt werden</li>
+        <li>Interner Chat für die Kolleginnen</li>
+        <li>Rollensystem und lückenlose Fahrzeughistorie</li>
+        <li>Arbeitsübersicht und Statistik (Monatsverlauf, Erfolgsquote, Standortvergleich)</li>
       </ul>
     </div>
   </div>
@@ -54,11 +55,14 @@
     <li>Eigene Single-Page-Application in <strong>reinem JavaScript</strong>, ohne Frontend-Framework</li>
     <li>Echtzeit-Architektur über <strong>WebSockets</strong> statt REST-API, gesamte Anwendungslogik serverseitig</li>
     <li>Live-Aktualisierungen über <strong>PostgreSQL-LISTEN/NOTIFY</strong>-Trigger</li>
-    <li>Tägliche automatische Synchronisation mit dem Dealer-Management-System</li>
+    <li>Regelmäßige automatische Synchronisation mit dem Dealer-Management-System</li>
     <li>Eigenständige Hintergrunddienste für Datenabgleich und automatische Erinnerungen</li>
     <li>Serverseitige <strong>PDF-Erstellung</strong> aus Vorlagen mit Headless-Chromium</li>
     <li>JWT-basierte Authentifizierung, bcrypt-Passwort-Hashing und rollenbasierte Zugriffskontrolle</li>
     <li>Durchgängig parametrisierte SQL-Abfragen (kein ORM) als Schutz vor SQL-Injection</li>
+    <li><strong>Nachvollziehbarer Termin-Algorithmus:</strong> Jede Berechnung wird als Snapshot gespeichert. Ein Cross-Check-Test prüft die Erklärung im Browser gegen die Berechnung auf dem Server.</li>
+    <li><strong>Automatisierte Qualitätssicherung mit einem Befehl:</strong> Eine Testdatenbank wird über die gesamte Migrationskette neu gebaut. Dazu laufen Simulatoren für DMS, Werkstattplanung und SMS/Mail-Versand sowie Unit-, Datenbank- und Browsertests in echtem Chromium.</li>
+    <li>Jeder Wochenabgleich wird mit Kennzahlen und Fehlern protokolliert.</li>
   </ul>
 </section>
 
@@ -82,6 +86,9 @@
       <h3>Werkzeuge</h3>
       <div class="tech-item"><i class="fas fa-file-pdf"></i><p>Puppeteer</p></div>
       <div class="tech-item"><i class="fas fa-lock"></i><p>JWT &amp; bcrypt</p></div>
+      <div class="tech-item"><i class="fas fa-bolt"></i><p>Vite</p></div>
+      <div class="tech-item"><i class="fas fa-code"></i><p>Handlebars</p></div>
+      <div class="tech-item"><i class="fas fa-vial"></i><p>Vitest</p></div>
     </div>
   </div>
 </section>
