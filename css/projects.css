@@ -384,8 +384,9 @@ body {
 
 /* Main container for the gallery */
 #project-images {
-  width: 1000px; /* Slightly wider for more breathing room */
-  height: 700px; /* Increased height */
+  /* flexibel statt fest 1000×700 px: auf dem Handy sonst Überlauf der ganzen Seite */
+  width: 100%;
+  max-width: 1000px;
   background-color: #fff;
   border-radius: 16px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
@@ -397,7 +398,7 @@ body {
 /* Main image wrapper styling */
 .main-image-wrapper {
   position: relative;
-  flex: 1; /* Takes up remaining space above thumbnails */
+  aspect-ratio: 1000 / 515; /* wie bisher auf dem Desktop (700 px minus Vorschauleiste) */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,6 +538,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .main-image-wrapper {
+    padding: 8px;
+  }
 }
 
 .gallery-note {
@@ -544,4 +554,142 @@ body {
   font-size: 0.85rem;
   color: #777;
   margin: 12px 0 0;
+}
+
+/* --- KoKi-Galerie: Vergrößern + Vollbildansicht (scripts/gallery.js) --- */
+.main-image {
+  cursor: zoom-in;
+}
+
+.gallery-expand {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(44, 62, 80, 0.75);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.gallery-expand:hover {
+  background: rgba(44, 62, 80, 0.95);
+}
+
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 64px 24px;
+  background: rgba(15, 20, 26, 0.94);
+}
+
+.gallery-lightbox[hidden] {
+  display: none;
+}
+
+.lb-figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lb-image {
+  max-width: 100%;
+  max-height: calc(100vh - 170px);
+  object-fit: contain;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.lb-figure figcaption {
+  max-width: 900px;
+  margin-top: 12px;
+  text-align: center;
+  color: #d5dbe0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.lb-title {
+  display: block;
+  margin-bottom: 4px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.lb-close {
+  position: absolute;
+  top: 8px;
+  right: 14px;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 64px;
+  border: 0;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 2.4rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lb-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.lb-prev {
+  left: 10px;
+}
+
+.lb-next {
+  right: 10px;
+}
+
+/* Handy: Überschrift darf umbrechen, Vollbild nutzt die ganze Breite */
+@media (max-width: 600px) {
+  #project-detail h2 {
+    font-size: 1.8rem;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .gallery-lightbox {
+    padding: 52px 8px 16px;
+  }
+
+  .lb-nav {
+    top: auto;
+    bottom: 14px;
+    transform: none;
+    width: 44px;
+    height: 44px;
+    font-size: 2rem;
+  }
+
+  .lb-image {
+    max-height: calc(100vh - 200px);
+  }
 }
