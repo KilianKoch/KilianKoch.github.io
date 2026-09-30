@@ -322,8 +322,8 @@ function renderTalks(talks, t, lang, opts = {}) {
       ${thumb}
       <div class="talk-main">
         <div class="publication-title">${escapeHtml(talk.title)}${
-          // Bevorstehend = Datum heute oder später; der tägliche Build nimmt die Markierung danach automatisch weg
-          talk.date >= new Date().toISOString().slice(0, 10)
+          // Bevorstehend = Datum nach heute; am Vortragstag selbst ist die Markierung schon weg
+          talk.date > new Date().toISOString().slice(0, 10)
             ? ` <span class="talk-upcoming"><i class="fas fa-calendar-days"></i> ${escapeHtml(t.talks.upcoming)}</span>`
             : ""
         }</div>
