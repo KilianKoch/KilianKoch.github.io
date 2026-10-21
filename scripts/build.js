@@ -537,7 +537,7 @@ function renderPersonJsonld(site) {
       url: site.baseUrl,
       email: `mailto:${site.email}`,
       image: `${site.baseUrl}/images/me.jpeg`,
-      sameAs: [`https://orcid.org/${site.orcid}`, site.github, site.linkedin],
+      sameAs: [`https://orcid.org/${site.orcid}`, site.rwthProfile, site.github, site.linkedin],
       identifier: {
         "@type": "PropertyValue",
         propertyID: "ORCID",

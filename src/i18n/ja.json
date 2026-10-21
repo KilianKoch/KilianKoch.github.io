@@ -12,29 +12,29 @@
     "publications": "論文",
     "talks": "講演",
     "events": "主催イベント",
-    "funding": "研究プロジェクト・資金",
+    "funding": "研究プロジェクト・研究助成",
     "contact": "連絡先"
   },
   "publications": {
-    "by": "著者:",
-    "showAbstract": "概要を表示",
-    "hideAbstract": "概要を隠す",
+    "by": "著者：",
+    "showAbstract": "要旨を表示",
+    "hideAbstract": "要旨を隠す",
     "readOnline": "オンラインで読む",
     "none": "論文はORCID経由で自動的にここに表示されます。",
     "types": {
       "preprint": "プレプリント",
-      "journal-article": "学術論文",
+      "journal-article": "学術誌論文",
       "software": "ソフトウェア",
       "other": "出版物"
     },
     "all": "すべての論文"
   },
   "talks": {
-    "slides": "スライド (PDF)",
+    "slides": "スライド（PDF）",
     "eventPage": "イベントページ",
     "none": "講演は近日中に掲載されます。",
     "roles": {
-      "Organizer": "オーガナイザー"
+      "Organizer": "世話人"
     },
     "upcoming": "予定",
     "all": "すべての講演"
@@ -44,7 +44,7 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "impressum": "インプリント",
+    "impressum": "運営者情報",
     "privacy": "プライバシーポリシー"
   },
   "cv": {

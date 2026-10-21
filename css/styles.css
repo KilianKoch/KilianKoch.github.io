@@ -1407,6 +1407,16 @@ img {
   margin-bottom: 14px;
 }
 
+#hero .hero-content .hero-role .affiliation-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+#hero .hero-content .hero-role .affiliation-link:hover {
+  color: #3498db;
+}
+
 #hero .hero-content .hero-intro {
   font-size: 18px;
   max-width: 600px;
