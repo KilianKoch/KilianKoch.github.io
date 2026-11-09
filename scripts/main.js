@@ -87,9 +87,21 @@ function initializeLangSwitcher() {
   });
 }
 
+// Sprungziel mit Abstract (z. B. /talks#2026-12-04-kyoto aus dem QR-Code der Folien):
+// Abstract des angesprungenen Eintrags automatisch aufklappen.
+function openTargetAbstract() {
+  const id = decodeURIComponent(location.hash.slice(1));
+  if (!id) return;
+  const target = document.getElementById(id);
+  const details = target?.querySelector("details.publication-abstract-details");
+  if (details) details.open = true;
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   initializeNavigation();
   initializePage();
   initializeLangSwitcher();
   initializePrintDetails();
+  openTargetAbstract();
 });
+window.addEventListener("hashchange", openTargetAbstract);

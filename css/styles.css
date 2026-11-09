@@ -2017,3 +2017,8 @@ nav .nav-links {
     padding: 8px 14px;
   }
 }
+
+/* Sprungziele einzelner Vorträge (/talks#id): nicht unter dem fixierten Kopfbalken verschwinden */
+.talk-item[id] {
+  scroll-margin-top: 80px;
+}

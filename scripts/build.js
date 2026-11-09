@@ -282,6 +282,22 @@ function renderPublicationsHead(pubs, site) {
   return `    ${meta}\n    ${jsonldBlock}`;
 }
 
+// Sprungziel eines Vortrags: "id" aus den Daten oder Datum + Ort (ASCII, klein), z. B. 2026-12-04-kyoto.
+// Ort = erstes Wort vor dem ersten Komma, das kein allgemeines Wort wie University/TU/RWTH/Burg ist.
+// Bei gleichem Ergebnis an einem Tag wird -2, -3 … angehängt.
+const ANCHOR_SKIP = new Set(["university", "universitat", "universitaet", "uni", "tu", "rwth", "burg",
+  "institute", "institut", "technical", "technische", "of", "the", "college", "school", "campus"]);
+function talkAnchor(talk, used) {
+  const words = (talk.venue || talk.event || "talk").split(",")[0].split(/\s+/)
+    .map((w) => w.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, ""))
+    .filter(Boolean);
+  const word = words.find((w) => !ANCHOR_SKIP.has(w)) || words[0];
+  let id = talk.id || `${talk.date}-${word || "talk"}`;
+  for (let n = 2; used.has(id); n++) id = `${talk.id || `${talk.date}-${word}`}-${n}`;
+  used.add(id);
+  return id;
+}
+
 function renderTalks(talks, t, lang, opts = {}) {
   const list = talks
     .filter((talk) => talk.type === "talk")
@@ -289,6 +305,7 @@ function renderTalks(talks, t, lang, opts = {}) {
 
   if (list.length === 0) return `<p class="empty-note">${escapeHtml(t.talks.none)}</p>`;
 
+  const usedAnchors = new Set();
   const items = list.map((talk) => {
     // Folien (Download) + Thumbnail nur, wenn ausdrücklich öffentlich freigegeben
     const slidesPublic = talk.slides && talk.slidesPublic;
@@ -318,7 +335,10 @@ function renderTalks(talks, t, lang, opts = {}) {
       </a>`
         : "";
 
-    return `  <li class="publication-item talk-item">
+    // Sprungziel automatisch aus Datum und erstem Wort des Ortes, z. B. /talks#2026-12-04-kyoto
+    // (QR-Code auf den Folien). Ein Feld "id" in data/talks.json überschreibt das.
+    const anchor = ` id="${escapeHtml(talkAnchor(talk, usedAnchors))}"`;
+    return `  <li class="publication-item talk-item"${anchor}>
       ${thumb}
       <div class="talk-main">
         <div class="publication-title">${escapeHtml(talk.title)}${
