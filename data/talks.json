@@ -12,6 +12,15 @@
   },
   {
     "type": "talk",
+    "title": "Half-Harmonic Map Heat Flows",
+    "event": "Seminar (invited talk)",
+    "venue": "Waseda University, Tokyo, Japan",
+    "date": "2026-11-27",
+    "slides": "/talks/Vortrag_Waseda_2026.pdf",
+    "slidesPublic": true
+  },
+  {
+    "type": "talk",
     "title": "Thresholding Scheme for the Half-Harmonic Map Heat Flow",
     "event": "Annual Retreat of the CRC 1481 “Sparsity and Singular Structures”",
     "venue": "Burg Frankenberg, Aachen",
